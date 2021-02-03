@@ -6,19 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: java | 最爱吃大米的博客</title>
+  <title>最爱吃大米的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="学习笔记记录">
-<meta property="og:type" content="website">
+  <meta name="description" content="np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。 可以接受两个一维数组生成两个二维矩阵。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="最爱吃大米的博客">
-<meta property="og:url" content="http://example.com/tags/java/index.html">
+<meta property="og:url" content="http://example.com/2021/02/03/%E3%80%90Numpy%E3%80%91%20meshgrid()%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="最爱吃大米的博客">
-<meta property="og:description" content="学习笔记记录">
+<meta property="og:description" content="np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。 可以接受两个一维数组生成两个二维矩阵。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrjzdsrej31f80d8dh5.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrq4qr4wj31fk0podio.jpg">
+<meta property="article:published_time" content="2021-02-03T15:54:38.745Z">
+<meta property="article:modified_time" content="2021-02-03T15:55:20.772Z">
 <meta property="article:author" content="最爱吃大米">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg">
   
     <link rel="alternative" href="/atom.xml" title="最爱吃大米的博客" type="application/atom+xml">
   
@@ -318,80 +324,207 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-【Numpy】 meshgrid()函数" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。</p>
+<p>可以接受两个一维数组生成两个二维矩阵。</p>
+<a id="more"></a>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mesharid(np.arange(<span class="number">4</span>),np.arange(<span class="number">4</span>)) </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>根据传入的两个一维数组参数生成两个数组元素的列表。</p>
+<p>如果第一个参数是xarray，维度是xdimesion，</p>
+<p>第二个参数是yarray，维度是ydimesion。</p>
+<p>那么生成的第一个二维数组是以xarray为行，共ydimesion行的向量；而第二个二维数组是以yarray的转置为列，共xdimesion列的向量。</p>
+</blockquote>
+<p>直观的感受：x-y坐标系中，x可取（1，2，3） y可取（4，5）</p>
+<p>共有6个点    （1，4）（1，5）（2，4）（2，5）（3，4）（3，5）</p>
+<p>np.mesharid()函数就是生成类似的数据网格</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg" alt="image-20201209180432323"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrjzdsrej31f80d8dh5.jpg"></p>
+<p>==测试代码：==</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment"># np建立一个等差数列</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>,<span class="number">30</span>,<span class="number">3</span>)</span><br><span class="line">print(<span class="string">f&quot;x的维度:<span class="subst">&#123;x.ndim&#125;</span>,shape:<span class="subst">&#123;x.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(x)</span><br><span class="line">y = np.linspace(<span class="number">0</span>,<span class="number">20</span>,<span class="number">2</span>)</span><br><span class="line">print(<span class="string">f&quot;y的维度:<span class="subst">&#123;y.ndim&#125;</span>,shape:<span class="subst">&#123;y.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(y)</span><br><span class="line"></span><br><span class="line">xx,yy = np.meshgrid(x, y)</span><br><span class="line">print(<span class="string">f&quot;xv的维度:<span class="subst">&#123;xx.ndim&#125;</span>,shape:<span class="subst">&#123;xx.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(<span class="string">f&quot;yv的维度:<span class="subst">&#123;yy.ndim&#125;</span>,shape:<span class="subst">&#123;yy.shape&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.plot(xx, yy,<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>result:</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrq4qr4wj31fk0podio.jpg" alt="image-20201209181329819"></p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/aipay.png">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/wechat_pay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          最爱吃大米
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2021/02/03/【Numpy】 meshgrid()函数/" title="" target="_blank">http://example.com/2021/02/03/【Numpy】 meshgrid()函数/</a>
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
     
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/02/03/%5B%E5%B0%8F%E7%99%BD%5D%20%20%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B--idea%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="archive-article-date">
-        <time datetime="2021-02-03T08:58:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-03</time>
-</a>
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/02/03/%5B%E5%B0%8F%E7%99%BD%5D%20%20%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B--idea%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">完整教程--Idea使用git进行项目管理</a>
-	
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/03/%E3%80%90Numpy%E3%80%91%20meshgrid()%E5%87%BD%E6%95%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="mask js-mask"></div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/idea//" class="article-tag-list-link color5">idea</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+
+<nav id="article-nav">
+  
+    <a href="/2021/02/03/%E3%80%90Numpy%E3%80%91np.c_%E5%92%8Cnp.r_%E7%9A%84%E7%94%A8%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/02/03/%E3%80%90Pytorch%E3%80%91torch.normal()%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+<div id="SOHUCS" sid="【Numpy】 meshgrid()函数" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
+
+
+
+
+
+
+
 
 
 
@@ -433,9 +566,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
