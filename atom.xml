@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-02-03T18:15:42.539Z</updated>
+  <updated>2021-02-03T19:12:11.505Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Hexo】yilia主题优化(一) 右侧新增Fork on Github</title>
+    <link href="http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91yilia%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96-%E4%B8%80-%E5%8F%B3%E4%BE%A7%E6%96%B0%E5%A2%9Efork-on-github/"/>
+    <id>http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91yilia%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96-%E4%B8%80-%E5%8F%B3%E4%BE%A7%E6%96%B0%E5%A2%9Efork-on-github/</id>
+    <published>2021-02-03T18:39:16.000Z</published>
+    <updated>2021-02-03T19:12:11.505Z</updated>
+    
+    <content type="html"><![CDATA[<p>选择一张合适的图片的新增到网站的右上角，用于快速跳转到个人github等相关网站。</p><a id="more"></a><p>1.打开/themes/yilia/layout/layout.ejs  文件，新增如下代码</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// theme.github 为_config.yml中配置，接下来会提到</span></span><br><span class="line">&lt;% <span class="keyword">if</span> (theme.github &amp;&amp; theme.github.url)  </span><br><span class="line">&lt;% # &quot;GitHub Ribbons&quot; %&gt;</span><br><span class="line">&lt;a <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;forkMe&quot;</span> style=<span class="string">&quot;position:absolute;z-index:999;top:0;right:0.5em;&quot;</span></span><br><span class="line">       href=<span class="string">&quot;&lt;%=theme.github.url%&gt;&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;</span><br><span class="line">       &lt;img src=<span class="string">&quot;&lt;%- url_for(&#x27;img/forkme.png&#x27;) %&gt;&quot;</span></span><br><span class="line">         <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;attachment-full size-full&quot;</span> alt=<span class="string">&quot;Fork me on GitHub&quot;</span> data-recalc-dims=<span class="string">&quot;1&quot;</span>&gt;&lt;/a&gt;</span><br><span class="line">      &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure><p>2.根据&lt;img src=”&lt;%- url_for(‘img/forkme.png’) %&gt;” 中所写的地址在source/img目录下添加一张图片为forkme.png</p><p><img src="https://i.loli.net/2021/02/04/Rx6guGir8LyOaCY.png" alt="forkme"></p><p>3.在themes主题配置文件中配置 如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> GitHub Ribbons(https://github.blog/2008-12-19-github-ribbons/)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 右上角github连接设置</span></span><br><span class="line">github:</span><br><span class="line"><span class="meta">  #</span><span class="bash"> (关闭请设置为<span class="literal">false</span>)</span></span><br><span class="line"><span class="meta">#</span><span class="bash">  url: https://github.com/xxxxxxxx?tab=repositories</span></span><br><span class="line">   url: flase</span><br></pre></td></tr></table></figure><p>效果图如下：</p><p><img src="https://i.loli.net/2021/02/04/9RLF35CAiXy1QBd.jpg" alt="img"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;选择一张合适的图片的新增到网站的右上角，用于快速跳转到个人github等相关网站。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="http://www.novoice.top/categories/hexo/"/>
+    
+    <category term="yilia" scheme="http://www.novoice.top/categories/hexo/yilia/"/>
+    
+    
+    <category term="hexo" scheme="http://www.novoice.top/tags/hexo/"/>
+    
+    <category term="yilia优化" scheme="http://www.novoice.top/tags/yilia%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown 语法</title>
@@ -43,11 +68,11 @@
   </entry>
   
   <entry>
-    <title>【Hexo】撰写文章</title>
-    <link href="http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/"/>
-    <id>http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/</id>
+    <title>【Hexo】基础教程(一)  撰写文章</title>
+    <link href="http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B(%E4%B8%80)%20%20%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/"/>
+    <id>http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B(%E4%B8%80)%20%20%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/</id>
     <published>2021-02-03T17:38:04.000Z</published>
-    <updated>2021-02-03T18:17:52.855Z</updated>
+    <updated>2021-02-03T18:36:44.206Z</updated>
     
     <content type="html"><![CDATA[<p>在搭建好属于自己的博客网站之后，我们可以尝试着在网站上编写我们的第一篇文章。</p><p><a href="https://hexo.io/zh-cn/docs/writing">hexo官方地址</a></p><a id="more"></a><h2 id="一、创建文章"><a href="#一、创建文章" class="headerlink" title="一、创建文章"></a>一、创建文章</h2><p>打开建立的hexo文件，<code>windows</code>右击git bash，<code>macos/linux</code>终端进入文件位置。输入如下：其中<code>title</code>为文章的标题。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;title&quot;</span><br></pre></td></tr></table></figure><p>输入后，hexo会根据目录下<code>scaffolds/post.md</code>，在<code>source/_posts</code> 文件夹下创建一个文件，名为:<code>title.md</code></p><h2 id="二、撰写文章"><a href="#二、撰写文章" class="headerlink" title="二、撰写文章"></a>二、撰写文章</h2><p>Markdown 文档格式与书写方式，可参考：<a href="/2021/02/04/Markdown-%E8%AF%AD%E6%B3%95/" title="Markdown-语法">Markdown-语法</a></p><h2 id="三、高级设置"><a href="#三、高级设置" class="headerlink" title="三、高级设置"></a>三、高级设置</h2><p><a href="https://hexo.io/zh-cn/docs/front-matter">官方地址：</a></p><h4 id="（1）模板设置"><a href="#（1）模板设置" class="headerlink" title="（1）模板设置"></a>（1）模板设置</h4><p>当我们使用命令 <code>hexo new &quot;title&quot;</code> 创建文章时，Hexo 会根据 <code>/scaffolds/post.md</code> 对新文章进行初始化。</p><p>j简单来说，<code>/scaffolds/post.md</code> 文档中所规定的格式就是新文章的 <strong>模板</strong>。</p><p>一个简单的示例如下：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: </span><br><span class="line">categories: </span><br></pre></td></tr></table></figure><h4 id="（2）头部设置"><a href="#（2）头部设置" class="headerlink" title="（2）头部设置"></a>（2）头部设置</h4><p>在每篇利用 Hexo 创建的文章的开头，都会有对文章进行说明的文字，叫做 <strong>文章头部</strong></p><p>文章的头部除了可以设置文章标题、发布日期等基础信息外，还可以为文章添加标签、分类等</p><p>一个简单的示例如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: Title</span><br><span class="line">date: YYYY-MM-DD HH:MM:SS</span><br><span class="line">tags: [tag1, tag2, ...]</span><br><span class="line">categories: category</span><br><span class="line">1234</span><br></pre></td></tr></table></figure><p><strong>注意</strong>：属性和属性值之间必须有一个空格，否则会解析错误</p><h4 id="（3）首页显示"><a href="#（3）首页显示" class="headerlink" title="（3）首页显示"></a>（3）首页显示</h4><p>在利用 Hexo 框架搭建的博客网站中，首页会显示文章的内容，且默认显示文章的全部内容</p><p>如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简</p><p>这时，我们只需在文章中使用 <code>&lt;!--more--&gt;</code> 标志即可，表示只会显示标志前面的内容</p><h2 id="四、部署发布"><a href="#四、部署发布" class="headerlink" title="四、部署发布"></a>四、部署发布</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g -c</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>]]></content>
     
