@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.novice.top/2021/02/04/Markdown-%E8%AF%AD%E6%B3%95/</loc>
+    <loc>http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/</loc>
     
     <lastmod>2021-02-03</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.novice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/</loc>
+    <loc>http://www.novoice.top/2021/02/04/Markdown-%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2021-02-03</lastmod>
     
@@ -17,7 +17,7 @@
   
 
   <url>
-    <loc>http://www.novice.top/</loc>
+    <loc>http://www.novoice.top/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -25,21 +25,21 @@
 
   
   <url>
-    <loc>http://www.novice.top/tags/md/</loc>
+    <loc>http://www.novoice.top/tags/md/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.novice.top/tags/markdown/</loc>
+    <loc>http://www.novoice.top/tags/markdown/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.novice.top/tags/hexo/</loc>
+    <loc>http://www.novoice.top/tags/hexo/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -48,14 +48,14 @@
 
   
   <url>
-    <loc>http://www.novice.top/categories/markdown/</loc>
+    <loc>http://www.novoice.top/categories/markdown/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.novice.top/categories/hexo/</loc>
+    <loc>http://www.novoice.top/categories/hexo/</loc>
     <lastmod>2021-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
