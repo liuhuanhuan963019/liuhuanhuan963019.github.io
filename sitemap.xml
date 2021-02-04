@@ -39,7 +39,7 @@
 
   
   <url>
-    <loc>http://www.novoice.top/tags/md/</loc>
+    <loc>http://www.novoice.top/tags/typora/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -53,14 +53,14 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/typora/</loc>
+    <loc>http://www.novoice.top/tags/hexo/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/hexo/</loc>
+    <loc>http://www.novoice.top/tags/md/</loc>
     <lastmod>2021-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
