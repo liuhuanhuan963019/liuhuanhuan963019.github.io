@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-02-04T10:20:38.174Z</updated>
+  <updated>2021-02-04T10:24:58.827Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -17,28 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Test”</title>
-    <link href="http://www.novoice.top/2021/02/04/test/"/>
-    <id>http://www.novoice.top/2021/02/04/test/</id>
-    <published>2021-02-04T10:18:46.000Z</published>
-    <updated>2021-02-04T10:20:38.174Z</updated>
-    
-    <content type="html"><![CDATA[<p>Markdown使用过程中最让人头疼的恐怕就是插入图片了，添加图片的方法可查看 <a href="https://www.jianshu.com/p/280c6a6f2594">简书-Markdown添加图片的三种方式</a>。简单总结，常用插入图片方法主要分为插入本地图片、插入网络图片两种。</p><a id="more"></a><h3 id="一、PicGo下载"><a href="#一、PicGo下载" class="headerlink" title="一、PicGo下载"></a>一、PicGo下载</h3><p><a href="https://github.com/Molunerfinn/PicGo/releases/tag/v2.3.0-beta.4">链接地址：</a></p><p>如果觉得下载慢的话，本文提供了百度云下载：</p><p>链接: <a href="https://pan.baidu.com/s/1r0s_0jNjBcJiw047WzLAmQ">https://pan.baidu.com/s/1r0s_0jNjBcJiw047WzLAmQ</a>  密码: hhq7</p><h3 id="二、新建github-仓库"><a href="#二、新建github-仓库" class="headerlink" title="二、新建github 仓库"></a>二、新建github 仓库</h3><p>​    </p><p><img src="https://raw.githubusercontent.com/liuhuanhuan963019/blogPicture/master/md_photos/008eGmZEly1gnbnv1vx2bj30o70gxjtb.jpg" alt="【Typora】github与picgo图床设置 02"></p><h3 id="三、github-token生成"><a href="#三、github-token生成" class="headerlink" title="三、github token生成"></a>三、github token生成</h3><p><code>生成一个token，让PicGo可以操作你的仓库</code></p><ul><li>方法1（直接访问tokens界面），<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> ，点击<code>Generate new token</code></li></ul><p><img src="https://raw.githubusercontent.com/liuhuanhuan963019/blogPicture/master/md_photos/008eGmZEly1gnbnvddd82j30v906ojs9.jpg" alt="【Typora】github与picgo图床设置 03"></p><p><img src="https://raw.githubusercontent.com/liuhuanhuan963019/blogPicture/master/md_photos/008eGmZEly1gnbnvt65l9j30wn05pjsb.jpg" alt="【Typora】github与picgo图床设置 04"></p><p>勾选<code>repo</code>后，滑到页面最下端，单击 <code>Generate token</code> 绿色按钮，生成token。</p><p><img src="https://raw.githubusercontent.com/liuhuanhuan963019/blogPicture/master/md_photos/008eGmZEly1gnbnvt65l9j30wn05pjsb.jpg" alt="【Typora】github与picgo图床设置 05"></p><p><strong>注意，生成的token只会显示一次，建议另存为文本文件妥善保存。如果忘记了，只能重新生成新的token，每次新生成的token与之前都不同。</strong></p><ul><li><p>方法2 点击主页右上角的<code>Settings</code></p><p><img src="https://raw.githubusercontent.com/liuhuanhuan963019/blogPicture/master/md_photos/008eGmZEly1gnbnvt65l9j30wn05pjsb.jpg" alt="【Typora】github与picgo图床设置 06"></p></li></ul><p>后续操作与步骤一差不多</p><h3 id="四、PicGo配置"><a href="#四、PicGo配置" class="headerlink" title="四、PicGo配置"></a>四、PicGo配置</h3><p><strong><em>图床配置</em></strong></p><p><img src="https://raw.githubusercontent.com/liuhuanhuan963019/blogPicture/master/md_photos/008eGmZEly1gnbnvt65l9j30wn05pjsb.jpg" alt="【Typora】github与picgo图床设置 07"></p><ul><li>设定仓库名：“GitHub用户名/仓库名”</li><li>设定分支名：“master”</li><li>设定Token：”上一步在github中生成的token）”</li><li>指定存储路径：会按照填写的路径在GitHub仓库下建立文件夹，填写 “img/” 即可 （填不填都行）</li><li>设定自定义域名：“<a href="https://github.com/(%E7%94%A8%E6%88%B7%E5%90%8D)/(%E4%BB%93%E5%BA%93%E5%90%8D)/master%E2%80%9D%EF%BC%88%E5%A1%AB%E4%B8%8D%E5%A1%AB%E9%83%BD%E8%A1%8C%EF%BC%89">https://github.com/(用户名)/(仓库名)/master”（填不填都行）</a></li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Markdown使用过程中最让人头疼的恐怕就是插入图片了，添加图片的方法可查看 &lt;a href=&quot;https://www.jianshu.com/p/280c6a6f2594&quot;&gt;简书-Markdown添加图片的三种方式&lt;/a&gt;。简单总结，常用插入图片方法主要分为插入本地图片、插入网络图片两种。&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>【Typora】github 与PicGO搭建图床の2娿3</title>
+    <title>【Typora】github 与PicGO搭建图床</title>
     <link href="http://www.novoice.top/2021/02/04/%E3%80%90Typora%E3%80%91github-%E4%B8%8EPicGO%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"/>
     <id>http://www.novoice.top/2021/02/04/%E3%80%90Typora%E3%80%91github-%E4%B8%8EPicGO%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</id>
     <published>2021-02-04T07:57:57.000Z</published>
-    <updated>2021-02-04T10:21:37.949Z</updated>
+    <updated>2021-02-04T10:24:58.827Z</updated>
     
     <content type="html"><![CDATA[<p>Markdown使用过程中最让人头疼的恐怕就是插入图片了，添加图片的方法可查看 <a href="https://www.jianshu.com/p/280c6a6f2594">简书-Markdown添加图片的三种方式</a>。简单总结，常用插入图片方法主要分为插入本地图片、插入网络图片两种。</p><a id="more"></a><h3 id="一、PicGo下载"><a href="#一、PicGo下载" class="headerlink" title="一、PicGo下载"></a>一、PicGo下载</h3><p><a href="https://github.com/Molunerfinn/PicGo/releases/tag/v2.3.0-beta.4">链接地址：</a></p><p>如果觉得下载慢的话，本文提供了百度云下载：</p><p>链接: <a href="https://pan.baidu.com/s/1r0s_0jNjBcJiw047WzLAmQ">https://pan.baidu.com/s/1r0s_0jNjBcJiw047WzLAmQ</a>  密码: hhq7</p><h3 id="二、新建github-仓库"><a href="#二、新建github-仓库" class="headerlink" title="二、新建github 仓库"></a>二、新建github 仓库</h3><p>​        <img src="%E3%80%90Typora%E3%80%91github%E4%B8%8Epicgo%E5%9B%BE%E5%BA%8A%E8%AE%BE%E7%BD%AE%2001.jpg" alt="【Typora】github与picgo图床设置 01"></p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbnv1vx2bj30o70gxjtb.jpg" alt="【Typora】github与picgo图床设置 02"></p><h3 id="三、github-token生成"><a href="#三、github-token生成" class="headerlink" title="三、github token生成"></a>三、github token生成</h3><p><code>生成一个token，让PicGo可以操作你的仓库</code></p><ul><li>方法1（直接访问tokens界面），<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> ，点击<code>Generate new token</code></li></ul><p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbnvddd82j30v906ojs9.jpg" alt="【Typora】github与picgo图床设置 03"></p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbnvkbdxbj30v30cxwgd.jpg" alt="【Typora】github与picgo图床设置 04"></p><p>勾选<code>repo</code>后，滑到页面最下端，单击 <code>Generate token</code> 绿色按钮，生成token。</p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbnvt65l9j30wn05pjsb.jpg" alt="【Typora】github与picgo图床设置 05"></p><p><strong>注意，生成的token只会显示一次，建议另存为文本文件妥善保存。如果忘记了，只能重新生成新的token，每次新生成的token与之前都不同。</strong></p><ul><li><p>方法2 点击主页右上角的<code>Settings</code></p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbnvzon6fj30at0c5t8z.jpg" alt="【Typora】github与picgo图床设置 06"></p></li></ul><p>后续操作与步骤一差不多</p><h3 id="四、PicGo配置"><a href="#四、PicGo配置" class="headerlink" title="四、PicGo配置"></a>四、PicGo配置</h3><p><strong><em>图床配置</em></strong></p><p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbnw78woqj30m30cb756.jpg" alt="【Typora】github与picgo图床设置 07"></p><ul><li>设定仓库名：“GitHub用户名/仓库名”</li><li>设定分支名：“master”</li><li>设定Token：”上一步在github中生成的token）”</li><li>指定存储路径：会按照填写的路径在GitHub仓库下建立文件夹，填写 “img/” 即可 （填不填都行）</li><li>设定自定义域名：“<a href="https://github.com/(%E7%94%A8%E6%88%B7%E5%90%8D)/(%E4%BB%93%E5%BA%93%E5%90%8D)/master%E2%80%9D%EF%BC%88%E5%A1%AB%E4%B8%8D%E5%A1%AB%E9%83%BD%E8%A1%8C%EF%BC%89">https://github.com/(用户名)/(仓库名)/master”（填不填都行）</a></li></ul>]]></content>
     
