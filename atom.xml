@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-02-04T16:43:33.730Z</updated>
+  <updated>2021-02-04T18:21:23.511Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Hexo】基础教程(二) 文章新增图片上传</title>
+    <link href="http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%8C-%E6%96%87%E7%AB%A0%E6%96%B0%E5%A2%9E%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
+    <id>http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%8C-%E6%96%87%E7%AB%A0%E6%96%B0%E5%A2%9E%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/</id>
+    <published>2021-02-04T17:37:43.000Z</published>
+    <updated>2021-02-04T18:21:23.511Z</updated>
+    
+    <content type="html"><![CDATA[<p>在博客中插入视频和图片能让人通俗易懂，生动形象。下面我们简答用两种方式介绍下hexo 博客文章中新增图片</p><a id="more"></a><h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a><strong><em>方法一：</em></strong></h4><p><strong>hexo 添加图片插件：</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure><p>也可下载官方链接地址：<a href="https://github.com/cnzsb/hexo-asset.git">hexo-asset</a></p><p>此时的下载或不下载取决于自己的<a href="https://hexo.io/themes/">theme</a>主题中所包含的默认的插件是否存在。可以在不安装此插件的前提下执行如下步骤。若不行，在安装此插件后执行如下步骤：</p><p>在hexo主文件夹中<code>_config.yml</code>配置文件中，修改为 <code>post_asset_folder: true</code>， 然后新建一篇文章</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;test&quot;</span><br></pre></td></tr></table></figure><p>这个时候会出现一个<code>test.md</code> 和 <code>test</code>的文件夹</p><p><img src="%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%8C-%E6%96%87%E7%AB%A0%E6%96%B0%E5%A2%9E%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A001.jpg" alt="img"></p><p>将图片资源放在<code>test</code>中，文章就可以使用相对路径引用图片资源了。格式如下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure><p><strong>上述是markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。</strong></p><p>如果希望图片在文章和首页中同时显示，可以使用标签插件语法。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img image.jpg This is an image %&#125;</span><br></pre></td></tr></table></figure><p>重新编译后 再启动服务即可。</p><p>效果可查看如下链接：<a href="/2021/02/04/%E3%80%90Typora%E3%80%91github-%E4%B8%8EPicGO%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" title="【Typora】github-与PicGO搭建图床">【Typora】github-与PicGO搭建图床</a></p><h4 id="方法二：使用cdn来存储图片"><a href="#方法二：使用cdn来存储图片" class="headerlink" title="方法二：使用cdn来存储图片"></a><strong><em>方法二：使用cdn来存储图片</em></strong></h4><p>使用typora编辑md文档，除了在本地存储图片，还可以将图片上传到一些免费的CDN服务中。例如在typora中配置图片上传到配置好的github图床中，会生成对应的url地址，将地址直接拿来引用即可。具体配置方案，请参考：<a href="/2021/02/04/%E3%80%90Typora%E3%80%91github-%E4%B8%8EPicGO%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" title="【Typora】github-与PicGO搭建图床">【Typora】github-与PicGO搭建图床</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在博客中插入视频和图片能让人通俗易懂，生动形象。下面我们简答用两种方式介绍下hexo 博客文章中新增图片&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="http://www.novoice.top/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://www.novoice.top/tags/hexo/"/>
+    
+    <category term="yilia" scheme="http://www.novoice.top/tags/yilia/"/>
+    
+  </entry>
   
   <entry>
     <title>【Typora】github 与PicGO搭建图床</title>
@@ -33,9 +56,9 @@
     <category term="markdown" scheme="http://www.novoice.top/categories/markdown/"/>
     
     
-    <category term="typora" scheme="http://www.novoice.top/tags/typora/"/>
-    
     <category term="markdown" scheme="http://www.novoice.top/tags/markdown/"/>
+    
+    <category term="typora" scheme="http://www.novoice.top/tags/typora/"/>
     
   </entry>
   
@@ -84,9 +107,9 @@
     <category term="markdown" scheme="http://www.novoice.top/categories/markdown/"/>
     
     
-    <category term="markdown" scheme="http://www.novoice.top/tags/markdown/"/>
-    
     <category term="md" scheme="http://www.novoice.top/tags/md/"/>
+    
+    <category term="markdown" scheme="http://www.novoice.top/tags/markdown/"/>
     
   </entry>
   
