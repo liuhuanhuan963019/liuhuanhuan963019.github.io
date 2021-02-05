@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-02-04T18:23:59.853Z</updated>
+  <updated>2021-02-05T08:08:58.606Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【Hexo】基础教程(三) 添加网易云音乐</title>
+    <link href="http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%B8%89-%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
+    <id>http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%B8%89-%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</id>
+    <published>2021-02-05T07:41:51.000Z</published>
+    <updated>2021-02-05T08:08:58.606Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1、打开网易云音乐首页，复制选择的背景音乐分享外链"><a href="#1、打开网易云音乐首页，复制选择的背景音乐分享外链" class="headerlink" title="1、打开网易云音乐首页，复制选择的背景音乐分享外链"></a>1、打开网易云音乐首页，复制选择的背景音乐分享外链</h4><p><a href="https://music.163.com/">网易云音乐</a></p><p><code>但是有些尴尬的就是，我们目前只能添加一些没设置版权的音乐，有些收费或无版权的音乐是无法添加收听的。</code></p><a id="more"></a><h4 id="2、搜索任意歌曲后进入详情页面：如下图"><a href="#2、搜索任意歌曲后进入详情页面：如下图" class="headerlink" title="2、搜索任意歌曲后进入详情页面：如下图"></a>2、搜索任意歌曲后进入详情页面：如下图</h4><p><img src="/.top//%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%B8%89-%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%9001.jpg" alt="【hexo】基础教程-三-添加网易云音乐01"></p><h4 id="3、在详情页面点击生成外链播放器就会见到如下页面："><a href="#3、在详情页面点击生成外链播放器就会见到如下页面：" class="headerlink" title="3、在详情页面点击生成外链播放器就会见到如下页面："></a>3、在详情页面点击生成<a href="https://music.163.com/#/outchain/2/139774/">外链播放器</a>就会见到如下页面：</h4><p><img src="/.top//%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%B8%89-%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%9002.jpg" alt="【hexo】基础教程-三-添加网易云音乐02"></p><p>可设置音乐播放样式大小（一般设置为默认） </p><p>勾选设置音乐自动播放</p><h4 id="4、复制外链播放器的代码"><a href="#4、复制外链播放器的代码" class="headerlink" title="4、复制外链播放器的代码"></a>4、复制外链播放器的代码</h4><p>在<code>themes/yilia/layout/_partial/left-col.ejs</code>文件<code>nav</code>标签中添加如下代码</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder=<span class="string">&quot;no&quot;</span> border=<span class="string">&quot;0&quot;</span> marginwidth=<span class="string">&quot;0&quot;</span> marginheight=<span class="string">&quot;0&quot;</span> width=<span class="number">330</span> height=<span class="number">86</span> src=<span class="string">&quot;//music.163.com/outchain/player?type=2&amp;id=139774&amp;auto=1&amp;height=66&quot;</span>&gt;</span><br><span class="line">&lt;/iframe&gt;</span><br></pre></td></tr></table></figure><p>本文修改了一些代码，用于新增一些样式和文字效果</p><p><img src="/.top//%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%B8%89-%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%9003.jpg" alt="【hexo】基础教程-三-添加网易云音乐03"></p><h4 id="5、在yilia主题配置文件中添加属性"><a href="#5、在yilia主题配置文件中添加属性" class="headerlink" title="5、在yilia主题配置文件中添加属性"></a>5、在yilia主题配置文件中添加属性</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 网易云音乐插件</span></span><br><span class="line">music:</span><br><span class="line">  enable: true</span><br><span class="line"><span class="meta">  #</span><span class="bash"> 播放器尺寸类型(1：长尺寸、2：短尺寸)</span></span><br><span class="line">  type: 1</span><br><span class="line">  id: 139774  # 网易云分享的音乐ID(更换音乐请更改此配置项)</span><br><span class="line">  autoPlay: true  # 是否开启自动播放</span><br><span class="line"><span class="meta">  #</span><span class="bash"> 提示文本(关闭请设置为<span class="literal">false</span>)</span></span><br><span class="line">  text: &#x27;这似乎是首纯音乐，请尽情的欣赏它吧！&#x27;</span><br></pre></td></tr></table></figure><p>效果如图所示：</p><p><img src="/.top//%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%B8%89-%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%9004.jpg" alt="【hexo】基础教程-三-添加网易云音乐04"></p><p>欢迎访问我的博客：<a href="http://www.novoice.top/">www.novoice.top</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;1、打开网易云音乐首页，复制选择的背景音乐分享外链&quot;&gt;&lt;a href=&quot;#1、打开网易云音乐首页，复制选择的背景音乐分享外链&quot; class=&quot;headerlink&quot; title=&quot;1、打开网易云音乐首页，复制选择的背景音乐分享外链&quot;&gt;&lt;/a&gt;1、打开网易云音乐首页，复制选择的背景音乐分享外链&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://music.163.com/&quot;&gt;网易云音乐&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;但是有些尴尬的就是，我们目前只能添加一些没设置版权的音乐，有些收费或无版权的音乐是无法添加收听的。&lt;/code&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="http://www.novoice.top/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://www.novoice.top/tags/hexo/"/>
+    
+    <category term="基础教程" scheme="http://www.novoice.top/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【Hexo】基础教程(二) 文章新增图片上传</title>
     <link href="http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%8C-%E6%96%87%E7%AB%A0%E6%96%B0%E5%A2%9E%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
     <id>http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%8C-%E6%96%87%E7%AB%A0%E6%96%B0%E5%A2%9E%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/</id>
     <published>2021-02-04T17:37:43.000Z</published>
-    <updated>2021-02-04T18:23:59.853Z</updated>
+    <updated>2021-02-05T08:09:25.516Z</updated>
     
     <content type="html"><![CDATA[<p>在博客中插入视频和图片能让人通俗易懂，生动形象。下面我们简答用两种方式介绍下hexo 博客文章中新增图片</p><a id="more"></a><h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a><strong><em>方法一：</em></strong></h4><p><strong>hexo 添加图片插件：</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure><p>也可下载官方链接地址：<a href="https://github.com/cnzsb/hexo-asset.git">hexo-asset</a></p><p>此时的下载或不下载取决于自己的<a href="https://hexo.io/themes/">theme</a>主题中所包含的默认的插件是否存在。可以在不安装此插件的前提下执行如下步骤。若不行，在安装此插件后执行如下步骤：</p><p>在hexo主文件夹中<code>_config.yml</code>配置文件中，修改为 <code>post_asset_folder: true</code>， 然后新建一篇文章</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;test&quot;</span><br></pre></td></tr></table></figure><p>这个时候会出现一个<code>test.md</code> 和 <code>test</code>的文件夹</p><p><img src="/.top//%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%8C-%E6%96%87%E7%AB%A0%E6%96%B0%E5%A2%9E%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A001.jpg" alt="img"></p><p>将图片资源放在<code>test</code>中，文章就可以使用相对路径引用图片资源了。格式如下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](image.jpg)</span><br></pre></td></tr></table></figure><p><strong>上述是markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。</strong></p><p>如果希望图片在文章和首页中同时显示，可以使用标签插件语法。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img image.jpg This is an image %&#125;</span><br></pre></td></tr></table></figure><p>重新编译后 再启动服务即可。</p><p>效果可查看如下链接：<a href="/2021/02/04/%E3%80%90Typora%E3%80%91github-%E4%B8%8EPicGO%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" title="【Typora】github-与PicGO搭建图床">【Typora】github-与PicGO搭建图床</a></p><h4 id="方法二：使用cdn来存储图片"><a href="#方法二：使用cdn来存储图片" class="headerlink" title="方法二：使用cdn来存储图片"></a><strong><em>方法二：使用cdn来存储图片</em></strong></h4><p>使用typora编辑md文档，除了在本地存储图片，还可以将图片上传到一些免费的CDN服务中。例如在typora中配置图片上传到配置好的github图床中，会生成对应的url地址，将地址直接拿来引用即可。具体配置方案，请参考：<a href="/2021/02/04/%E3%80%90Typora%E3%80%91github-%E4%B8%8EPicGO%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" title="【Typora】github-与PicGO搭建图床">【Typora】github-与PicGO搭建图床</a></p>]]></content>
     
@@ -35,7 +59,7 @@
     
     <category term="hexo" scheme="http://www.novoice.top/tags/hexo/"/>
     
-    <category term="yilia" scheme="http://www.novoice.top/tags/yilia/"/>
+    <category term="基础教程" scheme="http://www.novoice.top/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -56,9 +80,9 @@
     <category term="markdown" scheme="http://www.novoice.top/categories/markdown/"/>
     
     
-    <category term="markdown" scheme="http://www.novoice.top/tags/markdown/"/>
-    
     <category term="typora" scheme="http://www.novoice.top/tags/typora/"/>
+    
+    <category term="markdown" scheme="http://www.novoice.top/tags/markdown/"/>
     
   </entry>
   
@@ -107,9 +131,9 @@
     <category term="markdown" scheme="http://www.novoice.top/categories/markdown/"/>
     
     
-    <category term="md" scheme="http://www.novoice.top/tags/md/"/>
-    
     <category term="markdown" scheme="http://www.novoice.top/tags/markdown/"/>
+    
+    <category term="md" scheme="http://www.novoice.top/tags/md/"/>
     
   </entry>
   
@@ -118,7 +142,7 @@
     <link href="http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B(%E4%B8%80)%20%20%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/"/>
     <id>http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B(%E4%B8%80)%20%20%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/</id>
     <published>2021-02-03T17:38:04.000Z</published>
-    <updated>2021-02-03T18:36:44.206Z</updated>
+    <updated>2021-02-05T08:09:15.018Z</updated>
     
     <content type="html"><![CDATA[<p>在搭建好属于自己的博客网站之后，我们可以尝试着在网站上编写我们的第一篇文章。</p><p><a href="https://hexo.io/zh-cn/docs/writing">hexo官方地址</a></p><a id="more"></a><h2 id="一、创建文章"><a href="#一、创建文章" class="headerlink" title="一、创建文章"></a>一、创建文章</h2><p>打开建立的hexo文件，<code>windows</code>右击git bash，<code>macos/linux</code>终端进入文件位置。输入如下：其中<code>title</code>为文章的标题。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;title&quot;</span><br></pre></td></tr></table></figure><p>输入后，hexo会根据目录下<code>scaffolds/post.md</code>，在<code>source/_posts</code> 文件夹下创建一个文件，名为:<code>title.md</code></p><h2 id="二、撰写文章"><a href="#二、撰写文章" class="headerlink" title="二、撰写文章"></a>二、撰写文章</h2><p>Markdown 文档格式与书写方式，可参考：<a href="/2021/02/04/Markdown-%E8%AF%AD%E6%B3%95/" title="Markdown-语法">Markdown-语法</a></p><h2 id="三、高级设置"><a href="#三、高级设置" class="headerlink" title="三、高级设置"></a>三、高级设置</h2><p><a href="https://hexo.io/zh-cn/docs/front-matter">官方地址：</a></p><h4 id="（1）模板设置"><a href="#（1）模板设置" class="headerlink" title="（1）模板设置"></a>（1）模板设置</h4><p>当我们使用命令 <code>hexo new &quot;title&quot;</code> 创建文章时，Hexo 会根据 <code>/scaffolds/post.md</code> 对新文章进行初始化。</p><p>j简单来说，<code>/scaffolds/post.md</code> 文档中所规定的格式就是新文章的 <strong>模板</strong>。</p><p>一个简单的示例如下：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: </span><br><span class="line">categories: </span><br></pre></td></tr></table></figure><h4 id="（2）头部设置"><a href="#（2）头部设置" class="headerlink" title="（2）头部设置"></a>（2）头部设置</h4><p>在每篇利用 Hexo 创建的文章的开头，都会有对文章进行说明的文字，叫做 <strong>文章头部</strong></p><p>文章的头部除了可以设置文章标题、发布日期等基础信息外，还可以为文章添加标签、分类等</p><p>一个简单的示例如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: Title</span><br><span class="line">date: YYYY-MM-DD HH:MM:SS</span><br><span class="line">tags: [tag1, tag2, ...]</span><br><span class="line">categories: category</span><br><span class="line">1234</span><br></pre></td></tr></table></figure><p><strong>注意</strong>：属性和属性值之间必须有一个空格，否则会解析错误</p><h4 id="（3）首页显示"><a href="#（3）首页显示" class="headerlink" title="（3）首页显示"></a>（3）首页显示</h4><p>在利用 Hexo 框架搭建的博客网站中，首页会显示文章的内容，且默认显示文章的全部内容</p><p>如果当文章太长的时候就会显得十分冗余，所以我们有必要对其进行精简</p><p>这时，我们只需在文章中使用 <code>&lt;!--more--&gt;</code> 标志即可，表示只会显示标志前面的内容</p><h2 id="四、部署发布"><a href="#四、部署发布" class="headerlink" title="四、部署发布"></a>四、部署发布</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g -c</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -132,6 +156,8 @@
     
     
     <category term="hexo" scheme="http://www.novoice.top/tags/hexo/"/>
+    
+    <category term="基础教程" scheme="http://www.novoice.top/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
