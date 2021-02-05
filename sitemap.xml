@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%B8%89-%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</loc>
+    
+    <lastmod>2021-02-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%8C-%E6%96%87%E7%AB%A0%E6%96%B0%E5%A2%9E%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/</loc>
     
     <lastmod>2021-02-05</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>http://www.novoice.top/2021/02/04/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B(%E4%B8%80)%20%20%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/</loc>
-    
-    <lastmod>2021-02-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.novoice.top/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%B8%89-%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</loc>
     
     <lastmod>2021-02-05</lastmod>
     
@@ -53,7 +53,7 @@
 
   
   <url>
-    <loc>http://www.novoice.top/tags/typora/</loc>
+    <loc>http://www.novoice.top/tags/md/</loc>
     <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -88,7 +88,7 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/md/</loc>
+    <loc>http://www.novoice.top/tags/typora/</loc>
     <lastmod>2021-02-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
