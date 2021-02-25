@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-02-12T13:28:06.692Z</updated>
+  <updated>2021-02-25T12:17:32.974Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Github】提升github访问速度</title>
+    <link href="http://www.novoice.top/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/"/>
+    <id>http://www.novoice.top/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/</id>
+    <published>2021-02-25T11:56:26.000Z</published>
+    <updated>2021-02-25T12:17:32.974Z</updated>
+    
+    <content type="html"><![CDATA[<p>此方式适用于各种操作系统，主要方式为修改host文件，添加配置的方式</p><h4 id="1-查找域名对应的ip地址，并修改hosts文件"><a href="#1-查找域名对应的ip地址，并修改hosts文件" class="headerlink" title="1.查找域名对应的ip地址，并修改hosts文件"></a>1.查找域名对应的ip地址，并修改hosts文件</h4><p>windows/Macos/linux通用的方式：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nslookup github.com</span><br><span class="line">nslookup github.global.ssl.fastly.net</span><br></pre></td></tr></table></figure><a id="more"></a><p><code>注：尝试过fastly.Net的方式，加速的效果不是很明显，但是改为fastly.net的方式加速效果的话有着显著的提高。</code></p><p>上述输出的结果为</p><p><img src="%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A601.png" alt="【github】提升github访问速度01"></p><p><img src="%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A602.png" alt="【github】提升github访问速度02"></p><p>上述图片均为windows10环境下的结果。具体参数按照自己的电脑实际情况来看。</p><p><code>特别声明：网上很多博主的地址，大多数都是自己电脑的查询地址，不建议使用，最好的使用方式是查看自己本机的地址，此地址会变化，所以尽量自己动手查看下，以防万一。</code></p><p>将以下内容添加到windows(==C:\Windows\System32\drivers\etc\hosts==) macos(==/etc/hosts==)中</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">13.250.177.223 github.com</span><br><span class="line">157.240.8.41 github.global.ssl.fastly.net</span><br></pre></td></tr></table></figure><blockquote><p>新增到文件的末尾（注意windows10用户会存在文件无法修改的权限，此修改文件的方式，见下期博客）</p></blockquote><h4 id="2-刷新dns缓存"><a href="#2-刷新dns缓存" class="headerlink" title="2.刷新dns缓存"></a>2.刷新dns缓存</h4><p>macos:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dscacheutil -flushcache</span><br></pre></td></tr></table></figure><p>windows：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure><h4 id="3-使用chrome插件"><a href="#3-使用chrome插件" class="headerlink" title="3.使用chrome插件"></a>3.使用chrome插件</h4><p>谷歌商店搜索github加速即可对github提升一些略微显著的效果。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;此方式适用于各种操作系统，主要方式为修改host文件，添加配置的方式&lt;/p&gt;
+&lt;h4 id=&quot;1-查找域名对应的ip地址，并修改hosts文件&quot;&gt;&lt;a href=&quot;#1-查找域名对应的ip地址，并修改hosts文件&quot; class=&quot;headerlink&quot; title=&quot;1.查找域名对应的ip地址，并修改hosts文件&quot;&gt;&lt;/a&gt;1.查找域名对应的ip地址，并修改hosts文件&lt;/h4&gt;&lt;p&gt;windows/Macos/linux通用的方式：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;nslookup github.com&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;nslookup github.global.ssl.fastly.net&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="github" scheme="http://www.novoice.top/categories/github/"/>
+    
+    
+    <category term="github" scheme="http://www.novoice.top/tags/github/"/>
+    
+    <category term="git" scheme="http://www.novoice.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【Springboot】springboot+mybatis自动创建表</title>
+    <link href="http://www.novoice.top/2021/02/13/%E3%80%90springboot%E3%80%91springboot-mybatis%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BA%E8%A1%A8/"/>
+    <id>http://www.novoice.top/2021/02/13/%E3%80%90springboot%E3%80%91springboot-mybatis%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BA%E8%A1%A8/</id>
+    <published>2021-02-13T10:20:58.000Z</published>
+    <updated>2021-02-18T17:31:51.306Z</updated>
+    
+    
+    
+    
+    <category term="springBoot" scheme="http://www.novoice.top/categories/springBoot/"/>
+    
+    
+    <category term="springBoot" scheme="http://www.novoice.top/tags/springBoot/"/>
+    
+    <category term="mybatis" scheme="http://www.novoice.top/tags/mybatis/"/>
+    
+  </entry>
   
   <entry>
     <title>【Hexo】基础教程(五) 阿里云域名解析</title>
