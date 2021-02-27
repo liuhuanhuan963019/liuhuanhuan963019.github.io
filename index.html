@@ -325,6 +325,197 @@
             
 
   
+    <article id="post-【Pytorch】pytorch安装（包含cuda详细安装）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/">【Pytorch】pytorch安装（包含cuda详细安装）</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/" class="archive-article-date">
+        <time datetime="2021-02-26T16:37:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-27</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Pytorch安装"><a href="#Pytorch安装" class="headerlink" title="Pytorch安装"></a>Pytorch安装</h1><h2 id="一、安装anaconda"><a href="#一、安装anaconda" class="headerlink" title="一、安装anaconda"></a>一、安装anaconda</h2><p>网址：<a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a></p>
+<p>网页翻到最下面，选择下载Windows 32位/64位版本，傻瓜式安装，记得勾选【Add to Path】 可以将anaconda的环境安装到系统中去</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91Pytorch%E5%AE%89%E8%A3%8501.png" alt="image-20210226184530041"></p>
+<h2 id="二、Anaconda创建虚拟环境"><a href="#二、Anaconda创建虚拟环境" class="headerlink" title="二、Anaconda创建虚拟环境"></a>二、Anaconda创建虚拟环境</h2><p><strong>1 、从开始菜单中打开Anaconda Navigator，单机进入Environments选项卡，如下图所示</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8502.png" alt="image-20210226185001846"></p>
+<p><strong>2、在Environments选项卡中，单击左下方的Create按钮，创建虚拟环境，如下图所示</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8503.png" alt="image-20210226185132837"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8504.png" alt="image-20210226185258488"><code>此时在Environments选项卡中，已经出现刚刚创建的虚拟环境 【注】才创建的虚拟环境只包含最基本的库</code></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8505.png" alt="image-20210226185650716"></p>
+<h2 id="三、安装Pycharm-创建工程"><a href="#三、安装Pycharm-创建工程" class="headerlink" title="三、安装Pycharm,创建工程"></a>三、安装Pycharm,创建工程</h2><p>网址：<a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a></p>
+<p><strong>1、单击download进入下载页面</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8506.png" alt="image-20210226185905498"></p>
+<p>此时，有两种版本选择，嫌麻烦就用社区版，但是功能较少，专业版需要自己找破解，或者用校园邮箱申请一年免费，一年后再次审查通过还可以继续用</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8507.png" alt="image-20210226185939074"></p>
+<p><strong>2、打开PyCharm，单击New project</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8508.png" alt="image-20210226190033081"></p>
+<p><strong>3、PyCharm创建Conda工程</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8509.png" alt="image-20210226190145258"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8510.png" alt="image-20210226190227936"></p>
+<p>4、在Anaconda安装文件夹下找到envs文件夹，里面存储的都是你创建的虚拟环境，然后选择刚刚创建的虚拟环境文件下的python.exe，点击OK</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8511.png" alt="image-20210226190301076"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8512.png" alt="image-20210226190328238"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8546.png" alt="image-20210226190350296"></p>
+<p>5、创建完成后自动进入如下界面：</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8513.png" alt="image-20210226190429918"></p>
+<h2 id="四、CUDA安装"><a href="#四、CUDA安装" class="headerlink" title="四、CUDA安装"></a>四、CUDA安装</h2><p><strong>1、查看CUDA支持版本</strong></p>
+<p>打开NVIDIA控制面板，按照图示顺序查看CUDA所支持的最高版本</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8514.png" alt="image-20210226200016567"></p>
+<p><strong>2、下载CUDA</strong></p>
+<p>打开网址：<a href="https://developer.nvidia.com/cuda-toolkit-archive%EF%BC%8C%E9%80%89%E6%8B%A9%E9%80%82%E5%90%88%E8%87%AA%E5%B7%B1%E7%94%B5%E8%84%91%E7%9A%84cuda%E7%89%88%E6%9C%AC%EF%BC%8C%E6%AF%94%E5%88%9A%E6%89%8D%E6%9F%A5%E7%9C%8B%E7%9A%84%E6%89%80%E6%94%AF%E6%8C%81%E7%9A%84CUDA">https://developer.nvidia.com/cuda-toolkit-archive，选择适合自己电脑的cuda版本，比刚才查看的所支持的CUDA</a> 版本低都行</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8515.png" alt="image-20210226233838107"></p>
+<p>此时要根据自己的系统进行选择</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8516.png" alt="image-20210226235343901"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8517.png" alt="image-20210226235440600"></p>
+<p><strong>3、下载cuDNN</strong></p>
+<p>打开网址：<a href="https://developer.nvidia.com/cudnn%EF%BC%8C%E7%82%B9%E5%87%BBDownload">https://developer.nvidia.com/cudnn，点击Download</a> cuDNN</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8518.png" alt="image-20210227000358285"></p>
+<p>注意，cuDNN下载需要NVIDIA账户，没有则先注册，此步需要耐心，贼卡</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8519.png" alt="image-20210227000437102"></p>
+<p><strong>4、登陆之后，点击Download cuDNN进入的应该是如下界面，先把问卷填了，才能进入下载界面</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8520.png" alt="image-20210227000708677"></p>
+<p>此时终于进入下载界面了，勾选I agree…，然后按照下图操作</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8521.png" alt="image-20210227000739017"></p>
+<p><strong>5、选择适合自己的操作系统版本下载</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8522.png" alt="image-20210227000848436"></p>
+<p><strong>6、安装CUDA</strong></p>
+<p>双击安装包开始安装，此时让你选择的路径并不是安装路径，而是暂时解压出来的文件所需要存放的地方，安装完成后会删除，只要保证选择空间足够大的地方即可，安装路径是默认C盘里，不能修改，此处可以不更改，点击OK即可</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8523.png" alt="image-20210227000933389"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8524.png" alt="image-20210227001012795"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8525.png" alt="image-20210227001038878"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8526.png" alt="image-20210227001105715"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8527.png" alt="image-20210227001140064"></p>
+<p> <code>验证CUDA是否安装成功，打开cmd，输入 nvcc –V，如下返回则说明安装成功 </code></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8528.png" alt="image-20210227001226296"></p>
+<p>解压压缩包，压缩包内文件如下：</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8529.png" alt="image-20210227001333119"></p>
+<p><strong>7、安装cuDNN</strong></p>
+<p>打开cuda安装文件夹，默认的强制安装路径为：</p>
+<p>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\版本号</p>
+<p>打开安装路径如下：</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8530.png" alt="image-20210227001422354"></p>
+<p>将解压的cuDNN压缩包内的三个文件夹复制到CUDA安装目录下：</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8531.png" alt="image-20210227001503720"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8532.png" alt="image-20210227001527682"></p>
+<p>验证cuDNN是否安装完成，打开cmd，输入</p>
+<p>   <code>cd C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\extras\demo_suite   </code></p>
+<p>然后执行命令：</p>
+<p>   <code>bandwidthTest.exe   </code></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8533.png" alt="image-20210227001624983"></p>
+<p>然后再执行命令：</p>
+<p> <code>deviceQuery.exe </code></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8534.png" alt="image-20210227001657605"></p>
+<p><strong>8、下载PyTorch安装文件</strong></p>
+<p>打开网址：<a href="https://download.pytorch.org/whl/torch_stable.html%EF%BC%8C%E7%95%8C%E9%9D%A2%E5%A6%82%E4%B8%8B%EF%BC%9A">https://download.pytorch.org/whl/torch_stable.html，界面如下：</a></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8535.png" alt="image-20210227001753290"></p>
+<p>每个文件命名都是有规律的：</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8536.png" alt="image-20210227001822167"></p>
+<p>使用快捷键Ctrl+F，搜索我们需要安装的版本文件下载</p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8537.png" alt="image-20210227001851897"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8538.png" alt="image-20210227001909013"></p>
+<h2 id="五、安装pytorch"><a href="#五、安装pytorch" class="headerlink" title="五、安装pytorch"></a>五、安装pytorch</h2><p><strong>1、打开PyCharm，进入刚刚创建的工程里，打开Terminal窗口：</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8541.png" alt="image-20210227002109768"></p>
+<p><strong>2、在PyCharm的Terminal窗口中键入cd 命令，切换目录到PyTorch安装包所在的地址，然后分别执行pip install命令安装两个文件，先安装torch，再安装torchvision，期间会一起下载所需要的依赖包</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8542.png" alt="image-20210227002141655"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8543.png" alt="image-20210227002200869"></p>
+<p><strong>3、现在验证是否安装成功，在main.py里写入以下代码并运行：</strong></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8544.png" alt="image-20210227002226122"></p>
+<p><img src="%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%8545.png" alt="image-20210227002303019"></p>
+<blockquote>
+<p>以上方式针对的是windows10操作系统，大家可以根据大家各自的操作系统选择，安装cuda或者不安装cuda</p>
+</blockquote>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pytorch</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">cuda</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/pytorch//" class="article-tag-list-link color3">pytorch</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-【github】代码同步提交到github和码云" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1306,112 +1497,6 @@
 
 
   
-    <article id="post-Markdown-语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/04/Markdown-%E8%AF%AD%E6%B3%95/">Markdown 语法</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/04/Markdown-%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-        <time datetime="2021-02-03T17:57:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-04</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<p>Markdown 是一种可以使用普通文本编辑器编写的 标记语言，通过简单的 标记语法，它可以使普通文本内容具有一定的格式。</p>
-</blockquote>
-<p><a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程：</a></p>
-    
-    <a class="article-more-a" href="/2021/02/04/Markdown-%E8%AF%AD%E6%B3%95/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">md</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/markdown//" class="article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/04/Markdown-%E8%AF%AD%E6%B3%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next »</a>
@@ -1551,6 +1636,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">pytorch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cuda</a>
               </li>
              
               <li class="article-tag-list-item">
