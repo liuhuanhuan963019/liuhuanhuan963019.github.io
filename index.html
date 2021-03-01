@@ -325,6 +325,887 @@
             
 
   
+    <article id="post-sql-版本不兼容问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/sql-%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/">Sql 版本不兼容问题</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/sql-%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        <time datetime="2021-03-01T13:33:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>sql 版本不兼容问题</p>
+<h1 id="Recommended-in-standard-MySQL-setup"><a href="#Recommended-in-standard-MySQL-setup" class="headerlink" title="Recommended in standard MySQL setup"></a>Recommended in standard MySQL setup</h1><p>sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/sql-%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql-优化浅析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/">Mysql 优化浅析</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/" class="archive-article-date">
+        <time datetime="2021-03-01T13:32:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>数据库优化从4个方向去优化<br>1、sql和索引，写出健壮的sql，索引不是越多越好<br>2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）<br>3、系统配置（打开文件系统次数，文件安全性）<br>4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）</p>
+<blockquote>
+<p>show variables like ‘slow_query_log’  查询慢查询日志<br>set globel slow_query_log_file = ‘/home/mysql/sql_log/mysql-slow.log’  设置慢查询日志的路径<br>set global log_queries_not_using_indexes = on;    设置慢查询日志是否记录未添加索引的字段<br>set global long_query_time = 1    设置记录慢查询日志时间<br>mysqldumpslow -t 3 url | more</p>
+</blockquote>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/mysql//" class="article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-适合macos系统中idea快捷键与设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/%E9%80%82%E5%90%88macos%E7%B3%BB%E7%BB%9F%E4%B8%ADidea%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE/">适合Macos系统中idea快捷键与设置</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/%E9%80%82%E5%90%88macos%E7%B3%BB%E7%BB%9F%E4%B8%ADidea%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE/" class="archive-article-date">
+        <time datetime="2021-03-01T13:31:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">alt &#x3D; option</span><br><span class="line">ctrl &#x3D; control</span><br><span class="line"></span><br><span class="line">control + enter		类初始化</span><br><span class="line">command + o			打开类</span><br><span class="line">command + e         打开最近打开的文件</span><br><span class="line">control + table     打开上次打开的文件</span><br><span class="line">command + delete	删除行</span><br><span class="line">command + x			剪切行</span><br><span class="line">command + d    		复制一行</span><br><span class="line">control + t 		重构菜单</span><br><span class="line">option + 上&#x2F;下    	缩小或放大选区</span><br><span class="line">command + 左&#x2F;右 		移动鼠标光标到最左边和最右边</span><br><span class="line">command + shift + 上&#x2F;下  移动行或方法上移或下移</span><br><span class="line">option + enter  	构造函数参数提取到属性，自动创建类，提示信息，错误引入修订</span><br><span class="line">Command shift + o 	打开文件</span><br><span class="line">command + shift + t 打开单元测试</span><br><span class="line">command + option + enter 	在上面增加一行 	</span><br><span class="line">COMmand + shift + enter 	在下面增加一行</span><br><span class="line">control + option + 0      优化import,删除无用引入</span><br><span class="line">command + shift + a		杳找action</span><br><span class="line">command + option + l 	格式化代码</span><br><span class="line">option + control + r 	调出运行，列出那些可以执行</span><br><span class="line">Command + option + p	抽取参数</span><br><span class="line">Command + option + v	抽取变量</span><br><span class="line">Command + option + f	抽取字段</span><br><span class="line">Command + option + c	抽取常量</span><br><span class="line">Command + option + m	抽取方法</span><br><span class="line"></span><br><span class="line">fn+shift+f6			重命名</span><br><span class="line">command + option + n 	内联将调用替换成实现   将一个变量定义抽取成一个变量直接赋值</span><br><span class="line"></span><br><span class="line">invert if condition 条件反转 内容也反转   如if大于变小于号</span><br><span class="line"></span><br><span class="line">Live templates 内置 偏好设置E</span><br><span class="line">$NAME$ 记得要 点define</span><br><span class="line">目定义live tem temp lates 替换 偏好设置里有.. eg: sout Tori 1ter</span><br><span class="line">向后声明 eg: &quot;aa&quot;.var， &quot;sdf&#39;&quot; . fori</span><br><span class="line">智能补全</span><br><span class="line"></span><br><span class="line">if（str &#x3D;&#x3D; null） &#123;</span><br><span class="line">return &quot;abc&quot; &#x2F;&#x2F;command +shift +enter 补分号  </span><br><span class="line">double shift查找文件方</span><br><span class="line">command + n弹出生 成代码(get set方法或者 构造方法之类)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><u>实现ctrl+ 滚轮变大字体：</u></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;General-&gt;勾选change font size.....</span><br></pre></td></tr></table></figure>
+<p>设置自动导包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;general-&gt;auto import-&gt;insert imports on paste All</span><br></pre></td></tr></table></figure>
+<p>显示方法分割符号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;general-&gt;appearance-&gt;show method separators</span><br></pre></td></tr></table></figure>
+
+<p>取消单行显示文件 文件多时可以一起显示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;general-&gt;Editor Tabs-&gt;show tabs in one row</span><br></pre></td></tr></table></figure>
+<p> 修改注释的颜色</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a58b9ff46fcb05e7f4e2ff6a284fc6eb.png" alt="image-20201015183930399"></p>
+<p>设置导包，超过几个包自动转为* 如5歌以上util 转为*</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/613195d0d9477d412ad68d74fbd8e3e3.png" alt="image-20201015184118158"></p>
+<p>设置文件新建头部标签签名：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/bdc9c2ee7f4c41e164a64d2f060faf8e.png" alt="image-20201015184336781"></p>
+<p>设置当前项目编码格式的问题：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b325a31c944953f98374525b4f5f0122.png" alt="image-20201015184540827"></p>
+<p>设置自动自动编译</p>
+<p><a href="https://tva1.sinaimg.cn/large/007S8ZIlgy1gjq7nggkbpj31lw0t4n6n.jpg">https://tva1.sinaimg.cn/large/007S8ZIlgy1gjq7nggkbpj31lw0t4n6n.jpg</a>)</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e4111c72d9cb270af84b77cc34717d6c.png" alt="image-20201015184922175"></p>
+<p>若出现无代码提示的显示功能时，可更改</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c755691474638eb535f5161ea6663813.png" alt="image-20201015185031169"></p>
+<p>快捷输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Sout   输出</span><br><span class="line"></span><br><span class="line">soutp</span><br><span class="line"></span><br><span class="line">soutm</span><br><span class="line"></span><br><span class="line">soutv</span><br><span class="line"></span><br><span class="line">main </span><br><span class="line"></span><br><span class="line">psvm main方法</span><br><span class="line"></span><br><span class="line">循环输出： iter. fori   itar</span><br><span class="line">list.for   正对list集合的增强for循环</span><br><span class="line">list.forr   倒叙遍历</span><br><span class="line"></span><br><span class="line">ifn   判断list是不是null</span><br><span class="line">inn   判断list是不是null</span><br><span class="line"></span><br><span class="line">prsf.   p rivate static final </span><br></pre></td></tr></table></figure>
+
+
+<p>idea添加本地tomcat运行测试</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d839abec792bac339117f567d431e5f2.png" alt="image-20201015190525155"></p>
+<p>idea中添加数据库的管理</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ef0d13da68cb9e62a88f6eba95f15823.png" alt="image-20201015190722036"></p>
+<p>上传当前项目到gi t</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/79d62784078627f21154ec8e49252f19.png" alt="image-20201015191142473"></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/%E9%80%82%E5%90%88macos%E7%B3%BB%E7%BB%9F%E4%B8%ADidea%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-macos-常用快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/macos-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">Macos 常用快捷键</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/macos-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
+        <time datetime="2021-03-01T13:30:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="选取空间截图"><a href="#选取空间截图" class="headerlink" title="选取空间截图"></a>选取空间截图</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shift+command+4</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="全屏截图"><a href="#全屏截图" class="headerlink" title="全屏截图"></a>全屏截图</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shift+command+3</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="可以显示隐藏文件，文件夹，再按一次，恢复隐藏"><a href="#可以显示隐藏文件，文件夹，再按一次，恢复隐藏" class="headerlink" title="可以显示隐藏文件，文件夹，再按一次，恢复隐藏"></a>可以显示隐藏文件，文件夹，再按一次，恢复隐藏</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Command+Shift+.</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="finder下可以前往任何文件夹，包括隐藏文件夹"><a href="#finder下可以前往任何文件夹，包括隐藏文件夹" class="headerlink" title="finder下可以前往任何文件夹，包括隐藏文件夹"></a>finder下可以前往任何文件夹，包括隐藏文件夹</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Command+Shift+G</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="复制当前文件路径"><a href="#复制当前文件路径" class="headerlink" title="复制当前文件路径"></a>复制当前文件路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">commend+option+c</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="查看文件路径"><a href="#查看文件路径" class="headerlink" title="查看文件路径"></a>查看文件路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command + i</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="解决pycharm打不开的问题"><a href="#解决pycharm打不开的问题" class="headerlink" title="解决pycharm打不开的问题"></a><a href="https://www.cnblogs.com/liuxiaoming123/p/12783121.html">解决pycharm打不开的问题</a></h3><h3 id="vim命令"><a href="#vim命令" class="headerlink" title="vim命令"></a>vim命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">i 开始编辑 </span><br><span class="line">esc 退出编辑 </span><br><span class="line">:w 保存但不退出 </span><br><span class="line">:wq  保存并退出 </span><br><span class="line">:q   退出 </span><br><span class="line">:q!  强制退出，不保存 </span><br><span class="line">:e!  放弃所有修改，从上次保存文件开始再编辑命令历史</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="显示隐藏文件"><a href="#显示隐藏文件" class="headerlink" title="显示隐藏文件"></a>显示隐藏文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.Finder AppleShowAllFiles YES;KillAll Finder</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="关闭隐藏文件"><a href="#关闭隐藏文件" class="headerlink" title="关闭隐藏文件"></a>关闭隐藏文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.Finder AppleShowAllFiles NO;KillAll Finder</span><br></pre></td></tr></table></figure>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/macos-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-【小白】brew命令使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91brew%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/">【小白】Brew命令使用</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91brew%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+        <time datetime="2021-03-01T13:29:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="一：官网"><a href="#一：官网" class="headerlink" title="一：官网"></a>一：官网</h1><p><a href="https://brew.sh/">HomeBrew</a></p>
+<h1 id="二：目录"><a href="#二：目录" class="headerlink" title="二：目录"></a>二：目录</h1><ul>
+<li><p>安装</p>
+</li>
+<li><p>查看帮助信息</p>
+</li>
+<li><p>查看版本</p>
+</li>
+<li><p>更新HomeBrew自己</p>
+</li>
+<li><p>安装软件包</p>
+</li>
+<li><p>查询可更新的包</p>
+</li>
+<li><p>更新包（formula）</p>
+</li>
+<li><p>清理旧版本</p>
+</li>
+<li><p>锁定不想要的包</p>
+</li>
+<li><p>卸载安装包</p>
+</li>
+<li><p>查看包信息</p>
+</li>
+<li><p>查看安装列表</p>
+</li>
+<li><p>查询可用包</p>
+</li>
+<li><p>卸载HomeBrew</p>
+</li>
+</ul>
+<h1 id="三：常用命令"><a href="#三：常用命令" class="headerlink" title="三：常用命令"></a>三：常用命令</h1><ul>
+<li><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;安装依赖工具</span><br><span class="line">xcode-select --install</span><br><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>查看帮助信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew help</span><br></pre></td></tr></table></figure></li>
+<li><p>查看版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew -v</span><br></pre></td></tr></table></figure></li>
+<li><p>更新HomeBrew自己</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure></li>
+<li><p>安装软件包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">brew install [包名]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;安装git</span><br><span class="line">brew install git</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;安装git-lfs</span><br><span class="line">brew install git-lfs</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;安装wget</span><br><span class="line">brew install wget</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;安装openssl</span><br><span class="line">brew install openssl</span><br></pre></td></tr></table></figure></li>
+<li><p>查询可更新的包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew outdated</span><br></pre></td></tr></table></figure></li>
+<li><p>更新包（formula）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;更新所有</span><br><span class="line">brew upgrade</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;更新指定包</span><br><span class="line">brew upgrade [包名]</span><br></pre></td></tr></table></figure></li>
+<li><p>清理旧版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;清理所有包的旧版本</span><br><span class="line">brew cleanup </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;清理指定包的旧版本</span><br><span class="line">brew cleanup [包名]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;查看可清理的旧版本包，不执行实际操作</span><br><span class="line">brew cleanup -n </span><br></pre></td></tr></table></figure></li>
+<li><p>锁定不想要的包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;锁定某个包</span><br><span class="line">brew pin $FORMULA  </span><br><span class="line">&#x2F;&#x2F;取消锁定</span><br><span class="line">brew unpin $FORMULA     </span><br></pre></td></tr></table></figure></li>
+<li><p>卸载安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall [包名]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;例：卸载git</span><br><span class="line">brew uninstall git</span><br></pre></td></tr></table></figure></li>
+<li><p>查看包信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info [包名]</span><br></pre></td></tr></table></figure></li>
+<li><p>查看安装列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew list</span><br></pre></td></tr></table></figure></li>
+<li><p>查询可用包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search [包名]</span><br></pre></td></tr></table></figure></li>
+<li><p>卸载HomeBrew</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd &#96;brew --prefix&#96;</span><br><span class="line">rm -rf Cellar</span><br><span class="line">brew prune</span><br><span class="line">rm &#96;git ls-files&#96;</span><br><span class="line">rm -r Library&#x2F;Homebrew Library&#x2F;Aliases Library&#x2F;Formula Library&#x2F;Contributions</span><br><span class="line">rm -rf .git</span><br><span class="line">rm -rf ~&#x2F;Library&#x2F;Caches&#x2F;Homebrew</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">brew</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91brew%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-【小白】macos常用开发环境配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91macos%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">【小白】Macos常用开发环境配置</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91macos%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+        <time datetime="2021-03-01T13:28:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="table-自动补全"><a href="#table-自动补全" class="headerlink" title="table 自动补全"></a>table 自动补全</h2><ol>
+<li><p>打开终端，输入nano .inputrc 命令回车，进入编辑状态</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nano .inputrc</span></span><br></pre></td></tr></table></figure>
+
+</li>
+<li><p>粘贴下面的语句到文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set completion-ignore-case on</span><br><span class="line">set show-all-if-ambiguous on</span><br><span class="line">TAB: menu-complete</span><br></pre></td></tr></table></figure></li>
+<li><p>保存文件， Control + O 保存， 再按回车</p>
+</li>
+<li><p>Control + X , 退出文本编辑</p>
+</li>
+<li><p>重启终端， 试验Tab键自动补全已经OK啦</p>
+</li>
+</ol>
+<h2 id="新增ll命令"><a href="#新增ll命令" class="headerlink" title="新增ll命令"></a>新增ll命令</h2><p>1.打开配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
+<p>2.i进入编辑模式，esc推出，:wq保存更改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias ll&#x3D;&#39;ls -alF&#39;</span><br><span class="line">alias la&#x3D;&#39;ls -A&#39;</span><br><span class="line">alias l&#x3D;&#39;ls -CF</span><br></pre></td></tr></table></figure>
+<p>3.重新加载配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
+<p>4.若此时再出现诸如一下问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zsh: command not found: ll</span><br><span class="line">zsh: command not found: la</span><br><span class="line">zsh: command not found: l</span><br></pre></td></tr></table></figure>
+<p>5.打开文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .zshrc</span><br></pre></td></tr></table></figure>
+<p>6.添加如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias ll&#x3D;&#39;ls -alF&#39;</span><br><span class="line">alias la&#x3D;&#39;ls -A&#39;</span><br><span class="line">alias l&#x3D;&#39;ls -CF&#39;</span><br></pre></td></tr></table></figure>
+<p>7.保存之后使用source .zshrc</p>
+<h2 id="新增brew命令"><a href="#新增brew命令" class="headerlink" title="新增brew命令"></a>新增brew命令</h2><p>安装时会提示安装git 安装好git后重新启动输入命令运行即可（时间比较久）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;bin&#x2F;zsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://www.mintimate.cn/2020/04/05/Homebrew/">https://www.mintimate.cn/2020/04/05/Homebrew/</a> 博客</p>
+</blockquote>
+<p>​    本地软件库列表：brew ls</p>
+<p>​    查找软件：brew search google（其中google替换为要查找的软件关键字）</p>
+<p>​    查看brew版本：brew -v 更新brew版本：brew update</p>
+<p><strong>现在可以输入命令open ~/.zshrc -e 或者 open ~/.bash_profile -e 整理一下重复的语句(运行 echo $SHELL 可以查看应该打开那一个文件修改)</strong></p>
+<img src="../../../../csdn博客/Library/Application Support/typora-user-images/image-20201205133049764.png" alt="image-20201205133049764" style="zoom: 50%;" />
+
+<h2 id="新增wget-命令"><a href="#新增wget-命令" class="headerlink" title="新增wget 命令"></a>新增wget 命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install wget</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="新增rz-sz命令"><a href="#新增rz-sz命令" class="headerlink" title="新增rz/sz命令"></a>新增rz/sz命令</h2><p>rz 上传功能    sz 下载功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install lrzsz</span><br></pre></td></tr></table></figure>
+<h2 id="Mac-提示文件损坏解决方式"><a href="#Mac-提示文件损坏解决方式" class="headerlink" title="Mac 提示文件损坏解决方式"></a>Mac 提示文件损坏解决方式</h2><blockquote>
+<p>第一种常见情况：只需要开启允许“任何来源”即可</p>
+<p>1.在终端控制台中输入：sudo spctl –master-disable，回车,如果你的笔记本设置有开机密码，会提示要你输入密码，输入的整个过程中是看不到密码显示的，不要因为看不到输入的密码而着急，继续输入完密码后按下回车键。</p>
+<p>2.打开系统偏好设置——&gt;安全性与隐私，显示了任何来源，然后点击允许来自任何来源。如果没有【任何来源】的选项，可以再次执行刚才的代码进行尝试。</p>
+<p>3.重新双击安装文件便不会再次提示“文件已损坏”了。</p>
+<p>此时有的小伙伴发现依旧会出现“文件已损坏的提示”，此时就需要使用另外一种方式了</p>
+<p>1.打开终端，输入： sudo xattr -r -d com.apple.quarantine，最后面加上一个空格<br>2.然后在访达-&gt;应用程序中找到你要打开的软件，拖到终端窗口中，回车执行，就可以正常打开文件了</p>
+<p>作者：Sugar_ping<br>链接：<a href="https://www.jianshu.com/p/4ad57723a4fc">https://www.jianshu.com/p/4ad57723a4fc</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<h2 id="新增maven"><a href="#新增maven" class="headerlink" title="新增maven"></a>新增maven</h2><ol>
+<li><p>打开配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">open ~&#x2F;.bash_profile</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MAVEN_HOME&#x3D;&#x2F;Users&#x2F;light6&#x2F;JavaFile&#x2F;apache-maven-3.6.3</span><br><span class="line">export MAVEN_HOME</span><br><span class="line">export PATH&#x3D;$MAVEN_HOME&#x2F;bin:$PATH</span><br></pre></td></tr></table></figure>
+<p>3.保存配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>创建/修改.zshrc文件<br>如果有.zshrc文件则修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">open ~&#x2F;.zshrc</span><br><span class="line">touch ~&#x2F;.zshrc</span><br><span class="line"># 打开后新增配置</span><br><span class="line">MAVEN_HOME&#x3D;&#x2F;Users&#x2F;light6&#x2F;JavaFile&#x2F;apache-maven-3.6.3</span><br><span class="line">export MAVEN_HOME</span><br><span class="line">export PATH&#x3D;$MAVEN_HOME&#x2F;bin:$PATH</span><br><span class="line">source ~&#x2F;.bash_profile</span><br><span class="line"></span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure></li>
+<li><p>maven修改本地镜像地址</p>
+</li>
+</ol>
+<blockquote>
+<p>Conf-&gt;settings.xml</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirrors&gt;</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line">&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line">&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;</span><br><span class="line">&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line">&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br><span class="line">&lt;&#x2F;mirrors&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="新增tomcat环境配置"><a href="#新增tomcat环境配置" class="headerlink" title="新增tomcat环境配置"></a>新增tomcat环境配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim ~&#x2F;.bash_profile </span><br><span class="line"># 新增tomcat bin绝对路径</span><br><span class="line">export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;apache-tomcat-8.5.60&#x2F;bin</span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="node"><a href="#node" class="headerlink" title="node"></a>node</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="brew-安装vue"><a href="#brew-安装vue" class="headerlink" title="brew 安装vue"></a>brew 安装vue</h2><blockquote>
+<p>#安装cnpm</p>
+<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>#安装脚手架</p>
+<p>npm install -g vue-cli</p>
+</blockquote>
+<h2 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h2><blockquote>
+<p>cnpm install webpack -g</p>
+</blockquote>
+<h2 id="安装vue脚手架"><a href="#安装vue脚手架" class="headerlink" title="安装vue脚手架"></a>安装vue脚手架</h2><blockquote>
+<p>npm install -g vue-cli</p>
+<p>创建首个vue项目</p>
+<p>1.在Mac中创建文件夹，名称自己起，然后在终端打开该目录，也可以用vscode 打开，在终端输入：</p>
+<p>sudo vue init webpack vue_project</p>
+<p>坐等安装完成。</p>
+<p>2.安装成功后切换到在终端中切换到项目根目录</p>
+<p>cd vue_peoject</p>
+<p>3.安装项目依赖，在终端中输入：</p>
+<p>sudo npm install</p>
+<p>4.安装依赖完成后，启动项目，在终端或者vscode终端输入：</p>
+<p>npm run dev</p>
+<p>5.访问<a href="http://localhsot:8080，打开vue项目">http://localhsot:8080，打开vue项目</a></p>
+</blockquote>
+<h2 id="Mac-OS-下-Python3-pip-配置国内源"><a href="#Mac-OS-下-Python3-pip-配置国内源" class="headerlink" title="Mac OS 下 Python3 pip 配置国内源"></a>Mac OS 下 Python3 pip 配置国内源</h2><blockquote>
+<p>阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣 (douban) <a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a><br>两种方式使用</p>
+<p>安装时指定</p>
+<p>~ pip install ipython -i <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a></p>
+<p>如果提示 host 不被信任可以加上参数 –trusted-host</p>
+<p>~ pip install ipython -i <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a> –trusted-host mirrors.aliyun.com</p>
+<p>​                                                                   macOS</p>
+<p>~ mkdir .pip   # 在用户根目录（cd~ / cd）下创建一个.pip目录<br>~ cd pip<br>~ touch pip.conf # 创建一个pip配置文件<br># 写入配置<br>[global]<br>index-url = <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>[install]<br>trusted-host = mirrors.aliyun.com</p>
+</blockquote>
+<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>1.安装完Node.js 及 Git 后，即可使用npm来安装Hexo：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+
+<p>2.创建一个目录用来作为你的blog目录，例如 MyBlog；并在该目录中进行Hexo的初始化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init MyBlog</span><br><span class="line">cd ~&#x2F;MyBlog&#x2F;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成后，得到以下目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">·</span><br><span class="line">|-- _config.yml</span><br><span class="line">|-- package.json</span><br><span class="line">|-- scaffolds</span><br><span class="line">|-- source</span><br><span class="line">|   |-- _drafts</span><br><span class="line">|   |-- _posts</span><br><span class="line">|-- themes</span><br></pre></td></tr></table></figure>
+<p>至此完成了Hexo的安装及初始化,下面进行本地的预览</p>
+<p>3.安装hexo server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-server </span><br></pre></td></tr></table></figure>
+<p>4.生成静态页面并打开hexo本地服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate </span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>依据命令行提示，打开 <a href="http://localhost:4000即可看到默认主题的默认页面了。">http://localhost:4000即可看到默认主题的默认页面了。</a></p>
+<h3 id="配置git与Github账户关联"><a href="#配置git与Github账户关联" class="headerlink" title="配置git与Github账户关联"></a>配置git与Github账户关联</h3><p>1.打开前面创建的MyBlog目录下的 <strong>_config.yml</strong> 文件，在修改最下方的<strong>deploy</strong>为</p>
+<p>*<strong>==注意，冒号后面一定要加空格==</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: gihub: https:&#x2F;&#x2F;github.com&#x2F;[your_account]&#x2F;[your_accout].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>2.安装hexo的git部署，在命令行中执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>3.将生成静态页面并部署到github的仓库中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g 或者hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>当提示 ** INFO Deploy done: git <strong>即上传成功，这时就可以通过 \</strong>http://[your_account].github.io** 来访问你的个人站点了。</p>
+<h3 id="hexo基本配置"><a href="#hexo基本配置" class="headerlink" title="hexo基本配置"></a>hexo基本配置</h3><p>以下是hexo配置文件 <strong>_config.yml</strong> 的基本内容及基本设置，更多个性化设置请参考<a href="https://hexo.io/zh-cn/docs/index.html">官方文档</a>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Hexo Configuration</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/configuration.html</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Source: https://github.com/hexojs/hexo/</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Site  <span class="comment">##页面信息</span></span></span><br><span class="line">title: Who&#x27;s Blog  ##标题，即浏览器标签栏显示的内容</span><br><span class="line">subtitle: Why so serious?  ##副标题</span><br><span class="line">description:        ##描述，简介</span><br><span class="line">author: Charles Wei  ##作者</span><br><span class="line">language: zh-CN  ##语言</span><br><span class="line">timezone: Asia/Shanghai  ##时区</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> URL</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span></span><br><span class="line">url: http://wwww.charleswei.me  ##域名，后面自定义域名后，写在这里，用 .github.io的话，这里用默认的不用改</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Directory  <span class="comment">##文件目录，可不改</span></span></span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"><span class="meta">#</span><span class="bash"> Writing  <span class="comment">##静态页面生成属性，可不改</span></span></span><br><span class="line">new_post_name: :year-:month-:day-:title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight: </span><br><span class="line">  enable: true </span><br><span class="line">  line_number: true </span><br><span class="line">  auto_detect: false </span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Category &amp; Tag <span class="comment">##标签，可不改</span></span></span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"><span class="meta">#</span><span class="bash"> Date / Time format  <span class="comment">##时间格式，可不改</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Hexo uses Moment.js to parse and display date</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># You can customize the date format as defined in</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># http://momentjs.com/docs/#/displaying/format/</span></span></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Pagination <span class="comment">##每页显示文章数，按需改</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Set per_page to 0 to disable pagination</span></span></span><br><span class="line">per_page: 10</span><br><span class="line">pagination_dir: page</span><br><span class="line"><span class="meta">#</span><span class="bash"> Extensions <span class="comment">##主题设置</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Plugins: https://hexo.io/plugins/</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Themes: https://hexo.io/themes/</span></span></span><br><span class="line">theme: indigo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Deployment  <span class="comment">##git部署关联</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/deployment.html</span></span></span><br><span class="line">deploy: </span><br><span class="line">  type: git </span><br><span class="line">  repo: github: https://github.com/glassweichao/glassweichao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>Hexo具有高定制的主题效果，你可以从Hexo的<a href="https://hexo.io/themes/">主题库</a>中选择合适的主题，也可以自己制作。<br>以我现在使用的<a href="https://github.com/yscoder/hexo-theme-indigo">indigo</a>主题为例。首先将主题库clone到MyBlog目录下的themes目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:yscoder/hexo-theme-indigo.git themes/indigo1</span><br></pre></td></tr></table></figure>
+<p>安装less，主题使用less作为css预处理工具：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-less --save1</span><br></pre></td></tr></table></figure>
+<p>安装feed,用于生吃RSS：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save1</span><br></pre></td></tr></table></figure>
+<p>安装json-content，用于生成静态站点数据，提供搜索功能的数据源：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-json-content --save1</span><br></pre></td></tr></table></figure>
+<p>开启标签页：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags1</span><br></pre></td></tr></table></figure>
+<p>修改<code>MyBlog/source/tags/index.md</code>的源数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">layout: tags</span><br><span class="line">noDate: true</span><br><span class="line">comments: false</span><br><span class="line">---1234</span><br></pre></td></tr></table></figure>
+<p>修改hexo配置文件<code>_config.yml</code>中的主题标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: indigo1</span><br></pre></td></tr></table></figure>
+<p>最后修改主题配置文件<code>MyBlog/themes/indigo/_config.yml</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#添加新菜单项遵循以下规则</span><br><span class="line"># menu:</span><br><span class="line">#   link: fontawesome图标，省略前缀，本主题前缀为 icon-，必须</span><br><span class="line">#   text: About 菜单显示的文字，如果省略即默认与图标一致，首字母会转大写</span><br><span class="line">#   url: &#x2F;about 链接，绝对或相对路径，必须。</span><br><span class="line">#   target: _blank 是否跳出，省略则在当前页面打开</span><br><span class="line">menu: </span><br><span class="line">  home: </span><br><span class="line">    text: 主页</span><br><span class="line">    url: &#x2F; </span><br><span class="line">  archives: </span><br><span class="line">    url: &#x2F;archives </span><br><span class="line">  tags: </span><br><span class="line">    url: &#x2F;tags </span><br><span class="line">  github: </span><br><span class="line">    url: https:&#x2F;&#x2F;github.com&#x2F;glassweichao </span><br><span class="line">    target: _blank </span><br><span class="line">  link: </span><br><span class="line">    text: 测试 </span><br><span class="line">    url: &#x2F;404</span><br><span class="line">rss: &#x2F;atom.xml</span><br><span class="line">#你的头像,替换掉 indigo&#x2F;source&#x2F;img&#x2F;logo.jpg 即可</span><br><span class="line">urlavatar: &#x2F;img&#x2F;logo.jpg</span><br><span class="line"># Content</span><br><span class="line">tags: </span><br><span class="line">  title: 标签</span><br><span class="line">#是否开启分享</span><br><span class="line">share: true</span><br><span class="line">#是否开启搜索</span><br><span class="line">search: true</span><br><span class="line">#是否大屏幕下文章页隐藏导航</span><br><span class="line">hideMenu: true</span><br><span class="line">#是否开启toc</span><br><span class="line">#toc: false  关闭toc</span><br><span class="line">toc: </span><br><span class="line">  list_number: true # 是否显示数字排序</span><br><span class="line">#浏览器标签栏小图标</span><br><span class="line">favicon: &#x2F;favicon.ico1234567891011121314151617181920212223242526272829303132333435363738</span><br></pre></td></tr></table></figure>
+<p>最后生成部署，来看看效果吧</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<h2 id="mysql安装"><a href="#mysql安装" class="headerlink" title="mysql安装"></a>mysql安装</h2><p>1.brew安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mysql</span><br></pre></td></tr></table></figure>
+<p>2.安装包安装</p>
+<h2 id="anaconda"><a href="#anaconda" class="headerlink" title="anaconda"></a>anaconda</h2><p>官网下载 （<a href="https://repo.anaconda.com/archive/Anaconda3-2020.11-MacOSX-x86_64.pkg%EF%BC%89">https://repo.anaconda.com/archive/Anaconda3-2020.11-MacOSX-x86_64.pkg）</a></p>
+<p>创建虚拟环境</p>
+<blockquote>
+<p>conda create –name DeepLearning python=3  #指定执行版本为python3</p>
+<p>conda activate DeepLearning</p>
+<p>pip3 install numpy</p>
+<p>pip3 install pandas</p>
+<p>pip3 install matplotlib</p>
+<p>pip3 install Scikit-Learn</p>
+<p>pip3 install torch torchvision torchaudio #pytorch 安装</p>
+<p>conda info –envs #查看已经安装的环境</p>
+</blockquote>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91macos%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-【Linux】常用Linux命令汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1098,632 +1979,9 @@
 
 
   
-    <article id="post-2143-replace-favo-xrcch-com-Dns劫持解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/01/2143-replace-favo-xrcch-com-Dns%E5%8A%AB%E6%8C%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">2143.replace.favo.xrcch.com Dns劫持解决方案</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/01/2143-replace-favo-xrcch-com-Dns%E5%8A%AB%E6%8C%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
-        <time datetime="2021-03-01T12:04:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><strong>DNS劫持具体原因：</strong></p>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">被DNS劫持了。</span><br><span class="line"></span><br><span class="line">这样就可以通过访问一个特定的网站，给对方增加流量。他们就可以赚钱了。</span><br><span class="line"></span><br><span class="line">请检查多种浏览器是否都出现这种情况？如果是，那就说明要么您的路由器把黑了，要么就是宽带运营商动了手脚。如果只是谷歌浏览器出现这个情况，那么先考虑您的浏览器是官方的，还是别人修改过的。如果是修改过的，那么就有可能把修改者植入了相关劫持功能。</span><br><span class="line">如果是官方的，那么请关闭所有扩展工具，并一个一个测试它们，这样就知道哪个扩展工具在进行劫持操作。</span><br></pre></td></tr></table></figure>
-</blockquote>
-    
-    <a class="article-more-a" href="/2021/03/01/2143-replace-favo-xrcch-com-Dns%E5%8A%AB%E6%8C%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">windows10</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DNS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/windows10//" class="article-tag-list-link color5">windows10</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/01/2143-replace-favo-xrcch-com-Dns%E5%8A%AB%E6%8C%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【Pytorch】pytorch安装（包含cuda详细安装）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/">【Pytorch】pytorch安装（包含cuda详细安装）</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/" class="archive-article-date">
-        <time datetime="2021-02-26T16:37:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Pytorch安装"><a href="#Pytorch安装" class="headerlink" title="Pytorch安装"></a>Pytorch安装</h1><h2 id="一、安装anaconda"><a href="#一、安装anaconda" class="headerlink" title="一、安装anaconda"></a>一、安装anaconda</h2><p>网址：<a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a></p>
-<p>网页翻到最下面，选择下载Windows 32位/64位版本，傻瓜式安装，记得勾选【Add to Path】 可以将anaconda的环境安装到系统中去</p>
-<p><img src="%E3%80%90Pytorch%E3%80%91Pytorch%E5%AE%89%E8%A3%8501.png" alt="image-20210226184530041"></p>
-    
-    <a class="article-more-a" href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pytorch</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">cuda</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/pytorch//" class="article-tag-list-link color3">pytorch</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【github】代码同步提交到github和码云" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/">【Github】代码同步提交到github和码云</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/" class="archive-article-date">
-        <time datetime="2021-02-25T12:39:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-25</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>现在很多朋友在git clone  github代码的时候会发现速度慢的实在是难以吐槽，于是我们就像个方法，将我们的代码同步码云上，我们再去下载速度，是不是快了很多呢。&gt;。&lt;！！!</p>
-<p>但是随着我们提交代码的时候，我们就面临着，代码提交到哪里呢？码云还是github呢？本文将进行详细的介绍。</p>
-    
-    <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/github//" class="article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【github】提升github访问速度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/">【Github】提升github访问速度</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/" class="archive-article-date">
-        <time datetime="2021-02-25T11:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-25</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>此方式适用于各种操作系统，主要方式为修改host文件，添加配置的方式</p>
-<h4 id="1-查找域名对应的ip地址，并修改hosts文件"><a href="#1-查找域名对应的ip地址，并修改hosts文件" class="headerlink" title="1.查找域名对应的ip地址，并修改hosts文件"></a>1.查找域名对应的ip地址，并修改hosts文件</h4><p>windows/Macos/linux通用的方式：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nslookup github.com</span><br><span class="line">nslookup github.global.ssl.fastly.net</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/github//" class="article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【springboot】springboot-mybatis自动创建表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/13/%E3%80%90springboot%E3%80%91springboot-mybatis%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BA%E8%A1%A8/">【Springboot】springboot+mybatis自动创建表</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/13/%E3%80%90springboot%E3%80%91springboot-mybatis%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BA%E8%A1%A8/" class="archive-article-date">
-        <time datetime="2021-02-13T10:20:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-13</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot//" class="article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/13/%E3%80%90springboot%E3%80%91springboot-mybatis%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BA%E8%A1%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【hexo】基础教程-五-阿里云域名解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/09/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%94-%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/">【Hexo】基础教程(五) 阿里云域名解析</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/09/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%94-%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/" class="archive-article-date">
-        <time datetime="2021-02-09T05:31:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>hexo 搭建博客的时候，通常我们需要部署到远程服务器中，如果自己没有服务器的话，我们会选择将搭建好的项目，上传到github中，然后用过用户名.github.io来进行访问，今天本文来介绍另外一种方式，通过绑定域名的方式来查看。</p>
-    
-    <a class="article-more-a" href="/2021/02/09/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%94-%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/09/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E4%BA%94-%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next »</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next »</a>
     </nav>
   
 
@@ -1871,15 +2129,23 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">macos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">typora</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">pytorch</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">cuda</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">typora</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1908,6 +2174,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">brew</a>
               </li>
              
               <li class="article-tag-list-item">
