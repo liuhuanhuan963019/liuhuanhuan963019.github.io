@@ -567,56 +567,9 @@
     
     <p>现在很多朋友在git clone  github代码的时候会发现速度慢的实在是难以吐槽，于是我们就像个方法，将我们的代码同步码云上，我们再去下载速度，是不是快了很多呢。&gt;。&lt;！！!</p>
 <p>但是随着我们提交代码的时候，我们就面临着，代码提交到哪里呢？码云还是github呢？本文将进行详细的介绍。</p>
-<h2 id="1-远程仓库的使用"><a href="#1-远程仓库的使用" class="headerlink" title="1. 远程仓库的使用"></a>1. 远程仓库的使用</h2><h3 id="1-1-查看远程仓库"><a href="#1-1-查看远程仓库" class="headerlink" title="1.1 查看远程仓库"></a>1.1 查看远程仓库</h3><p>查看当前项目的远程仓库</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br></pre></td></tr></table></figure>
-<p>输出</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">origin</span><br></pre></td></tr></table></figure>
-<p>这个<code>origin</code>就是一个指向远程仓库的名称，是你在<code>clone</code>时 <code>git</code> 为你默认创建的。</p>
-<p>可以通过命令查看<code>origin</code>指向的远程仓库地址：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  https://github.com/liuhuanhuan963019/demo.git (fetch)</span><br><span class="line">origin  https://github.com/liuhuanhuan963019/demo.git (push)</span><br></pre></td></tr></table></figure>
-<p>该命令会显示读写远程仓库的名称和地址，我这里指向的是Github。</p>
-<h3 id="1-2-远程仓库重命名"><a href="#1-2-远程仓库重命名" class="headerlink" title="1.2 远程仓库重命名"></a>1.2 远程仓库重命名</h3><p>输入命令：<br><code>git remote rename &lt;old_remote&gt; &lt;new_remote&gt;</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rename origin github</span><br></pre></td></tr></table></figure>
-<p>输入命令查看：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">github  https://github.com/liuhuanhuan963019/demo.git (fetch)</span><br><span class="line">github  https://github.com/liuhuanhuan963019/demo.git (push)</span><br></pre></td></tr></table></figure>
-<p>完美！！！！</p>
-<h3 id="1-3-添加另一个远程仓库"><a href="#1-3-添加另一个远程仓库" class="headerlink" title="1.3 添加另一个远程仓库"></a>1.3 添加另一个远程仓库</h3><p>下面我们再添加Gitee上的远程仓库，首先在Gitee上创建一个空的仓库，名称与Github上相同。</p>
-<p>然后在【克隆/下载】处复制地址。</p>
-<p>输出添加远程仓库命令：</p>
-<p><code>git remote add &lt;remote&gt; &lt;url&gt;</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add gitee https://gitee.com/liuhuanhuan963019/demo.git </span><br></pre></td></tr></table></figure>
-<p>再来验证下是否成功，输出结果：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">github  https://github.com/liuhuanhuan963019/demo.git (fetch)</span><br><span class="line">github  https://github.com/liuhuanhuan963019/demo.git (push)</span><br><span class="line">gitee  https://gitee.com/liuhuanhuan963019/demo.git (fetch)</span><br><span class="line">gitee  https://gitee.com/liuhuanhuan963019/demo.git (push)</span><br></pre></td></tr></table></figure>
-<p>成功！！！</p>
-<h3 id="1-4-多个远程仓库的推送-拉取"><a href="#1-4-多个远程仓库的推送-拉取" class="headerlink" title="1.4 多个远程仓库的推送/拉取"></a>1.4 多个远程仓库的推送/拉取</h3><p>多个远程仓库的时候，必须加上远程仓库的名称，以识别是哪个远程仓库，命令如下：</p>
-<p><code>git push &lt;remote&gt; &lt;branch&gt;</code>、<code>git pull &lt;remote&gt; &lt;branch&gt;</code>：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push github master</span><br><span class="line">git pull github master</span><br><span class="line"></span><br><span class="line">git push gitee master</span><br><span class="line">git pull gitee master</span><br></pre></td></tr></table></figure>
-<p>如果不想每次操作都带着分支，需要将本地分支与远程分支进行关联：</p>
-<p><code>git branch --set-upstream-to=&lt;remote&gt;/&lt;remote_branch&gt; &lt;local_branch&gt;</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --set-upstream-to=gitee/main main</span><br></pre></td></tr></table></figure>
-<p>关联后就可以不指定分支了</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push github</span><br><span class="line">git pull github</span><br><span class="line"></span><br><span class="line">git push gitee</span><br><span class="line">git pull gitee</span><br></pre></td></tr></table></figure>
-<h3 id="1-5-移除一个远程仓库"><a href="#1-5-移除一个远程仓库" class="headerlink" title="1.5 移除一个远程仓库"></a>1.5 移除一个远程仓库</h3><p>如果想要移除一个远程仓库，可以使用下面命令：<br><code>git remote remove &lt;remote&gt;</code>或<code>git remote rm &lt;remote&gt;</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote remove gitee</span><br></pre></td></tr></table></figure>
-<p>执行移除远程仓库后，该仓库在本地的所有分支与配置信息也会一并删除。</p>
-<h2 id="2-常见错误及解决方案"><a href="#2-常见错误及解决方案" class="headerlink" title="2. 常见错误及解决方案"></a>2. 常见错误及解决方案</h2><h3 id="2-1-提示未指定分支"><a href="#2-1-提示未指定分支" class="headerlink" title="2.1 提示未指定分支"></a>2.1 提示未指定分支</h3><blockquote>
-<p>You asked to pull from the remote ‘gitee’, but did not specify<br>a branch. Because this is not the default configured remote<br>for your current branch, you must specify a branch on the command line.</p>
-</blockquote>
-<p>表示本地分支与远程分支未做关联，进行关联一下即可，执行下面命令：<br><code>git branch --set-upstream-to=&lt;remote&gt;/&lt;remote_branch&gt; &lt;your_branch&gt;</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --set-upstream-to=gitee/main main</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-没有存储库的权限"><a href="#2-2-没有存储库的权限" class="headerlink" title="2.2 没有存储库的权限"></a>2.2 没有存储库的权限</h3><p>当执行推送操作时，提示下面信息：</p>
-<blockquote>
-<p>remote: You do not have permission push to this repository<br>fatal: unable to access ‘<a href="https://gitee.com/gozhuyinglong/blog-demos.git/&#39;">https://gitee.com/gozhuyinglong/blog-demos.git/&#39;</a>: The requested URL returned error: 403</p>
-</blockquote>
-<p>表示没有远程仓库的权限，应该首先查看远程仓库是否公开，再检查本地账号和密码是否正确。</p>
-<h3 id="2-3-远程仓库未公开"><a href="#2-3-远程仓库未公开" class="headerlink" title="2.3 远程仓库未公开"></a>2.3 远程仓库未公开</h3><p>登录Gitee，检查该代码库是否公司。若未公开，则设置为公开。</p>
-<h3 id="2-4-生成SSH-Key，并添加到Github"><a href="#2-4-生成SSH-Key，并添加到Github" class="headerlink" title="2.4 生成SSH Key，并添加到Github"></a>2.4 生成SSH Key，并添加到Github</h3><p>输入下面命令来生成SSH Key，双引号内填写你的登录邮箱地址</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot; </span><br></pre></td></tr></table></figure>
-<p>如果弹出下面提示，直接回车即可。（若已存在，会提示是否替换，输入Y再回车）</p>
-<p>接下来的操作，参考作者的<a href="https://blog.csdn.net/qq_38140292/article/details/110730314">本地配置ssh</a></p>
-
+    
+    <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/#more">more >></a>
+    
     
 
     
