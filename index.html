@@ -453,10 +453,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <p>数据库优化从4个方向去优化<br>1、sql和索引，写出健壮的sql，索引不是越多越好<br>2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）<br>3、系统配置（打开文件系统次数，文件安全性）<br>4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）</p>
-<blockquote>
-<p>show variables like ‘slow_query_log’  查询慢查询日志<br>set globel slow_query_log_file = ‘/home/mysql/sql_log/mysql-slow.log’  设置慢查询日志的路径<br>set global log_queries_not_using_indexes = on;    设置慢查询日志是否记录未添加索引的字段<br>set global long_query_time = 1    设置记录慢查询日志时间<br>mysqldumpslow -t 3 url | more</p>
-</blockquote>
-
+    
+    <a class="article-more-a" href="/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/#more">more >></a>
+    
     
 
     
@@ -552,40 +551,11 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">alt &#x3D; option</span><br><span class="line">ctrl &#x3D; control</span><br><span class="line"></span><br><span class="line">control + enter		类初始化</span><br><span class="line">command + o			打开类</span><br><span class="line">command + e         打开最近打开的文件</span><br><span class="line">control + table     打开上次打开的文件</span><br><span class="line">command + delete	删除行</span><br><span class="line">command + x			剪切行</span><br><span class="line">command + d    		复制一行</span><br><span class="line">control + t 		重构菜单</span><br><span class="line">option + 上&#x2F;下    	缩小或放大选区</span><br><span class="line">command + 左&#x2F;右 		移动鼠标光标到最左边和最右边</span><br><span class="line">command + shift + 上&#x2F;下  移动行或方法上移或下移</span><br><span class="line">option + enter  	构造函数参数提取到属性，自动创建类，提示信息，错误引入修订</span><br><span class="line">Command shift + o 	打开文件</span><br><span class="line">command + shift + t 打开单元测试</span><br><span class="line">command + option + enter 	在上面增加一行 	</span><br><span class="line">COMmand + shift + enter 	在下面增加一行</span><br><span class="line">control + option + 0      优化import,删除无用引入</span><br><span class="line">command + shift + a		杳找action</span><br><span class="line">command + option + l 	格式化代码</span><br><span class="line">option + control + r 	调出运行，列出那些可以执行</span><br><span class="line">Command + option + p	抽取参数</span><br><span class="line">Command + option + v	抽取变量</span><br><span class="line">Command + option + f	抽取字段</span><br><span class="line">Command + option + c	抽取常量</span><br><span class="line">Command + option + m	抽取方法</span><br><span class="line"></span><br><span class="line">fn+shift+f6			重命名</span><br><span class="line">command + option + n 	内联将调用替换成实现   将一个变量定义抽取成一个变量直接赋值</span><br><span class="line"></span><br><span class="line">invert if condition 条件反转 内容也反转   如if大于变小于号</span><br><span class="line"></span><br><span class="line">Live templates 内置 偏好设置E</span><br><span class="line">$NAME$ 记得要 点define</span><br><span class="line">目定义live tem temp lates 替换 偏好设置里有.. eg: sout Tori 1ter</span><br><span class="line">向后声明 eg: &quot;aa&quot;.var， &quot;sdf&#39;&quot; . fori</span><br><span class="line">智能补全</span><br><span class="line"></span><br><span class="line">if（str &#x3D;&#x3D; null） &#123;</span><br><span class="line">return &quot;abc&quot; &#x2F;&#x2F;command +shift +enter 补分号  </span><br><span class="line">double shift查找文件方</span><br><span class="line">command + n弹出生 成代码(get set方法或者 构造方法之类)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><u>实现ctrl+ 滚轮变大字体：</u></p>
+    <p><u>实现ctrl+ 滚轮变大字体：</u>    </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;General-&gt;勾选change font size.....</span><br></pre></td></tr></table></figure>
-<p>设置自动导包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;general-&gt;auto import-&gt;insert imports on paste All</span><br></pre></td></tr></table></figure>
-<p>显示方法分割符号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;general-&gt;appearance-&gt;show method separators</span><br></pre></td></tr></table></figure>
-
-<p>取消单行显示文件 文件多时可以一起显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;general-&gt;Editor Tabs-&gt;show tabs in one row</span><br></pre></td></tr></table></figure>
-<p> 修改注释的颜色</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/a58b9ff46fcb05e7f4e2ff6a284fc6eb.png" alt="image-20201015183930399"></p>
-<p>设置导包，超过几个包自动转为* 如5歌以上util 转为*</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/613195d0d9477d412ad68d74fbd8e3e3.png" alt="image-20201015184118158"></p>
-<p>设置文件新建头部标签签名：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/bdc9c2ee7f4c41e164a64d2f060faf8e.png" alt="image-20201015184336781"></p>
-<p>设置当前项目编码格式的问题：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/b325a31c944953f98374525b4f5f0122.png" alt="image-20201015184540827"></p>
-<p>设置自动自动编译</p>
-<p><a href="https://tva1.sinaimg.cn/large/007S8ZIlgy1gjq7nggkbpj31lw0t4n6n.jpg">https://tva1.sinaimg.cn/large/007S8ZIlgy1gjq7nggkbpj31lw0t4n6n.jpg</a>)</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/e4111c72d9cb270af84b77cc34717d6c.png" alt="image-20201015184922175"></p>
-<p>若出现无代码提示的显示功能时，可更改</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/c755691474638eb535f5161ea6663813.png" alt="image-20201015185031169"></p>
-<p>快捷输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Sout   输出</span><br><span class="line"></span><br><span class="line">soutp</span><br><span class="line"></span><br><span class="line">soutm</span><br><span class="line"></span><br><span class="line">soutv</span><br><span class="line"></span><br><span class="line">main </span><br><span class="line"></span><br><span class="line">psvm main方法</span><br><span class="line"></span><br><span class="line">循环输出： iter. fori   itar</span><br><span class="line">list.for   正对list集合的增强for循环</span><br><span class="line">list.forr   倒叙遍历</span><br><span class="line"></span><br><span class="line">ifn   判断list是不是null</span><br><span class="line">inn   判断list是不是null</span><br><span class="line"></span><br><span class="line">prsf.   p rivate static final </span><br></pre></td></tr></table></figure>
-
-
-<p>idea添加本地tomcat运行测试</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d839abec792bac339117f567d431e5f2.png" alt="image-20201015190525155"></p>
-<p>idea中添加数据库的管理</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ef0d13da68cb9e62a88f6eba95f15823.png" alt="image-20201015190722036"></p>
-<p>上传当前项目到gi t</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/79d62784078627f21154ec8e49252f19.png" alt="image-20201015191142473"></p>
-
+    
+    <a class="article-more-a" href="/2021/03/01/%E9%80%82%E5%90%88macos%E7%B3%BB%E7%BB%9F%E4%B8%ADidea%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE/#more">more >></a>
+    
     
 
     
@@ -686,31 +656,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h3 id="选取空间截图"><a href="#选取空间截图" class="headerlink" title="选取空间截图"></a>选取空间截图</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shift+command+4</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="全屏截图"><a href="#全屏截图" class="headerlink" title="全屏截图"></a>全屏截图</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shift+command+3</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="可以显示隐藏文件，文件夹，再按一次，恢复隐藏"><a href="#可以显示隐藏文件，文件夹，再按一次，恢复隐藏" class="headerlink" title="可以显示隐藏文件，文件夹，再按一次，恢复隐藏"></a>可以显示隐藏文件，文件夹，再按一次，恢复隐藏</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Command+Shift+.</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="finder下可以前往任何文件夹，包括隐藏文件夹"><a href="#finder下可以前往任何文件夹，包括隐藏文件夹" class="headerlink" title="finder下可以前往任何文件夹，包括隐藏文件夹"></a>finder下可以前往任何文件夹，包括隐藏文件夹</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Command+Shift+G</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="复制当前文件路径"><a href="#复制当前文件路径" class="headerlink" title="复制当前文件路径"></a>复制当前文件路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">commend+option+c</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="查看文件路径"><a href="#查看文件路径" class="headerlink" title="查看文件路径"></a>查看文件路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command + i</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="解决pycharm打不开的问题"><a href="#解决pycharm打不开的问题" class="headerlink" title="解决pycharm打不开的问题"></a><a href="https://www.cnblogs.com/liuxiaoming123/p/12783121.html">解决pycharm打不开的问题</a></h3><h3 id="vim命令"><a href="#vim命令" class="headerlink" title="vim命令"></a>vim命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">i 开始编辑 </span><br><span class="line">esc 退出编辑 </span><br><span class="line">:w 保存但不退出 </span><br><span class="line">:wq  保存并退出 </span><br><span class="line">:q   退出 </span><br><span class="line">:q!  强制退出，不保存 </span><br><span class="line">:e!  放弃所有修改，从上次保存文件开始再编辑命令历史</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="显示隐藏文件"><a href="#显示隐藏文件" class="headerlink" title="显示隐藏文件"></a>显示隐藏文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.Finder AppleShowAllFiles YES;KillAll Finder</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="关闭隐藏文件"><a href="#关闭隐藏文件" class="headerlink" title="关闭隐藏文件"></a>关闭隐藏文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.Finder AppleShowAllFiles NO;KillAll Finder</span><br></pre></td></tr></table></figure>
-
+    
+    <a class="article-more-a" href="/2021/03/01/macos-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/#more">more >></a>
+    
     
 
     
@@ -807,70 +755,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h1 id="一：官网"><a href="#一：官网" class="headerlink" title="一：官网"></a>一：官网</h1><p><a href="https://brew.sh/">HomeBrew</a></p>
-<h1 id="二：目录"><a href="#二：目录" class="headerlink" title="二：目录"></a>二：目录</h1><ul>
-<li><p>安装</p>
-</li>
-<li><p>查看帮助信息</p>
-</li>
-<li><p>查看版本</p>
-</li>
-<li><p>更新HomeBrew自己</p>
-</li>
-<li><p>安装软件包</p>
-</li>
-<li><p>查询可更新的包</p>
-</li>
-<li><p>更新包（formula）</p>
-</li>
-<li><p>清理旧版本</p>
-</li>
-<li><p>锁定不想要的包</p>
-</li>
-<li><p>卸载安装包</p>
-</li>
-<li><p>查看包信息</p>
-</li>
-<li><p>查看安装列表</p>
-</li>
-<li><p>查询可用包</p>
-</li>
-<li><p>卸载HomeBrew</p>
-</li>
-</ul>
-<h1 id="三：常用命令"><a href="#三：常用命令" class="headerlink" title="三：常用命令"></a>三：常用命令</h1><ul>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;安装依赖工具</span><br><span class="line">xcode-select --install</span><br><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure></li>
-<li><p>查看帮助信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew help</span><br></pre></td></tr></table></figure></li>
-<li><p>查看版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew -v</span><br></pre></td></tr></table></figure></li>
-<li><p>更新HomeBrew自己</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure></li>
-<li><p>安装软件包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">brew install [包名]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;安装git</span><br><span class="line">brew install git</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;安装git-lfs</span><br><span class="line">brew install git-lfs</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;安装wget</span><br><span class="line">brew install wget</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;安装openssl</span><br><span class="line">brew install openssl</span><br></pre></td></tr></table></figure></li>
-<li><p>查询可更新的包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew outdated</span><br></pre></td></tr></table></figure></li>
-<li><p>更新包（formula）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;更新所有</span><br><span class="line">brew upgrade</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;更新指定包</span><br><span class="line">brew upgrade [包名]</span><br></pre></td></tr></table></figure></li>
-<li><p>清理旧版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;清理所有包的旧版本</span><br><span class="line">brew cleanup </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;清理指定包的旧版本</span><br><span class="line">brew cleanup [包名]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;查看可清理的旧版本包，不执行实际操作</span><br><span class="line">brew cleanup -n </span><br></pre></td></tr></table></figure></li>
-<li><p>锁定不想要的包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;锁定某个包</span><br><span class="line">brew pin $FORMULA  </span><br><span class="line">&#x2F;&#x2F;取消锁定</span><br><span class="line">brew unpin $FORMULA     </span><br></pre></td></tr></table></figure></li>
-<li><p>卸载安装包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall [包名]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;例：卸载git</span><br><span class="line">brew uninstall git</span><br></pre></td></tr></table></figure></li>
-<li><p>查看包信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info [包名]</span><br></pre></td></tr></table></figure></li>
-<li><p>查看安装列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew list</span><br></pre></td></tr></table></figure></li>
-<li><p>查询可用包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search [包名]</span><br></pre></td></tr></table></figure></li>
-<li><p>卸载HomeBrew</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd &#96;brew --prefix&#96;</span><br><span class="line">rm -rf Cellar</span><br><span class="line">brew prune</span><br><span class="line">rm &#96;git ls-files&#96;</span><br><span class="line">rm -r Library&#x2F;Homebrew Library&#x2F;Aliases Library&#x2F;Formula Library&#x2F;Contributions</span><br><span class="line">rm -rf .git</span><br><span class="line">rm -rf ~&#x2F;Library&#x2F;Caches&#x2F;Homebrew</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-
+    
+    <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91brew%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/#more">more >></a>
+    
     
 
     
@@ -973,173 +860,9 @@
     <h2 id="table-自动补全"><a href="#table-自动补全" class="headerlink" title="table 自动补全"></a>table 自动补全</h2><ol>
 <li><p>打开终端，输入nano .inputrc 命令回车，进入编辑状态</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nano .inputrc</span></span><br></pre></td></tr></table></figure>
-
-</li>
-<li><p>粘贴下面的语句到文件中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set completion-ignore-case on</span><br><span class="line">set show-all-if-ambiguous on</span><br><span class="line">TAB: menu-complete</span><br></pre></td></tr></table></figure></li>
-<li><p>保存文件， Control + O 保存， 再按回车</p>
-</li>
-<li><p>Control + X , 退出文本编辑</p>
-</li>
-<li><p>重启终端， 试验Tab键自动补全已经OK啦</p>
-</li>
-</ol>
-<h2 id="新增ll命令"><a href="#新增ll命令" class="headerlink" title="新增ll命令"></a>新增ll命令</h2><p>1.打开配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
-<p>2.i进入编辑模式，esc推出，:wq保存更改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias ll&#x3D;&#39;ls -alF&#39;</span><br><span class="line">alias la&#x3D;&#39;ls -A&#39;</span><br><span class="line">alias l&#x3D;&#39;ls -CF</span><br></pre></td></tr></table></figure>
-<p>3.重新加载配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
-<p>4.若此时再出现诸如一下问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zsh: command not found: ll</span><br><span class="line">zsh: command not found: la</span><br><span class="line">zsh: command not found: l</span><br></pre></td></tr></table></figure>
-<p>5.打开文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .zshrc</span><br></pre></td></tr></table></figure>
-<p>6.添加如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias ll&#x3D;&#39;ls -alF&#39;</span><br><span class="line">alias la&#x3D;&#39;ls -A&#39;</span><br><span class="line">alias l&#x3D;&#39;ls -CF&#39;</span><br></pre></td></tr></table></figure>
-<p>7.保存之后使用source .zshrc</p>
-<h2 id="新增brew命令"><a href="#新增brew命令" class="headerlink" title="新增brew命令"></a>新增brew命令</h2><p>安装时会提示安装git 安装好git后重新启动输入命令运行即可（时间比较久）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;bin&#x2F;zsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)&quot;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><a href="https://www.mintimate.cn/2020/04/05/Homebrew/">https://www.mintimate.cn/2020/04/05/Homebrew/</a> 博客</p>
-</blockquote>
-<p>​    本地软件库列表：brew ls</p>
-<p>​    查找软件：brew search google（其中google替换为要查找的软件关键字）</p>
-<p>​    查看brew版本：brew -v 更新brew版本：brew update</p>
-<p><strong>现在可以输入命令open ~/.zshrc -e 或者 open ~/.bash_profile -e 整理一下重复的语句(运行 echo $SHELL 可以查看应该打开那一个文件修改)</strong></p>
-<img src="../../../../csdn博客/Library/Application Support/typora-user-images/image-20201205133049764.png" alt="image-20201205133049764" style="zoom: 50%;" />
-
-<h2 id="新增wget-命令"><a href="#新增wget-命令" class="headerlink" title="新增wget 命令"></a>新增wget 命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install wget</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="新增rz-sz命令"><a href="#新增rz-sz命令" class="headerlink" title="新增rz/sz命令"></a>新增rz/sz命令</h2><p>rz 上传功能    sz 下载功能</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install lrzsz</span><br></pre></td></tr></table></figure>
-<h2 id="Mac-提示文件损坏解决方式"><a href="#Mac-提示文件损坏解决方式" class="headerlink" title="Mac 提示文件损坏解决方式"></a>Mac 提示文件损坏解决方式</h2><blockquote>
-<p>第一种常见情况：只需要开启允许“任何来源”即可</p>
-<p>1.在终端控制台中输入：sudo spctl –master-disable，回车,如果你的笔记本设置有开机密码，会提示要你输入密码，输入的整个过程中是看不到密码显示的，不要因为看不到输入的密码而着急，继续输入完密码后按下回车键。</p>
-<p>2.打开系统偏好设置——&gt;安全性与隐私，显示了任何来源，然后点击允许来自任何来源。如果没有【任何来源】的选项，可以再次执行刚才的代码进行尝试。</p>
-<p>3.重新双击安装文件便不会再次提示“文件已损坏”了。</p>
-<p>此时有的小伙伴发现依旧会出现“文件已损坏的提示”，此时就需要使用另外一种方式了</p>
-<p>1.打开终端，输入： sudo xattr -r -d com.apple.quarantine，最后面加上一个空格<br>2.然后在访达-&gt;应用程序中找到你要打开的软件，拖到终端窗口中，回车执行，就可以正常打开文件了</p>
-<p>作者：Sugar_ping<br>链接：<a href="https://www.jianshu.com/p/4ad57723a4fc">https://www.jianshu.com/p/4ad57723a4fc</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>
-<h2 id="新增maven"><a href="#新增maven" class="headerlink" title="新增maven"></a>新增maven</h2><ol>
-<li><p>打开配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">open ~&#x2F;.bash_profile</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MAVEN_HOME&#x3D;&#x2F;Users&#x2F;light6&#x2F;JavaFile&#x2F;apache-maven-3.6.3</span><br><span class="line">export MAVEN_HOME</span><br><span class="line">export PATH&#x3D;$MAVEN_HOME&#x2F;bin:$PATH</span><br></pre></td></tr></table></figure>
-<p>3.保存配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li><p>创建/修改.zshrc文件<br>如果有.zshrc文件则修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">open ~&#x2F;.zshrc</span><br><span class="line">touch ~&#x2F;.zshrc</span><br><span class="line"># 打开后新增配置</span><br><span class="line">MAVEN_HOME&#x3D;&#x2F;Users&#x2F;light6&#x2F;JavaFile&#x2F;apache-maven-3.6.3</span><br><span class="line">export MAVEN_HOME</span><br><span class="line">export PATH&#x3D;$MAVEN_HOME&#x2F;bin:$PATH</span><br><span class="line">source ~&#x2F;.bash_profile</span><br><span class="line"></span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure></li>
-<li><p>maven修改本地镜像地址</p>
-</li>
-</ol>
-<blockquote>
-<p>Conf-&gt;settings.xml</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirrors&gt;</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line">&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line">&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;</span><br><span class="line">&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line">&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br><span class="line">&lt;&#x2F;mirrors&gt;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="新增tomcat环境配置"><a href="#新增tomcat环境配置" class="headerlink" title="新增tomcat环境配置"></a>新增tomcat环境配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim ~&#x2F;.bash_profile </span><br><span class="line"># 新增tomcat bin绝对路径</span><br><span class="line">export PATH&#x3D;$PATH:&#x2F;usr&#x2F;local&#x2F;apache-tomcat-8.5.60&#x2F;bin</span><br><span class="line">source ~&#x2F;.bash_profile</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="node"><a href="#node" class="headerlink" title="node"></a>node</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="brew-安装vue"><a href="#brew-安装vue" class="headerlink" title="brew 安装vue"></a>brew 安装vue</h2><blockquote>
-<p>#安装cnpm</p>
-<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<p>#安装脚手架</p>
-<p>npm install -g vue-cli</p>
-</blockquote>
-<h2 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h2><blockquote>
-<p>cnpm install webpack -g</p>
-</blockquote>
-<h2 id="安装vue脚手架"><a href="#安装vue脚手架" class="headerlink" title="安装vue脚手架"></a>安装vue脚手架</h2><blockquote>
-<p>npm install -g vue-cli</p>
-<p>创建首个vue项目</p>
-<p>1.在Mac中创建文件夹，名称自己起，然后在终端打开该目录，也可以用vscode 打开，在终端输入：</p>
-<p>sudo vue init webpack vue_project</p>
-<p>坐等安装完成。</p>
-<p>2.安装成功后切换到在终端中切换到项目根目录</p>
-<p>cd vue_peoject</p>
-<p>3.安装项目依赖，在终端中输入：</p>
-<p>sudo npm install</p>
-<p>4.安装依赖完成后，启动项目，在终端或者vscode终端输入：</p>
-<p>npm run dev</p>
-<p>5.访问<a href="http://localhsot:8080，打开vue项目">http://localhsot:8080，打开vue项目</a></p>
-</blockquote>
-<h2 id="Mac-OS-下-Python3-pip-配置国内源"><a href="#Mac-OS-下-Python3-pip-配置国内源" class="headerlink" title="Mac OS 下 Python3 pip 配置国内源"></a>Mac OS 下 Python3 pip 配置国内源</h2><blockquote>
-<p>阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a><br>豆瓣 (douban) <a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a><br>两种方式使用</p>
-<p>安装时指定</p>
-<p>~ pip install ipython -i <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a></p>
-<p>如果提示 host 不被信任可以加上参数 –trusted-host</p>
-<p>~ pip install ipython -i <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a> –trusted-host mirrors.aliyun.com</p>
-<p>​                                                                   macOS</p>
-<p>~ mkdir .pip   # 在用户根目录（cd~ / cd）下创建一个.pip目录<br>~ cd pip<br>~ touch pip.conf # 创建一个pip配置文件<br># 写入配置<br>[global]<br>index-url = <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>[install]<br>trusted-host = mirrors.aliyun.com</p>
-</blockquote>
-<h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>1.安装完Node.js 及 Git 后，即可使用npm来安装Hexo：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-
-<p>2.创建一个目录用来作为你的blog目录，例如 MyBlog；并在该目录中进行Hexo的初始化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init MyBlog</span><br><span class="line">cd ~&#x2F;MyBlog&#x2F;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>新建完成后，得到以下目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">·</span><br><span class="line">|-- _config.yml</span><br><span class="line">|-- package.json</span><br><span class="line">|-- scaffolds</span><br><span class="line">|-- source</span><br><span class="line">|   |-- _drafts</span><br><span class="line">|   |-- _posts</span><br><span class="line">|-- themes</span><br></pre></td></tr></table></figure>
-<p>至此完成了Hexo的安装及初始化,下面进行本地的预览</p>
-<p>3.安装hexo server</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-server </span><br></pre></td></tr></table></figure>
-<p>4.生成静态页面并打开hexo本地服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate </span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>依据命令行提示，打开 <a href="http://localhost:4000即可看到默认主题的默认页面了。">http://localhost:4000即可看到默认主题的默认页面了。</a></p>
-<h3 id="配置git与Github账户关联"><a href="#配置git与Github账户关联" class="headerlink" title="配置git与Github账户关联"></a>配置git与Github账户关联</h3><p>1.打开前面创建的MyBlog目录下的 <strong>_config.yml</strong> 文件，在修改最下方的<strong>deploy</strong>为</p>
-<p>*<strong>==注意，冒号后面一定要加空格==</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: gihub: https:&#x2F;&#x2F;github.com&#x2F;[your_account]&#x2F;[your_accout].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>2.安装hexo的git部署，在命令行中执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>3.将生成静态页面并部署到github的仓库中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g 或者hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>当提示 ** INFO Deploy done: git <strong>即上传成功，这时就可以通过 \</strong>http://[your_account].github.io** 来访问你的个人站点了。</p>
-<h3 id="hexo基本配置"><a href="#hexo基本配置" class="headerlink" title="hexo基本配置"></a>hexo基本配置</h3><p>以下是hexo配置文件 <strong>_config.yml</strong> 的基本内容及基本设置，更多个性化设置请参考<a href="https://hexo.io/zh-cn/docs/index.html">官方文档</a>：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Hexo Configuration</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/configuration.html</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Source: https://github.com/hexojs/hexo/</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Site  <span class="comment">##页面信息</span></span></span><br><span class="line">title: Who&#x27;s Blog  ##标题，即浏览器标签栏显示的内容</span><br><span class="line">subtitle: Why so serious?  ##副标题</span><br><span class="line">description:        ##描述，简介</span><br><span class="line">author: Charles Wei  ##作者</span><br><span class="line">language: zh-CN  ##语言</span><br><span class="line">timezone: Asia/Shanghai  ##时区</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> URL</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span></span><br><span class="line">url: http://wwww.charleswei.me  ##域名，后面自定义域名后，写在这里，用 .github.io的话，这里用默认的不用改</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Directory  <span class="comment">##文件目录，可不改</span></span></span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"><span class="meta">#</span><span class="bash"> Writing  <span class="comment">##静态页面生成属性，可不改</span></span></span><br><span class="line">new_post_name: :year-:month-:day-:title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight: </span><br><span class="line">  enable: true </span><br><span class="line">  line_number: true </span><br><span class="line">  auto_detect: false </span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Category &amp; Tag <span class="comment">##标签，可不改</span></span></span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"><span class="meta">#</span><span class="bash"> Date / Time format  <span class="comment">##时间格式，可不改</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Hexo uses Moment.js to parse and display date</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># You can customize the date format as defined in</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># http://momentjs.com/docs/#/displaying/format/</span></span></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Pagination <span class="comment">##每页显示文章数，按需改</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Set per_page to 0 to disable pagination</span></span></span><br><span class="line">per_page: 10</span><br><span class="line">pagination_dir: page</span><br><span class="line"><span class="meta">#</span><span class="bash"> Extensions <span class="comment">##主题设置</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Plugins: https://hexo.io/plugins/</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Themes: https://hexo.io/themes/</span></span></span><br><span class="line">theme: indigo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Deployment  <span class="comment">##git部署关联</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/deployment.html</span></span></span><br><span class="line">deploy: </span><br><span class="line">  type: git </span><br><span class="line">  repo: github: https://github.com/glassweichao/glassweichao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>Hexo具有高定制的主题效果，你可以从Hexo的<a href="https://hexo.io/themes/">主题库</a>中选择合适的主题，也可以自己制作。<br>以我现在使用的<a href="https://github.com/yscoder/hexo-theme-indigo">indigo</a>主题为例。首先将主题库clone到MyBlog目录下的themes目录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:yscoder/hexo-theme-indigo.git themes/indigo1</span><br></pre></td></tr></table></figure>
-<p>安装less，主题使用less作为css预处理工具：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-less --save1</span><br></pre></td></tr></table></figure>
-<p>安装feed,用于生吃RSS：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save1</span><br></pre></td></tr></table></figure>
-<p>安装json-content，用于生成静态站点数据，提供搜索功能的数据源：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-json-content --save1</span><br></pre></td></tr></table></figure>
-<p>开启标签页：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags1</span><br></pre></td></tr></table></figure>
-<p>修改<code>MyBlog/source/tags/index.md</code>的源数据：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">layout: tags</span><br><span class="line">noDate: true</span><br><span class="line">comments: false</span><br><span class="line">---1234</span><br></pre></td></tr></table></figure>
-<p>修改hexo配置文件<code>_config.yml</code>中的主题标签：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: indigo1</span><br></pre></td></tr></table></figure>
-<p>最后修改主题配置文件<code>MyBlog/themes/indigo/_config.yml</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#添加新菜单项遵循以下规则</span><br><span class="line"># menu:</span><br><span class="line">#   link: fontawesome图标，省略前缀，本主题前缀为 icon-，必须</span><br><span class="line">#   text: About 菜单显示的文字，如果省略即默认与图标一致，首字母会转大写</span><br><span class="line">#   url: &#x2F;about 链接，绝对或相对路径，必须。</span><br><span class="line">#   target: _blank 是否跳出，省略则在当前页面打开</span><br><span class="line">menu: </span><br><span class="line">  home: </span><br><span class="line">    text: 主页</span><br><span class="line">    url: &#x2F; </span><br><span class="line">  archives: </span><br><span class="line">    url: &#x2F;archives </span><br><span class="line">  tags: </span><br><span class="line">    url: &#x2F;tags </span><br><span class="line">  github: </span><br><span class="line">    url: https:&#x2F;&#x2F;github.com&#x2F;glassweichao </span><br><span class="line">    target: _blank </span><br><span class="line">  link: </span><br><span class="line">    text: 测试 </span><br><span class="line">    url: &#x2F;404</span><br><span class="line">rss: &#x2F;atom.xml</span><br><span class="line">#你的头像,替换掉 indigo&#x2F;source&#x2F;img&#x2F;logo.jpg 即可</span><br><span class="line">urlavatar: &#x2F;img&#x2F;logo.jpg</span><br><span class="line"># Content</span><br><span class="line">tags: </span><br><span class="line">  title: 标签</span><br><span class="line">#是否开启分享</span><br><span class="line">share: true</span><br><span class="line">#是否开启搜索</span><br><span class="line">search: true</span><br><span class="line">#是否大屏幕下文章页隐藏导航</span><br><span class="line">hideMenu: true</span><br><span class="line">#是否开启toc</span><br><span class="line">#toc: false  关闭toc</span><br><span class="line">toc: </span><br><span class="line">  list_number: true # 是否显示数字排序</span><br><span class="line">#浏览器标签栏小图标</span><br><span class="line">favicon: &#x2F;favicon.ico1234567891011121314151617181920212223242526272829303132333435363738</span><br></pre></td></tr></table></figure>
-<p>最后生成部署，来看看效果吧</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<h2 id="mysql安装"><a href="#mysql安装" class="headerlink" title="mysql安装"></a>mysql安装</h2><p>1.brew安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mysql</span><br></pre></td></tr></table></figure>
-<p>2.安装包安装</p>
-<h2 id="anaconda"><a href="#anaconda" class="headerlink" title="anaconda"></a>anaconda</h2><p>官网下载 （<a href="https://repo.anaconda.com/archive/Anaconda3-2020.11-MacOSX-x86_64.pkg%EF%BC%89">https://repo.anaconda.com/archive/Anaconda3-2020.11-MacOSX-x86_64.pkg）</a></p>
-<p>创建虚拟环境</p>
-<blockquote>
-<p>conda create –name DeepLearning python=3  #指定执行版本为python3</p>
-<p>conda activate DeepLearning</p>
-<p>pip3 install numpy</p>
-<p>pip3 install pandas</p>
-<p>pip3 install matplotlib</p>
-<p>pip3 install Scikit-Learn</p>
-<p>pip3 install torch torchvision torchaudio #pytorch 安装</p>
-<p>conda info –envs #查看已经安装的环境</p>
-</blockquote>
-
+    
+    <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91macos%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#more">more >></a>
+    
     
 
     
@@ -1235,293 +958,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>[TOC]</p>
-<h5 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--help    命令说明`</span><br><span class="line"></span><br><span class="line">pwd       查看当前所在位置`</span><br><span class="line"></span><br><span class="line">tab       补全代码（特殊情况按两次）`</span><br><span class="line"></span><br><span class="line">曾经使用的命令可以上下按键来切换`</span><br><span class="line"></span><br><span class="line">`输入来不像执行的命令可以使用ctrl+c取消或者ctrl+u将输入的内容删除</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="l-s查看目录文件"><a href="#l-s查看目录文件" class="headerlink" title="l s查看目录文件"></a>l s查看目录文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-a 显示隐藏文件。</span><br><span class="line"></span><br><span class="line">-l 以列表的形式显示</span><br><span class="line"></span><br><span class="line">-h 以人性化的方式显示文件的大小</span><br><span class="line"></span><br><span class="line">-R  递归显示子目录</span><br><span class="line"></span><br><span class="line">ls -lR | grep bcd</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="cd-切换工作目录"><a href="#cd-切换工作目录" class="headerlink" title="cd 切换工作目录"></a>cd 切换工作目录</h5><p>​    绝对路径和相对路径：</p>
-<p>​        绝对路径：指的是在输入路径的时候，最前面是/或者～表示从根目录/home目录开始的具体的目录位置</p>
-<p>​        相对路径：指的是以当前目录开始，不以/或者～开头，表示不是以根目录或者home目录开始的目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd  切换到指定路径</span><br><span class="line"></span><br><span class="line">cd .  切换到当前目录</span><br><span class="line"></span><br><span class="line">Cd ..切换到上级目录</span><br><span class="line"></span><br><span class="line">Cd ~切换到home目录</span><br><span class="line"></span><br><span class="line">cd -  与上一次工作目录相互换</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="touch新建文件命令："><a href="#touch新建文件命令：" class="headerlink" title="touch新建文件命令："></a>touch新建文件命令：</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`touch 文件名称`</span><br></pre></td></tr></table></figure>
-<p>​    <img src="https://img-blog.csdnimg.cn/img_convert/0155a70da6bacff5b1bfb8a2a35739d2.png" alt="image-20201006023517134"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`touch  文件名称 文件名</span><br></pre></td></tr></table></figure>
-<p>`</p>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gjf36xnubfj31uw07eacj.jpg" alt="image-20201006023905517" style="zoom:50%;" />
-
-
-
-<h5 id="mkdir新建目录："><a href="#mkdir新建目录：" class="headerlink" title="mkdir新建目录："></a>mkdir新建目录：</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`-p 递归调用`</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`mkdir 文件名`</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p a/b/c</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir只能删除空目录，不能删除非空目录</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="rm-删除文件或目录"><a href="#rm-删除文件或目录" class="headerlink" title="rm. 删除文件或目录"></a>rm. 删除文件或目录</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-r   递归地删除目录下的文件，删除文件夹时必须加此参数</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-f. 强制删除，忽略不存在的文件，无需提示</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf filename.  删除文件名称</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="mv移动和重命名"><a href="#mv移动和重命名" class="headerlink" title="mv移动和重命名"></a>mv移动和重命名</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-f. 覆盖前不询问</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-i 覆盖前询问</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-n.不覆盖已经存在的文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv 命令在同一个文件夹下移动文件，即重命名功能</span><br></pre></td></tr></table></figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gjf36ny028j310k0dqdlx.jpg" alt="image-20201006025729725" style="zoom:50%;" />
-
-<h5 id="Cp复制"><a href="#Cp复制" class="headerlink" title="Cp复制"></a>Cp复制</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-i  覆盖前提示</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-r 若给出的源文件是目录文件，则cp将递归复制该目录下的所有子目录和文件，目标文件必须为以一个目录名</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d79db3a493a7704bbc2519a29f9097e3.png" alt="image-20201006025650259"></p>
-<h5 id="cat查看文件内容、合并文件"><a href="#cat查看文件内容、合并文件" class="headerlink" title="cat查看文件内容、合并文件"></a>cat查看文件内容、合并文件</h5><p>​    </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-n  输出行编号</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-s  不输出多行空行</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-b. 对非空行进行编号</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat filename.   查看文件的内容</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat. File1  file2. &gt; file1.    将file1 和file2的文件合并写入到file1中</span><br></pre></td></tr></table></figure>
-<h5 id="more-查看文件内容（分页查看）"><a href="#more-查看文件内容（分页查看）" class="headerlink" title="more  查看文件内容（分页查看）"></a>more  查看文件内容（分页查看）</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">more filename   查看filename文件到内容</span><br><span class="line">快捷键。                   功能说明</span><br><span class="line">空格键   									显示下一屏</span><br><span class="line">Enter键										一次滚动一行</span><br><span class="line">b													回滚一屏</span><br><span class="line">f													前滚一屏</span><br><span class="line">q													退出</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="history查看历史命令"><a href="#history查看历史命令" class="headerlink" title="history查看历史命令"></a>history查看历史命令</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history      查看历史命令	</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">history -c   删除历史命令记录</span><br></pre></td></tr></table></figure>
-<h5 id="sudo获得root权限"><a href="#sudo获得root权限" class="headerlink" title="sudo获得root权限"></a>sudo获得root权限</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Linux 默认不能以root账号登陆，可以用sudo 获得权限</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="linux三种权限"><a href="#linux三种权限" class="headerlink" title="linux三种权限"></a>linux三种权限</h5><p>​    <img src="https://img-blog.csdnimg.cn/img_convert/ffcd7d0a115605885ea3707da0ae9fc6.png" alt="image-20201006031247263"></p>
-<p>​    </p>
-<h5 id="创建用户："><a href="#创建用户：" class="headerlink" title="创建用户："></a>创建用户：</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd.   【用户名】</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-d   指定新账户的主目录</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-g   指定用户的所属组</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-G  指定用户附加组</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-s. 指定用户登陆</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-m. 自动创建home目录	</span><br></pre></td></tr></table></figure>
-
-
-<h5 id="删除用户："><a href="#删除用户：" class="headerlink" title="删除用户："></a>删除用户：</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userdel. [用户组]</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-r 删除用户的同时删除home目录</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su root  切换到root账号下</span><br><span class="line">whoami  查看当前登陆的账号</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3ee7abb54bd11c404569589b582f3b94.png" alt="image-20201006032300031"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd test1   创建用户</span><br><span class="line"></span><br><span class="line">cat  /etc/passwd    /etc/passwd存放了用户的信息</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/11a2993706f63e8d030a57b4838f73e1.png" alt="image-20201006032525488"></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/84deb341acc433bbc187a8e41a1893f9.png" alt="image-20201006032633108"></p>
-<p>此时未成功的创建好test用户</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -m test1   即可成功的创建用户  在/home目录下可看到该文件夹</span><br></pre></td></tr></table></figure>
-<p>修改用户的密码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd test1    新的下面输出新密码即可创建成功</span><br></pre></td></tr></table></figure>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gjf35snff3j31ws0cqdik.jpg" alt="image-20201006033226666" style="zoom:50%;" />
-
-<p>切换用户切换到对应的home目录下</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3c0595ecde5bf960bba6b9956cc25dab.png" alt="image-20201006033443851"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">userdel test2   只会去删除用户。不会删除用户对应的home目录</span><br><span class="line">userdel -r test2  不仅去删除用户。也会删除用户对应的home目录</span><br></pre></td></tr></table></figure>
-<h5 id="修改用户账号属性："><a href="#修改用户账号属性：" class="headerlink" title="修改用户账号属性："></a>修改用户账号属性：</h5><p>​    usermod:    </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-u 用户id</span><br><span class="line">-g 所属家属组</span><br><span class="line">-a -G GID  不实用-a会覆盖之前的附加组</span><br><span class="line">-d -m 将home目录位置移动到新位置</span><br><span class="line">-s 该用户账号的新登陆</span><br><span class="line">-l 新的登陆名称</span><br></pre></td></tr></table></figure>
-<h5 id="用户组管理："><a href="#用户组管理：" class="headerlink" title="用户组管理："></a>用户组管理：</h5><h6 id="创建用户组："><a href="#创建用户组：" class="headerlink" title="创建用户组："></a>创建用户组：</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd</span><br></pre></td></tr></table></figure>
-<h6 id="删除用户组"><a href="#删除用户组" class="headerlink" title="删除用户组"></a>删除用户组</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupdel</span><br></pre></td></tr></table></figure>
-<h6 id="修改组属性"><a href="#修改组属性" class="headerlink" title="修改组属性"></a>修改组属性</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupmod</span><br><span class="line">-g Gid</span><br></pre></td></tr></table></figure>
-<p>提示：</p>
-<p>​    创建用户时，会默认创建一个与用户名同民的组名</p>
-<p>​    创建成功后可在/e t c/passwd文件下查看</p>
-<p>​    新创建的用户没有sudo权限，需要将用户加到a d m，su do这两个组中才拥有su do权限</p>
-<h5 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h5><p>​    </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod + /-rwx 文件名｜目录名+增加权限,-取消权限</span><br></pre></td></tr></table></figure>
-<p>每个文件都有三组不同的权限，第一组文件所有者，第二组时文件所有组，第三组时其他用户</p>
-<p>第一组：u文件所有者 修改所有者权限 chmod u+/-/ = rwx filename</p>
-<p>第二组：g文件所有组 修改所有组权限 chmod g+/-/ = rwx filename</p>
-<p>第三组：o其他用户 修改所有组权限 chmod o+/-/ = rwx filename</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/550c24c6e9bde244b4aeafd58a2dcf27.png" alt="image-20201006152841615"></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/54de8b3b52565338c849c254c42d6dc2.png" alt="image-20201006153342388"></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6c837860023f30c92e83dfa3514d72b9.png" alt="image-20201006153447514"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 文件名｜目录名 指定权限修改</span><br><span class="line">chmod中第一个数字代表所有者权限，第二个数字代表所属组的权限，第三个数字代表其他人权限</span><br><span class="line">r   4</span><br><span class="line">w   2</span><br><span class="line">x   1</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">4 2 1    7     r w x</span><br><span class="line">4 2 0    6     r w -</span><br><span class="line">4 0 1    5     r - x</span><br><span class="line">4 0 0    4     r - -</span><br><span class="line">0 2 1    3     - w x</span><br><span class="line">0 2 0    2     - w -</span><br><span class="line">0 0 1    1     - - x</span><br><span class="line">0 0 0    0     - - -</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/807962e7aacedb1c61f6aaa637290888.png" alt="image-20201006154821717"></p>
-<h5 id="远程管理"><a href="#远程管理" class="headerlink" title="远程管理"></a>远程管理</h5><h6 id="Ifconfig"><a href="#Ifconfig" class="headerlink" title="Ifconfig"></a>Ifconfig</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig     查看系统ip地址</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/746f9acd475839015e8d252cc352d96f.png" alt="image-20201006155229054"></p>
-<h6 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping   检查网络是否正常通信，linux下默认ping不会结束，使用c t r l+C强制结束</span><br><span class="line">例如:ping www.baidu.com</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -c 指定几个数据包结束</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -i 指定发送数据包的间隔，单位时秒</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -s 指定发送数据的大小 单位时字节</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping -t 设置TTL的大小  TTL网络调数大小</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/fc9673c68ece8028e75f52dcc1e50520.png" alt="image-20201006155736975"></p>
-<h6 id="ssh远程连接"><a href="#ssh远程连接" class="headerlink" title="ssh远程连接"></a>ssh远程连接</h6><p>Ssh是一种网络协议，用于计算机之间的加密登陆，Linux下默认开启sshd服务，只有开启sshd服务才能进行连接</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd status  查看是否开启服务 active表示已开启</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/558c20a43a7e27877b75a903c812bfc8.png" alt="image-20201006160039844"></p>
-<h6 id="ssh远程连接-1"><a href="#ssh远程连接-1" class="headerlink" title="ssh远程连接"></a>ssh远程连接</h6><p>Window：xshell 和putty</p>
-<p>Mac. finallshell</p>
-<p>Linux  </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 端口 主机  -p可以指定端口</span><br><span class="line">ssh 一般默认使用22  看到welcome表示连接成功</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/20641d3cfdcf0133083b1864e84e2d46.png" alt="image-20201006160425256"></p>
-<h6 id="scp文件复制："><a href="#scp文件复制：" class="headerlink" title="scp文件复制："></a>scp文件复制：</h6><p>scp就是se cure copy 是一个在linux下用来进行远程拷贝文件的命令</p>
-<p>使用范例1:吧远程的e.txt文件拷贝到本地/home/python/Desktop下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp python@192.168.254.131:/home/python/a/e.txt /home/python/Desktop</span><br></pre></td></tr></table></figure>
-<p>使用范例2:把本地的Desktop/requirements.txt 文件拷贝到远程主机的home目录下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp Desktop/requirements.txt python@192.168.254.131:/home/python</span><br></pre></td></tr></table></figure>
-<p>使用范例3:scp -r可以复制文件夹，把当前目录下的demo文件夹复制到远程目录下的Desktop</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r demo user@remote:Desktop</span><br></pre></td></tr></table></figure>
-<p>使用范例4:将远程主机的a文件夹包括子文件，复制到本机的桌面</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r python@192.168.254.131:/home/python/a Desktop</span><br></pre></td></tr></table></figure>
-<p>scp只能在linux中使用，window中我们一般使用winscp</p>
-<p>winscp下载地址：<a href="https://winscp.net/eng/download.php">https://winscp.net/eng/download.php</a></p>
-<h5 id="系统信息管理"><a href="#系统信息管理" class="headerlink" title="系统信息管理"></a>系统信息管理</h5><h6 id="Date-查看系统当前时间"><a href="#Date-查看系统当前时间" class="headerlink" title="Date 查看系统当前时间"></a>Date 查看系统当前时间</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z ~]# date</span><br><span class="line">2020年 10月 06日 星期二 16:17:12 CST</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z ~]# </span><br></pre></td></tr></table></figure>
-<h6 id="查看磁盘空间"><a href="#查看磁盘空间" class="headerlink" title="查看磁盘空间"></a>查看磁盘空间</h6><p> d f -Th查看磁盘分区，以及挂载情况</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z ~]# df -Th</span><br><span class="line">文件系统       类型      容量  已用  可用 已用% 挂载点</span><br><span class="line">/dev/vda1      ext4       40G  4.3G   34G   12% /</span><br><span class="line">devtmpfs       devtmpfs  911M     0  911M    0% /dev</span><br><span class="line">tmpfs          tmpfs     920M     0  920M    0% /dev/shm</span><br><span class="line">tmpfs          tmpfs     920M  392K  920M    1% /run</span><br><span class="line">tmpfs          tmpfs     920M     0  920M    0% /sys/fs/cgroup</span><br><span class="line">tmpfs          tmpfs     184M     0  184M    0% /run/user/0</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z ~]# </span><br></pre></td></tr></table></figure>
-<p>du -sh 【filename】 查看目录大小</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# du -sh liuhuanhuan</span><br><span class="line">0       liuhuanhuan</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# </span><br></pre></td></tr></table></figure>
-<p>du -h [filename] 查看文件大小</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z tmp]# du -h hsperfdata_root/</span><br><span class="line">36K     hsperfdata_root/</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z tmp]# </span><br></pre></td></tr></table></figure>
-<h6 id="查看内核-操作系统-c-pu信息"><a href="#查看内核-操作系统-c-pu信息" class="headerlink" title="查看内核/操作系统/c pu信息"></a>查看内核/操作系统/c pu信息</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a 查看内核/操作系统/c pu信息</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z tmp]# uname -a</span><br><span class="line">Linux izuf6essqiicvb19gkmlb9z 3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -i 查看硬件平台</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -m 查看cpu</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -n 查看节点名称</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -o 查看操作系统</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -v 查看内核版本</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r 查看发行版本号</span><br></pre></td></tr></table></figure>
-<h6 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h6><p>to p查看进程实时运行情况，即系统资源实时使用情况，退出to p界面输入q</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">top - 16:27:44 up 26 days,  3:32,  3 users,  load average: 0.00, 0.06, 0.06</span><br><span class="line">Tasks:  79 total,   1 running,  78 sleeping,   0 stopped,   0 zombie</span><br><span class="line"><span class="meta">%</span><span class="bash">Cpu(s):  0.3 us,  0.2 sy,  0.0 ni, 99.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st</span></span><br><span class="line">KiB Mem :  1883652 total,   104420 free,   832708 used,   946524 buff/cache</span><br><span class="line">KiB Swap:        0 total,        0 free,        0 used.   847524 avail Mem </span><br><span class="line"></span><br><span class="line">  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                                                                                                          </span><br><span class="line">    1 root      20   0   43180   3304   2100 S  0.0  0.2   0:15.42 systemd                                                                                                          </span><br><span class="line">    2 root      20   0       0      0      0 S  0.0  0.0   0:00.02 kthreadd                                                                                                         </span><br><span class="line">    3 root      20   0       0      0      0 S  0.0  0.0   0:08.82 ksoftirqd/0                                                                                                      </span><br><span class="line">    5 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kworker/0:0H                                                                                                     </span><br><span class="line">    6 root      20   0       0      0      0 S  0.0  0.0   0:10.68 kworker/u2:0                                                                                                     </span><br><span class="line">    7 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 migration/0                                                                                                      </span><br><span class="line">    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 rcu_bh                                                                                                           </span><br><span class="line">    9 root      20   0       0      0      0 S  0.0  0.0   1:13.69 rcu_sched                                                                                                        </span><br><span class="line">   10 root      rt   0       0      0      0 S  0.0  0.0   0:06.55 watchdog/0                                                                                                       </span><br><span class="line">   12 root      20   0       0      0      0 S  0.0  0.0   0:00.00 kdevtmpfs                                                                                                        </span><br><span class="line">   13 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 netns                                                                                                            </span><br><span class="line">   14 root      20   0       0      0      0 S  0.0  0.0   0:00.51 khungtaskd                                                                                                       </span><br><span class="line">   15 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 writeback                                                                                                        </span><br><span class="line">   16 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kintegrityd                                                                                                      </span><br><span class="line">   17 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 bioset                                                                                                           </span><br><span class="line">   18 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kblockd                                                                                                          </span><br><span class="line">   19 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 md                                                                                                               </span><br><span class="line">   25 root      20   0       0      0      0 S  0.0  0.0   0:00.91 kswapd0                                                                                                          </span><br><span class="line">   26 root      25   5       0      0      0 S  0.0  0.0   0:00.00 ksmd                                                                                                             </span><br><span class="line">   27 root      39  19       0      0      0 S  0.0  0.0   0:03.26 khugepaged                                                                                                       </span><br><span class="line">   28 root      20   0       0      0      0 S  0.0  0.0   0:00.00 fsnotify_mark                                                                                                    </span><br><span class="line">   29 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 crypto                                                                                                           </span><br><span class="line">   37 root       0 -20       0      0      0 S  0.0  0.0   0:00.00 kthrotld </span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PID  进程id</span><br><span class="line">USER  进程所有者</span><br><span class="line">PR  进程优先级</span><br><span class="line">NI   nice值，负值表示高优先级，正值表示低优先级</span><br><span class="line">VIRT   进程使用的虚拟机内存总量</span><br><span class="line">RES    进程使用的，未被换出的物理内存大小</span><br><span class="line">SHR    共享内存大小</span><br><span class="line">S      进程状态 D=不可中断的睡眠状态 R=运行 S=睡眠 T=跟踪/停止 Z=僵尸进程</span><br><span class="line"><span class="meta">%</span><span class="bash">CPU   上次更新到现在CPU时间占用百分比</span></span><br><span class="line"><span class="meta">%</span><span class="bash">MEM	进程使用的物理内存百分比</span></span><br><span class="line">TIME+ 进程使用的cpu时间统计</span><br><span class="line">COMMAND 进程名称</span><br></pre></td></tr></table></figure>
-<h6 id="Ps-查看系用所有进程的状态"><a href="#Ps-查看系用所有进程的状态" class="headerlink" title="Ps 查看系用所有进程的状态"></a>Ps 查看系用所有进程的状态</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ps -ajx   一般使用ps 和-ajx一起使用</span><br><span class="line">D		不可中断系统进程</span><br><span class="line">R  	运行中的进程</span><br><span class="line">S		中断sleep状态</span><br><span class="line">T		停止</span><br><span class="line">Z		僵死-僵尸进程</span><br></pre></td></tr></table></figure>
-<h6 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h6><p>kill [参数][进程号]</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kill 9[进程号]   强制结束进程</span><br><span class="line">kill 15[进程号]   结束进程，等级没有-9高</span><br></pre></td></tr></table></figure>
-<p>提示：在linux中1号进程是不能被终止的</p>
-<h6 id="练习测试"><a href="#练习测试" class="headerlink" title="练习测试"></a>练习测试</h6><p>1.创建一个用户li lei,其id号未2002，基本组为s tu（id为3000）,附加组为linux</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo groupadd -g 3000 stu</span><br><span class="line">sudo groupadd linux</span><br><span class="line">sudo useradd -u 2002 -g stu -G linux lilei</span><br></pre></td></tr></table></figure>
-<p>2.创建一个用户hanmeimei需要默认创建home目录，并指定shell为/bin/bash</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo useradd -m -s /bin/bash hanmeimei</span><br></pre></td></tr></table></figure>
-<p>3.修改lilei 的id号为4004,所属组为linux</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -u 4004 -g linux lilei</span><br></pre></td></tr></table></figure>
-<p>4.添加系统用户zhao yu,其不允许其登陆系统</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -r -s &#x27;/bin/nologin&#x27; zhaoyu</span><br></pre></td></tr></table></figure>
-<p>5.在桌面创建一个文件a.txt，并查看其文件的权限</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch a.txt</span><br><span class="line">ls -l</span><br></pre></td></tr></table></figure>
-<p>6.修改a,txt所在组的权限为只读</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod g=r a.text</span><br></pre></td></tr></table></figure>
-<p>7.将a .txt的权限修改为其他人无任何权限，所有者可读可写，所属组</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod u=rw,g=r,o=--- a.text</span><br></pre></td></tr></table></figure>
-<h5 id="文件查找"><a href="#文件查找" class="headerlink" title="文件查找"></a>文件查找</h5><h6 id="which命令："><a href="#which命令：" class="headerlink" title="which命令："></a>which命令：</h6><p>查看给定命令的绝对位置，whi ch会在环境变量和$path设置的目录里查找合适的文件，也就是说which 可以查看系统某个命令是否存在，以及执行哪个位置的命令，此命令去搜索$path环境变量的目录中去，可以使用e cho $PATH查看，如：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# echo $PATH</span><br><span class="line">/usr/local/maven/apache-maven-3.6.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/java/jdk1.8.0_261/bin:/usr/local/java/jdk1.8.0_261/jre/bin:/usr/local/node/node-v12.18.4-linux-x64/bin:/root/bin</span><br></pre></td></tr></table></figure>
-<p>路径使用”:”去分割，Which命令会在这些路径下去搜索</p>
-<p>Which   [系统命令]</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# which java</span><br><span class="line">/usr/local/java/jdk1.8.0_261/bin/java</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# which mvn</span><br><span class="line">/usr/local/maven/apache-maven-3.6.3/bin/mvn</span><br></pre></td></tr></table></figure>
-<p>which是根据使用者所配置的环境变量去查看，不同的环境变量所找到的内容自然也是不同的</p>
-<h6 id="whereis命令："><a href="#whereis命令：" class="headerlink" title="whereis命令："></a>whereis命令：</h6><p>whereis可以查看命令的绝对位置</p>
-<p>whic h会列出这个命令的别名的记录，而whereis只会查看该命令所在的位置</p>
-<p>whereis</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-b 只查找二进制文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-B&lt;目录&gt; 只在设置的目录下查找二进制文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-f 不显示文件民前的路径名称</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-m 只查找说明文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-M&lt;目录&gt;   只在设置的目录下查看说明文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-s   只查找原始代码文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-S&lt;目录&gt; 只在设置的目录下面去查看原始代码文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-u 查找不包含指定类型的文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# whereis java</span><br><span class="line">java: /usr/local/java /usr/local/java/jdk1.8.0_261/bin/java /usr/local/java/jdk1.8.0_261/jre/bin/java</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# whereis mvn</span><br><span class="line">mvn: /usr/local/maven/apache-maven-3.6.3/bin/mvn /usr/local/maven/apache-maven-3.6.3/bin/mvn.cmd</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# whereis pwd</span><br><span class="line">pwd: /usr/bin/pwd /usr/include/pwd.h /usr/share/man/man1/pwd.1.gz</span><br></pre></td></tr></table></figure>
-<h6 id="Locate命令"><a href="#Locate命令" class="headerlink" title="Locate命令"></a>Locate命令</h6><p>Locate [关键字]</p>
-<p>1.linux特有的寻找文件和目录的命令，用于快速定位系统命令，配置文件等</p>
-<p>2.速度虽然快，但是有时候会找不到</p>
-<p>3.locate是在文件数据库中查找，所以是很快的</p>
-<p>4.文件数据库没有该文件，则无法查找到</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">updatedb 建立整个文件系统数据库    注意，执行权限为root</span><br></pre></td></tr></table></figure>
-<p>注：</p>
-<p>​    当在某些目录下创建文件时，然后更新数据库之后，并不能用locate命令立马查找到，原因是系统在更新数据库到配置文件中，设置了一些搜索限制，所以搜不到，输入如下命令即可看到：</p>
-<p>locate命令安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yun install mlocate</span><br><span class="line">updatedb</span><br></pre></td></tr></table></figure>
-<h6 id="find命令："><a href="#find命令：" class="headerlink" title="find命令："></a>find命令：</h6><p>会在一个目录中去搜索文件，可以指定一些匹配条件，如文件名，文件类型和用户名等</p>
-<p>Find [搜索路径][搜索选项] filename</p>
-<p>path路径，表示从这个路径下开始找</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-name filename  查找名为filename的文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-size +/-大小 按照文件的大小来查找 +大于 -小于</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-user username 按文件所属查找</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">通过时间查找</span><br><span class="line">			-ctime -atime -mtime （以天为单位）</span><br><span class="line">			-cmin -amin -mmin(以分为单位)</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-type 按文件类型</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-inum 根据i结点来查找</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-group 组名 按所属组来查找</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-a and 逻辑与 -O or </span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-exec 或 -ok command &#123;&#125; \:将查到的文件command操作，</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">按照名称去查找</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# find ./ -name java</span><br><span class="line">./usr/local/java</span><br><span class="line">./usr/local/java/jdk1.8.0_261/bin/java</span><br><span class="line">./usr/local/java/jdk1.8.0_261/jre/bin/java</span><br><span class="line">./usr/local/ShiJiaZhuRainAi/ShiJiaZhuangRain/src/test/java</span><br><span class="line">./usr/local/ShiJiaZhuRainAi/ShiJiaZhuangRain/src/main/java</span><br><span class="line">./etc/pki/java</span><br><span class="line">./etc/pki/ca-trust/extracted/java</span><br></pre></td></tr></table></figure>
-<p>发现并删除8天以前创建的文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ./ -mtime +8 -print|xargs rm -rf</span><br></pre></td></tr></table></figure>
-<p>Where locate whereis find的区别：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.which用于查找直接的命令 只能查找可执行的文件，该命令只在$PATh中去查找，查重范围小，速度快 -a返回所有结果</span><br><span class="line">2.whereis 不只可以查看命令 棋类类型文件也可以查找。在$PATH基础上增加一些系统目录的查找，查找范围比which稍微大点，速度快，</span><br><span class="line">3.locat 快速查找指定的文件 他会从linux内置的文件数据库中去查找 可以使用updatedb 来更新一次索引，确保不会遗漏文件，可以通过-r正则匹配查找文件</span><br><span class="line">4.直接搜索整个文件目录，默认从根目录开始查找，最强大但是速度慢</span><br></pre></td></tr></table></figure>
-<h6 id="Grep："><a href="#Grep：" class="headerlink" title="Grep："></a>Grep：</h6><p>grep是强大的文本搜索工具，他能使用正则表达式搜索文本，并把匹配的行打印出来</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grep &quot;python&quot; filename    #在filename文件中查找python,并将结果打印出来</span><br><span class="line">grep &quot;python&quot; filename filename2 filename3   #在多个文件中查找python,并将结果打印出来	</span><br></pre></td></tr></table></figure>
-<p>-E选项使用正则表达式：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E “[a-c]+” filename </span><br></pre></td></tr></table></figure>
-<p>在多个文件中查找</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep  &quot;match_patter&quot; file_1,file_2,file_3</span><br></pre></td></tr></table></figure>
-<p>输出包含匹配字符串的行数-n选项</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &quot;this&quot; index -n textindex</span><br></pre></td></tr></table></figure>
-<h6 id="管道符"><a href="#管道符" class="headerlink" title="管道符|"></a>管道符|</h6><p>将左边的输出当作右边的输入</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ajx | grep ssh   将ps输出的结果当作grep的输入过滤</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# ps -ajx | grep ssh</span><br><span class="line">    1  2005  2005  2005 ?           -1 Ss       0   0:00 /usr/sbin/sshd -D</span><br><span class="line">32741  8561  8561 32741 pts/0     8561 S+       0   0:00 ssh localhost -p 22</span><br><span class="line"> 2005  8562  8562  8562 ?           -1 Ss       0   0:00 sshd: root@pts/2</span><br><span class="line"> 8698 14678 14677  8698 pts/2    14677 R+       0   0:00 grep --color=auto ssh</span><br><span class="line"> 2005 27153 27153 27153 ?           -1 Ss       0   0:00 sshd: root@notty</span><br><span class="line">27153 27155 27155 27155 ?           -1 Ss       0   0:00 /usr/libexec/openssh/sftp-server</span><br><span class="line">27153 27174 27174 27174 ?           -1 Ss       0   0:00 /usr/libexec/openssh/sftp-server</span><br><span class="line">27153 27181 27181 27181 ?           -1 Ss       0   0:00 /usr/libexec/openssh/sftp-server</span><br><span class="line">27153 27188 27188 27188 ?           -1 Ss       0   0:00 /usr/libexec/openssh/sftp-server</span><br><span class="line">27153 27195 27195 27195 ?           -1 Ss       0   0:00 /usr/libexec/openssh/sftp-server</span><br><span class="line">27153 27202 27202 27202 ?           -1 Ss       0   0:00 /usr/libexec/openssh/sftp-server</span><br><span class="line"> 2005 32739 32739 32739 ?           -1 Ss       0   0:21 sshd: root@pts/0,pts/1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>显示/e t c目录下的文件或目录的总数量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# ll /etc | grep -E &quot;.*&quot; -c</span><br><span class="line">196</span><br></pre></td></tr></table></figure>
-<h6 id="输出重定向"><a href="#输出重定向" class="headerlink" title="输出重定向"></a>输出重定向</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">ls &gt; test.txt   #将ls命令的输出重定向到test.txt文件</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# ll &gt; /home/TestCDX.txt</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# ls</span><br><span class="line">bin  boot  dev  etc  home  lib  lib64  liuhuanhuan  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z /]# cd /home</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# ls</span><br><span class="line">temp  test  test2  TestCDX.txt  testfile</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# cat TestCDX.txt </span><br><span class="line">总用量 60</span><br><span class="line">lrwxrwxrwx.  1 root root     7 8月  18 2017 bin -&gt; usr/bin</span><br><span class="line">dr-xr-xr-x.  4 root root  4096 9月   9 21:19 boot</span><br><span class="line">drwxr-xr-x  19 root root  2980 9月  11 14:00 dev</span><br><span class="line">drwxr-xr-x. 81 root root  4096 10月  6 17:48 etc</span><br><span class="line">drwxr-xr-x.  5 root root  4096 10月  6 18:25 home</span><br><span class="line">lrwxrwxrwx.  1 root root     7 8月  18 2017 lib -&gt; usr/lib</span><br><span class="line">lrwxrwxrwx.  1 root root     9 8月  18 2017 lib64 -&gt; usr/lib64</span><br><span class="line">-rw-r--r--   1 root root     0 10月  6 02:34 liuhuanhuan</span><br><span class="line">drwx------.  2 root root 16384 8月  18 2017 lost+found</span><br><span class="line">drwxr-xr-x.  2 root root  4096 11月  5 2016 media</span><br><span class="line">drwxr-xr-x.  2 root root  4096 11月  5 2016 mnt</span><br><span class="line">drwxr-xr-x.  2 root root  4096 9月  27 17:35 opt</span><br><span class="line">dr-xr-xr-x  90 root root     0 9月  10 12:55 proc</span><br><span class="line">dr-xr-x---. 11 root root  4096 10月  6 15:25 root</span><br><span class="line">drwxr-xr-x  23 root root   660 10月  6 17:48 run</span><br><span class="line">lrwxrwxrwx.  1 root root     8 8月  18 2017 sbin -&gt; usr/sbin</span><br><span class="line">drwxr-xr-x.  2 root root  4096 11月  5 2016 srv</span><br><span class="line">dr-xr-xr-x  13 root root     0 9月  10 20:55 sys</span><br><span class="line">drwxrwxrwt. 13 root root  4096 10月  6 17:48 tmp</span><br><span class="line">drwxr-xr-x. 13 root root  4096 8月  18 2017 usr</span><br><span class="line">drwxr-xr-x. 19 root root  4096 9月  10 20:55 var</span><br></pre></td></tr></table></figure>
-<p>输出重定向：追加&gt;&gt;</p>
-<p>将输出重定向追加到文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;```</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;ls &gt;&gt; text.txt   将ls命令的输出追加到test.txt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;[root@izuf6essqiicvb19gkmlb9z /]<span class="comment"># ll &gt; /home/TestCDX.txt</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;[root@izuf6essqiicvb19gkmlb9z /]<span class="comment"># ls</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;bin  boot  dev  etc  home  lib  lib64  liuhuanhuan  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;[root@izuf6essqiicvb19gkmlb9z /]<span class="comment"># cd /home</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;[root@izuf6essqiicvb19gkmlb9z home]<span class="comment"># ls</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;temp  <span class="built_in">test</span>  test2  TestCDX.txt  testfile</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;[root@izuf6essqiicvb19gkmlb9z home]<span class="comment"># cat TestCDX.txt</span></span> </span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;总用量 60</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;lrwxrwxrwx.  1 root root     7 8月  18 2017 bin -&gt; usr/bin</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;dr-xr-xr-x.  4 root root  4096 9月   9 21:19 boot</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x  19 root root  2980 9月  11 14:00 dev</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x. 81 root root  4096 10月  6 17:48 etc</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  5 root root  4096 10月  6 18:25 home</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;lrwxrwxrwx.  1 root root     7 8月  18 2017 lib -&gt; usr/lib</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;lrwxrwxrwx.  1 root root     9 8月  18 2017 lib64 -&gt; usr/lib64</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;-rw-r--r--   1 root root     0 10月  6 02:34 liuhuanhuan</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwx------.  2 root root 16384 8月  18 2017 lost+found</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  2 root root  4096 11月  5 2016 media</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  2 root root  4096 11月  5 2016 mnt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  2 root root  4096 9月  27 17:35 opt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;dr-xr-xr-x  90 root root     0 9月  10 12:55 proc</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;dr-xr-x---. 11 root root  4096 10月  6 15:25 root</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x  23 root root   660 10月  6 17:48 run</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;lrwxrwxrwx.  1 root root     8 8月  18 2017 sbin -&gt; usr/sbin</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  2 root root  4096 11月  5 2016 srv</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;dr-xr-xr-x  13 root root     0 9月  10 20:55 sys</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxrwxrwt. 13 root root  4096 10月  6 17:48 tmp</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x. 13 root root  4096 8月  18 2017 usr</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x. 19 root root  4096 9月  10 20:55 var</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;[root@izuf6essqiicvb19gkmlb9z home]<span class="comment"># ls &gt;&gt; TestCDX.txt</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;[root@izuf6essqiicvb19gkmlb9z home]<span class="comment"># ls</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;temp  <span class="built_in">test</span>  test2  TestCDX.txt  testfile</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;[root@izuf6essqiicvb19gkmlb9z home]<span class="comment"># cat TestCDX.txt</span></span> </span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;总用量 60</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;lrwxrwxrwx.  1 root root     7 8月  18 2017 bin -&gt; usr/bin</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;dr-xr-xr-x.  4 root root  4096 9月   9 21:19 boot</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x  19 root root  2980 9月  11 14:00 dev</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x. 81 root root  4096 10月  6 17:48 etc</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  5 root root  4096 10月  6 18:25 home</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;lrwxrwxrwx.  1 root root     7 8月  18 2017 lib -&gt; usr/lib</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;lrwxrwxrwx.  1 root root     9 8月  18 2017 lib64 -&gt; usr/lib64</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;-rw-r--r--   1 root root     0 10月  6 02:34 liuhuanhuan</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwx------.  2 root root 16384 8月  18 2017 lost+found</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  2 root root  4096 11月  5 2016 media</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  2 root root  4096 11月  5 2016 mnt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  2 root root  4096 9月  27 17:35 opt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;dr-xr-xr-x  90 root root     0 9月  10 12:55 proc</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;dr-xr-x---. 11 root root  4096 10月  6 15:25 root</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x  23 root root   660 10月  6 17:48 run</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;lrwxrwxrwx.  1 root root     8 8月  18 2017 sbin -&gt; usr/sbin</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x.  2 root root  4096 11月  5 2016 srv</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;dr-xr-xr-x  13 root root     0 9月  10 20:55 sys</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxrwxrwt. 13 root root  4096 10月  6 17:48 tmp</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x. 13 root root  4096 8月  18 2017 usr</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;drwxr-xr-x. 19 root root  4096 9月  10 20:55 var</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;temp</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;<span class="built_in">test</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;test2</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;TestCDX.txt</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;testfile</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 文件打包解压命令</span><br><span class="line"></span><br><span class="line">###### 文件打包</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;shell</span><br><span class="line">tar -cvf 生成打包的文件名.tar 需要被打包的文件</span><br><span class="line">-c  	创建一个新的归档</span><br><span class="line">-v		详细的列出处理的文件</span><br><span class="line">-f    使用归档文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">将指定文件目录下的文件打包</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# tar -cvf 打包测试.tar TestCDX.txt temp</span><br><span class="line">TestCDX.txt</span><br><span class="line">temp/</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# ls</span><br><span class="line">temp  test  test2  TestCDX.txt  testfile  打包测试.tar</span><br></pre></td></tr></table></figure>
-<h6 id="文件解包"><a href="#文件解包" class="headerlink" title="文件解包"></a>文件解包</h6><p>ta r -xvf 打包过的文件</p>
-<p>-x 将打包过的文件解压</p>
-<p>-f 选项必须放到最后面</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">解压到指定文件目录下  tar -xvf 需要解压的文件 -C 指定的文件路径</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# tar -xvf 打包测试.tar -C /home/a</span><br><span class="line">TestCDX.txt</span><br><span class="line">temp/</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# ls</span><br><span class="line">a  temp  test  test2  TestCDX.txt  testfile  打包测试.tar</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# cd a</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z a]# ls</span><br><span class="line">temp  TestCDX.txt</span><br></pre></td></tr></table></figure>
-<h5 id="压缩解压命令"><a href="#压缩解压命令" class="headerlink" title="压缩解压命令"></a>压缩解压命令</h5><h6 id="gzip命令"><a href="#gzip命令" class="headerlink" title="gzip命令"></a>gzip命令</h6><p>gzip一般和tar一起使用，完成打包压缩</p>
-<p>ta r只负责打包并为做压缩，使用-z选项可以调用gzip完成压缩，完成打包压缩</p>
-<p>使用ta r打包压缩的文件名，一般命名成x x x x x.tar.gz区别于其他文件</p>
-<p>压缩文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf py.tar.gz a.txt b.txt c.txt</span><br></pre></td></tr></table></figure>
-<p>解压缩文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf py.tar.gz</span><br></pre></td></tr></table></figure>
-<p>解压缩到指定目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf 打包文件.tar.gz -C 目标路径</span><br><span class="line">-C是指定哪里，目标文件必须存在</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">压缩指定的testfile和test2 </span><br><span class="line"></span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# tar -zcvf 打包测试压缩.tar.gz testfile test2</span><br><span class="line">testfile</span><br><span class="line">test2/</span><br><span class="line">test2/.bash_logout</span><br><span class="line">test2/.bashrc</span><br><span class="line">test2/.bash_profile</span><br><span class="line">test2/.bash_history</span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# ls</span><br><span class="line">a  temp  test  test2  TestCDX.txt  testfile  打包测试.tar  打包测试压缩.tar.gz</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">解压缩压缩包到指定的文件tar -zxvf 需要解压的文件 -C 指定文件目录</span><br><span class="line"></span><br><span class="line">[root@izuf6essqiicvb19gkmlb9z home]# tar -zxvf 打包测试压缩.tar.gz -C /home/test</span><br><span class="line">testfile</span><br><span class="line">test2/</span><br><span class="line">test2/.bash_logout</span><br><span class="line">test2/.bashrc</span><br><span class="line">test2/.bash_profile</span><br><span class="line">test2/.bash_history</span><br></pre></td></tr></table></figure>
-<h6 id="bzip命令"><a href="#bzip命令" class="headerlink" title="bzip命令"></a>bzip命令</h6><p>bzip和gzip的方式差不多，也是由tar去调用，使用-j选项</p>
-<p>b zi p压缩的文件是x x x.tar.bz2</p>
-<p>压缩文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -jcvf py.tar.bz2 a.txt b.txt</span><br></pre></td></tr></table></figure>
-<p>解压缩文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -jxvf py.tar.bz2</span><br></pre></td></tr></table></figure>
-<h5 id="ubunt软件管理"><a href="#ubunt软件管理" class="headerlink" title="ubunt软件管理"></a>ubunt软件管理</h5><p>软件安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install 软件包</span><br></pre></td></tr></table></figure>
-<p>如:安装s sh服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ssh</span><br></pre></td></tr></table></figure>
-<p>软件更新</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update 软件包</span><br></pre></td></tr></table></figure>
-<p>如:更新s sh服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update ssh</span><br></pre></td></tr></table></figure>
-<p>软件卸载</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt remove 软件包</span><br></pre></td></tr></table></figure>
-<p>如:卸载s sh服务</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt remove ssh</span><br></pre></td></tr></table></figure>
-<h5 id="vi-m编辑器"><a href="#vi-m编辑器" class="headerlink" title="vi m编辑器"></a>vi m编辑器</h5><h6 id="1-命令模式"><a href="#1-命令模式" class="headerlink" title="1.命令模式"></a>1.命令模式</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim filename    打开或新建文件。 </span><br><span class="line">vim+n filename.  打开或新建文件。光标移至n行</span><br><span class="line">vim + filename.   打开文件，光标移至最后一行</span><br><span class="line">vim +/pattern filename   打开文件，并将光标置于第一个与pattern匹配的位置</span><br><span class="line">vim -r filename.  在上次使用vim编辑器崩溃时，恢复filename</span><br><span class="line">vim filename---filename.  依次打开文件</span><br></pre></td></tr></table></figure>
-<p>​    移动光标命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">h			光标左移一个字符</span><br><span class="line">l			光标右移一个字符</span><br><span class="line">k或ctrl_p	光标上移一行</span><br><span class="line">j					光标下移一行</span><br><span class="line">w					光标右移一个字到字首</span><br><span class="line">b					光标左移一个字到字首</span><br><span class="line">o				光标移到当前行首</span><br><span class="line"><span class="meta">$</span><span class="bash">				光标移至当前行尾部</span></span><br><span class="line">ctrl+f	文件尾翻以屏</span><br><span class="line">ctrl+b	文件首翻以屏</span><br><span class="line">home	移动至行首</span><br><span class="line">end		移动至行末</span><br><span class="line">G			跳转至文档最末尾</span><br><span class="line">gg		跳转至文档首行</span><br><span class="line">nG    n是个数字，表示跳转至第几行</span><br></pre></td></tr></table></figure>
-<p>删除文档命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dd			删除光标所在行</span><br><span class="line">d0			删除光标所在行光标前面的内容</span><br><span class="line"><span class="meta">d$</span><span class="bash">			删除光标所在行光标末尾的内容</span></span><br><span class="line"> 3 dd		删除光标所在行包含当前行后面3行内容</span><br><span class="line"> yy		复制</span><br><span class="line"> 2 yy	复制光标所在行开始2行内容</span><br><span class="line"> p	粘贴 删除的内容也可以粘贴</span><br><span class="line"> u   撤销</span><br><span class="line"> ctrl r.  反撤销</span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<h6 id="2-插入-编辑-模式"><a href="#2-插入-编辑-模式" class="headerlink" title="2.插入(编辑)模式"></a>2.插入(编辑)模式</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">i    在光标前</span><br><span class="line">I.   在当前行首</span><br><span class="line">a. 光标后</span><br><span class="line">A    在当前行尾</span><br><span class="line">o		在当前行之下新开一行</span><br><span class="line">0   在当前行之上新开一行</span><br></pre></td></tr></table></figure>
-<p>退出编辑:wq 推出并保存    </p>
-<h6 id="3-末行模式"><a href="#3-末行模式" class="headerlink" title="3.末行模式"></a>3.末行模式</h6><p>保存退出</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:q			退出</span><br><span class="line">:q!			退出并不保存</span><br><span class="line">:w			保存</span><br><span class="line">:Wq			退出并保存</span><br><span class="line">:x  退出并保存</span><br></pre></td></tr></table></figure>
-<p>查找替换</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/string  在文本中查找string</span><br><span class="line">n 下一个</span><br><span class="line">N 上一个</span><br><span class="line">:n1,n2s /word1/word2/g   将n1行到n2行中word1替换成word2,g表示全部替换</span><br><span class="line">:1,$s /word1/word2/g  从第一行到最后一行寻找word1字符串，并将该字符串取代为word2</span><br><span class="line">:1,$s /word1/word2/gc 从第一行到最后一行寻找word1字符串，并将该字符串取代为word2!</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">v按字符移动选择文本</span><br><span class="line">V按行移动选择文本</span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<h5 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install lrzsz    rz/sz命令安装</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf + 文件名称		删除某个文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-tomcat-8.5.20 tomcat8.5   更改名称</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a  查看系统版本</span><br></pre></td></tr></table></figure>
-
+    <h5 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--help    命令说明`</span><br><span class="line"></span><br><span class="line">pwd       查看当前所在位置`</span><br><span class="line"></span><br><span class="line">tab       补全代码（特殊情况按两次）`</span><br><span class="line"></span><br><span class="line">曾经使用的命令可以上下按键来切换`</span><br><span class="line"></span><br><span class="line">`输入来不像执行的命令可以使用ctrl+c取消或者ctrl+u将输入的内容删除</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2021/03/01/%E3%80%90Linux%E3%80%91%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/#more">more >></a>
+    
     
 
     
@@ -1619,35 +1059,9 @@
     
     <p>配置gi t</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;username@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>忽略文件：</p>
-<p>扩展名为.pyc的文件是根据.py文件自动生成的，因此我们无需让Git跟踪它们。这些文件存 储在目录__pycache__中。为让Git忽略这个目录，创建一个名为.gitignore的特殊文件（这个文件 名以句点打头，且没有扩展名），</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.gitignore</span><br></pre></td></tr></table></figure>
-<p>这让Git忽略目录__pycache__中的所有文件。使用文件.gitignore可避免项目混乱，开发起来 更容易。</p>
-<p>初始化仓库：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<p>查看当前项目状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-<p>将文件加入到仓库中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
-<p>执行提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
-<p>查看提交历史</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
-<p>第二次提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">git commit -am &quot;commit&quot;</span><br><span class="line">git log --pretty&#x3D;oneline</span><br></pre></td></tr></table></figure>
-<p>撤销修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git status  #查看下此时git状态</span><br><span class="line">git checkout让你能够恢复到以前的任何提交。命令git checkout .放弃自最后一次提交后所做的所有修改，将项目恢复到最后一次提交的状态</span><br><span class="line">git checkout .</span><br><span class="line">git status</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>检查以前的提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty&#x3D;oneline</span><br><span class="line">git checkout be017b</span><br></pre></td></tr></table></figure>
-<p>切换分支 前的代码最好全部提交，不要作任何更改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git status</span><br><span class="line">git log --pretty&#x3D;oneline</span><br><span class="line">git reset --hard be017b</span><br><span class="line">git status</span><br><span class="line">git log --pretty&#x3D;oneline</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>删除仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">rm -rf .git</span><br><span class="line">git status</span><br><span class="line">git init </span><br><span class="line">git status</span><br><span class="line">git init</span><br><span class="line">git add.</span><br><span class="line">git commit -m &quot;&quot;</span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
-<p>分支操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git branch 查看当前所在分支</span><br><span class="line">git branch -a 查看项目所有分支</span><br><span class="line">git branch -r 查看项目远程分支</span><br><span class="line">git chectout -b dev 创建本地分支并切换到新创建的分支</span><br><span class="line">git push origin HEAD -U 将新创建的分支信息推送到github</span><br><span class="line">git branch -d 分支名称	删除本地的指定分支</span><br><span class="line">git push orign --delete dev 删除远程分支</span><br></pre></td></tr></table></figure>
-<p>用户信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git config user.name 查看本地名称</span><br><span class="line">git config user.email 查看本地email</span><br><span class="line">git config -a 查看本地所有配置</span><br><span class="line"></span><br><span class="line">#查看当前用户配置</span><br><span class="line">git config --global --list </span><br><span class="line"></span><br><span class="line">#查看系统用户配置</span><br><span class="line">git config --system --list</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+    
+    <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/#more">more >></a>
+    
     
 
     
@@ -1746,70 +1160,9 @@
     <p><a href="https://git-scm.com/download/win">下载git</a></p>
 <p><a href="https://github.com/join?source=header-home">注册github账户</a></p>
 <p>[TOC]</p>
-<h3 id="1-在github上创建项⽬"><a href="#1-在github上创建项⽬" class="headerlink" title="1.在github上创建项⽬"></a>1.在github上创建项⽬</h3><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6vxki6zj30ms0csgzt.jpg" alt="image-20201208090803623" style="zoom:50%;" />
-
-<blockquote>
-<p>填好后点 Create repository 按钮提交</p>
-</blockquote>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6w275wgj30ky0g2thz.jpg" alt="image-20201208090839504" style="zoom:50%;" />
-
-<p>提交成功如下图：</p>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6wfzzi4j30mw0dw74w.jpg" alt="image-20201208090908481" style="zoom:50%;" />
-
-<h3 id="2-把本地代码提交到git"><a href="#2-把本地代码提交到git" class="headerlink" title="2.把本地代码提交到git"></a>2.把本地代码提交到git</h3><blockquote>
-<p><strong>进⼊到：本地⽬录代码⽂件⽬录</strong></p>
-<p>单击 右键 打开git bush 类似于Win的cmd</p>
-</blockquote>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6wiuqckj30ju0gewmt.jpg" alt="image-20201208091412803" style="zoom:50%;" />
-
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6wn03q6j30mo0gcjvp.jpg" alt="image-20201208091425553" style="zoom:50%;" />
-
-<p>下边操作之前需要设置⽤户</p>
-<p>⾸先,你需要执⾏下⾯两条命令,作为git的基础配置,作⽤是告诉git你是谁,你输⼊的信息将出现在你创建的提 交中.</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --GLOBAL user.NAME &quot;你的名字或昵称&quot;</span><br><span class="line">git config --GLOBAL user.EMAIL &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p>然后执⾏:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git ADD .</span><br><span class="line">git commit -m &quot;first commit&quot;	（first commit 本次提交的内容）</span><br><span class="line">git remote ADD origin https://github.com/852172891/test3.git （地址换成你</span><br><span class="line">git push -u origin MASTER	（这⼀句执⾏的时候 可能需要输⼊你的 git 账号 和密码</span><br></pre></td></tr></table></figure>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6wqji2sj30mo0m21kx.jpg" alt="image-20201208091640521" style="zoom:50%;" />
-
-
-<p>输⼊密码后，提交成功，到github上刷新⼀下，本地的⽂件已经上传到github上了</p>
-<h3 id="3-项目地址"><a href="#3-项目地址" class="headerlink" title="3.项目地址"></a>3.项目地址</h3><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6wsmstij30k40i67ek.jpg" alt="image-20201208091730178" style="zoom:50%;" />
-
-<h3 id="4-常见问题"><a href="#4-常见问题" class="headerlink" title="4.常见问题"></a>4.常见问题</h3><h4 id="4-1Permanently-added-the-RSA-host-key-for-IP-address-‘13-250-177-223’-to-t-he-list-of-known-hosts"><a href="#4-1Permanently-added-the-RSA-host-key-for-IP-address-‘13-250-177-223’-to-t-he-list-of-known-hosts" class="headerlink" title="4.1Permanently added the RSA host key for IP address ‘13.250.177.223’ to t he list of known hosts?"></a>4.1Permanently added the RSA host key for IP address ‘13.250.177.223’ to t he list of known hosts?</h4><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6ww10i2j30mq05y11w.jpg" alt="image-20201208091813211" style="zoom:50%;" />
-
-<p>步骤:1 可以⽤ ssh -T <a href="mailto:git@github.com去测试">git@github.com去测试⼀下</a></p>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6wypyuvj30mq05sn52.jpg" alt="image-20201208091841090" style="zoom:50%;" />
-
-<p>图上可以明显看出缺少了公钥</p>
-<ol start="2">
-<li><p>在下载好的Git中的bin⽬录下打开bash.exe输⼊命令ssh-keygen -t rsa-C “username” (注：username为你git上的⽤户名)，如果执⾏成    功。返回：</p>
-<p>Generating public/private rsa key pair.</p>
-<p>Enter file in which to save the key</p>
-</li>
-</ol>
-<p>(/Users/username/.ssh/id_rsa):    //这⾥的username是电脑上的⽤户名 这个地址也是⽂件的存储地址，然后我们按回⻋.</p>
-<p>如果你以前有存储地址会返回/Users/yourusername/.ssh/id_rsa already exists.Overwrite (y/n)? 直接输⼊y回⻋。如果以前没有储存地址就会出现</p>
-<p>​        Enter passphrase(empty for no passphrase);也直接回⻋，两种情况回⻋后都会出现 Enter same passphrase again 然后接着回⻋会显示⼀⻓串内容其中</p>
-<p>​    还有⼀些..o.. o oo .oS. 之类的代码，这说明SSH key就已经⽣成了。⽂件⽬录就是：username/.ssh/id_rsa.pub.</p>
-<p>​    <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6x21r25j30mu086q3i.jpg" alt="image-20201208092240295" style="zoom:50%;" /></p>
-<ol start="3">
-<li><p>然后找到系统⾃动在.ssh⽂件夹下⽣成两个⽂件，id_rsa和id_rsa.pub，⽤记事本打开id_rsa.pub将全部的内容复制。</p>
-</li>
-<li><p>打开<a href="https://github.com/%EF%BC%8C%E7%99%BB%E9%99%86%E4%BD%A0%E7%9A%84%E8%B4%A6%E6%88%B7%EF%BC%8C%E8%BF%9B%E2%BC%8A%E8%AE%BE%E7%BD%AE%EF%BC%88Settings%EF%BC%89%E6%89%BE%E5%88%B0">https://github.com/，登陆你的账户，进⼊设置（Settings）找到</a></p>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6x4do8bj30jg0e648f.jpg" alt="image-20201208092336801" style="zoom:50%;" />
-</li>
-<li><p>然后将你复制的内容粘贴到key中</p>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glg6x785wjj30mc0aatdo.jpg" alt="image-20201208092353244" style="zoom:50%;" />
-</li>
-<li><p>再点击Add SSH Key            </p>
-</li>
-<li><p>仍然在bash.exe中输⼊<a href="mailto:ssh-Tgit@github.com然后会跳出">ssh -T git@github.com然后会跳出⼀堆内容你</a>只需输⼊yes回⻋就完事了，然后他会提示你成功了</p>
-<h4 id="4-2-rejected-master-gt-master-fetch-first"><a href="#4-2-rejected-master-gt-master-fetch-first" class="headerlink" title="4.2 ! [rejected] master -&gt; master (fetch first)"></a>4.2 ! [rejected] master -&gt; master (fetch first)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -f origin master 暴⼒解决</span><br><span class="line">https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_44118318&#x2F;article&#x2F;details&#x2F;85030461(转载)</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-
+    
+    <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91git%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0/#more">more >></a>
+    
     
 
     
@@ -2137,10 +1490,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">typora</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">pytorch</a>
               </li>
              
@@ -2154,6 +1503,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">typora</a>
               </li>
              
               <li class="article-tag-list-item">

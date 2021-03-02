@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="数据库优化从4个方向去优化1、sql和索引，写出健壮的sql，索引不是越多越好2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）3、系统配置（打开文件系统次数，文件安全性）4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）  show variables like ‘slow_query_log’  查询慢查询日志set globel slow_query_log">
+  <meta name="description" content="数据库优化从4个方向去优化1、sql和索引，写出健壮的sql，索引不是越多越好2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）3、系统配置（打开文件系统次数，文件安全性）4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mysql 优化浅析">
 <meta property="og:url" content="http://www.novoice.top/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/index.html">
 <meta property="og:site_name" content="最爱吃大米的博客">
-<meta property="og:description" content="数据库优化从4个方向去优化1、sql和索引，写出健壮的sql，索引不是越多越好2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）3、系统配置（打开文件系统次数，文件安全性）4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）  show variables like ‘slow_query_log’  查询慢查询日志set globel slow_query_log">
+<meta property="og:description" content="数据库优化从4个方向去优化1、sql和索引，写出健壮的sql，索引不是越多越好2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）3、系统配置（打开文件系统次数，文件安全性）4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-01T13:32:43.000Z">
-<meta property="article:modified_time" content="2021-03-01T13:33:09.787Z">
+<meta property="article:modified_time" content="2021-03-02T04:09:04.244Z">
 <meta property="article:author" content="最爱吃大米">
 <meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
@@ -375,6 +375,8 @@
   <div class="article-entry" itemprop="articleBody">
     
     <p>数据库优化从4个方向去优化<br>1、sql和索引，写出健壮的sql，索引不是越多越好<br>2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）<br>3、系统配置（打开文件系统次数，文件安全性）<br>4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）</p>
+<a id="more"></a>
+
 <blockquote>
 <p>show variables like ‘slow_query_log’  查询慢查询日志<br>set globel slow_query_log_file = ‘/home/mysql/sql_log/mysql-slow.log’  设置慢查询日志的路径<br>set global log_queries_not_using_indexes = on;    设置慢查询日志是否记录未添加索引的字段<br>set global long_query_time = 1    设置记录慢查询日志时间<br>mysqldumpslow -t 3 url | more</p>
 </blockquote>
@@ -735,10 +737,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">typora</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">pytorch</a>
               </li>
              
@@ -752,6 +750,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">typora</a>
               </li>
              
               <li class="article-tag-list-item">
