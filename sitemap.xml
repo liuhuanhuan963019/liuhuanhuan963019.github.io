@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.novoice.top/2021/03/02/Python-os%E6%A8%A1%E5%9D%97%E7%AE%80%E4%BB%8B/</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/2021/03/02/%E3%80%90Python%E5%BC%BA%E5%8C%96%E3%80%91lamdba%E8%AF%A6%E8%A7%A3/</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/2021/03/02/%E3%80%90python%E5%BC%BA%E5%8C%96%E3%80%91-griddata-%E4%BA%8C%E7%BB%B4%E6%8F%92%E5%80%BC/</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/2021/03/02/%E3%80%90python%E5%9F%BA%E7%A1%80%E3%80%91os%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/2021/03/02/%E3%80%90Python%E3%80%91%E5%A4%9A%E8%BF%9B%E7%A8%8BProcess/</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/2021/03/02/%E3%80%90Python%E3%80%91SMTP%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/2021/03/02/%E3%80%90Python-%E5%BC%BA%E5%8C%96%E3%80%91assert%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/</loc>
+    
+    <lastmod>2021-03-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.novoice.top/2021/03/02/%E3%80%90PyCINRAD%E3%80%91-pycinrad%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2021-03-02</lastmod>
@@ -235,7 +284,14 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/mysql/</loc>
+    <loc>http://www.novoice.top/tags/python/</loc>
+    <lastmod>2021-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/tags/os/</loc>
     <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -249,7 +305,7 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/python/</loc>
+    <loc>http://www.novoice.top/tags/mysql/</loc>
     <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -370,7 +426,7 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/categories/mysql/</loc>
+    <loc>http://www.novoice.top/categories/python/</loc>
     <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -384,7 +440,14 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/categories/python/</loc>
+    <loc>http://www.novoice.top/categories/mysql/</loc>
+    <lastmod>2021-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/categories/python/Numpy/</loc>
     <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -406,13 +469,6 @@
   
   <url>
     <loc>http://www.novoice.top/categories/hexo/</loc>
-    <lastmod>2021-03-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.novoice.top/categories/python/Numpy/</loc>
     <lastmod>2021-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

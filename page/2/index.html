@@ -325,6 +325,728 @@
             
 
   
+    <article id="post-【Numpy】np-c-和np-r-的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/02/%E3%80%90Numpy%E3%80%91np-c-%E5%92%8Cnp-r-%E7%9A%84%E7%94%A8%E6%B3%95/">【Numpy】np.c_和np.r_的用法</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/02/%E3%80%90Numpy%E3%80%91np-c-%E5%92%8Cnp-r-%E7%9A%84%E7%94%A8%E6%B3%95/" class="archive-article-date">
+        <time datetime="2021-03-02T04:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h4 id="numpy-c-and-numpy-r-的用法"><a href="#numpy-c-and-numpy-r-的用法" class="headerlink" title="numpy.c_()  and  numpy.r_()的用法"></a><a href="https://numpy.org/doc/stable/reference/generated/numpy.c_.html?highlight=c_#numpy.c_">numpy.c_()</a>  and  <a href="https://numpy.org/doc/stable/reference/generated/numpy.r_.html?highlight=r_#numpy.r_">numpy.r_()</a>的用法</h4><blockquote>
+<p><strong>np.r_是按列连接两个矩阵，就是把两矩阵上下相加，要求列数相等。</strong></p>
+<p><strong>np.c_是按行连接两个矩阵，就是把两矩阵左右相加，要求行数相等。</strong></p>
+</blockquote>
+    
+    <a class="article-more-a" href="/2021/03/02/%E3%80%90Numpy%E3%80%91np-c-%E5%92%8Cnp-r-%E7%9A%84%E7%94%A8%E6%B3%95/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Numpy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python/Numpy//" class="article-tag-list-link color1">Numpy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/02/%E3%80%90Numpy%E3%80%91np-c-%E5%92%8Cnp-r-%E7%9A%84%E7%94%A8%E6%B3%95/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-【Numpy】meshgrid-函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/02/%E3%80%90Numpy%E3%80%91meshgrid-%E5%87%BD%E6%95%B0/">【Numpy】meshgrid()函数</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/02/%E3%80%90Numpy%E3%80%91meshgrid-%E5%87%BD%E6%95%B0/" class="archive-article-date">
+        <time datetime="2021-03-02T04:30:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。</p>
+<p>可以接受两个一维数组生成两个二维矩阵。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mesharid(np.arange(<span class="number">4</span>),np.arange(<span class="number">4</span>)) </span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2021/03/02/%E3%80%90Numpy%E3%80%91meshgrid-%E5%87%BD%E6%95%B0/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Numpy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python/Numpy//" class="article-tag-list-link color1">Numpy</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/02/%E3%80%90Numpy%E3%80%91meshgrid-%E5%87%BD%E6%95%B0/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-sql-版本不兼容问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/sql-%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/">Sql 版本不兼容问题</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/sql-%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        <time datetime="2021-03-01T13:33:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>sql 版本不兼容问题</p>
+<h1 id="Recommended-in-standard-MySQL-setup"><a href="#Recommended-in-standard-MySQL-setup" class="headerlink" title="Recommended in standard MySQL setup"></a>Recommended in standard MySQL setup</h1><p>sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/sql-%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql-优化浅析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/">Mysql 优化浅析</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/" class="archive-article-date">
+        <time datetime="2021-03-01T13:32:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>数据库优化从4个方向去优化<br>1、sql和索引，写出健壮的sql，索引不是越多越好<br>2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）<br>3、系统配置（打开文件系统次数，文件安全性）<br>4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）</p>
+    
+    <a class="article-more-a" href="/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/mysql//" class="article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-适合macos系统中idea快捷键与设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/%E9%80%82%E5%90%88macos%E7%B3%BB%E7%BB%9F%E4%B8%ADidea%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE/">适合Macos系统中idea快捷键与设置</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/%E9%80%82%E5%90%88macos%E7%B3%BB%E7%BB%9F%E4%B8%ADidea%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE/" class="archive-article-date">
+        <time datetime="2021-03-01T13:31:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><u>实现ctrl+ 滚轮变大字体：</u>    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setting-&gt;editor-&gt;General-&gt;勾选change font size.....</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2021/03/01/%E9%80%82%E5%90%88macos%E7%B3%BB%E7%BB%9F%E4%B8%ADidea%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/%E9%80%82%E5%90%88macos%E7%B3%BB%E7%BB%9F%E4%B8%ADidea%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-macos-常用快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/macos-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">Macos 常用快捷键</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/macos-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
+        <time datetime="2021-03-01T13:30:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="选取空间截图"><a href="#选取空间截图" class="headerlink" title="选取空间截图"></a>选取空间截图</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shift+command+4</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2021/03/01/macos-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/macos-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-【小白】brew命令使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91brew%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/">【小白】Brew命令使用</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91brew%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+        <time datetime="2021-03-01T13:29:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="一：官网"><a href="#一：官网" class="headerlink" title="一：官网"></a>一：官网</h1><p><a href="https://brew.sh/">HomeBrew</a></p>
+    
+    <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91brew%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">macos</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">brew</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/macos//" class="article-tag-list-link color1">macos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91brew%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-【小白】macos常用开发环境配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -625,733 +1347,9 @@
 
 
   
-    <article id="post-【小白】git本地代码上传" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91git%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0/">【小白】Git本地代码上传</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91git%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0/" class="archive-article-date">
-        <time datetime="2021-03-01T13:21:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a href="https://git-scm.com/download/win">下载git</a></p>
-<p><a href="https://github.com/join?source=header-home">注册github账户</a></p>
-<p>[TOC]</p>
-    
-    <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91git%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/git//" class="article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91git%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【小白】完整教程-idea使用git进行项目管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B-idea%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">【小白】完整教程--Idea使用git进行项目管理</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B-idea%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="archive-article-date">
-        <time datetime="2021-03-01T12:56:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="完整教程–idea使用git进行项目管理"><a href="#完整教程–idea使用git进行项目管理" class="headerlink" title="完整教程–idea使用git进行项目管理"></a><a href="https://www.cnblogs.com/nihaorz/p/6576322.html">完整教程–idea使用git进行项目管理</a></h1><h2 id="Github如何删除项目"><a href="#Github如何删除项目" class="headerlink" title="Github如何删除项目"></a>Github如何删除项目</h2><p><a href="https://jingyan.baidu.com/article/86112f13aba9c7273797871a.html">https://jingyan.baidu.com/article/86112f13aba9c7273797871a.html</a></p>
-    
-    <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B-idea%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">idea</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/github//" class="article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/01/%E3%80%90%E5%B0%8F%E7%99%BD%E3%80%91%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B-idea%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2143-replace-favo-xrcch-com-Dns劫持解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/01/2143-replace-favo-xrcch-com-Dns%E5%8A%AB%E6%8C%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">2143.replace.favo.xrcch.com Dns劫持解决方案</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/01/2143-replace-favo-xrcch-com-Dns%E5%8A%AB%E6%8C%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
-        <time datetime="2021-03-01T12:04:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><strong>DNS劫持具体原因：</strong></p>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">被DNS劫持了。</span><br><span class="line"></span><br><span class="line">这样就可以通过访问一个特定的网站，给对方增加流量。他们就可以赚钱了。</span><br><span class="line"></span><br><span class="line">请检查多种浏览器是否都出现这种情况？如果是，那就说明要么您的路由器把黑了，要么就是宽带运营商动了手脚。如果只是谷歌浏览器出现这个情况，那么先考虑您的浏览器是官方的，还是别人修改过的。如果是修改过的，那么就有可能把修改者植入了相关劫持功能。</span><br><span class="line">如果是官方的，那么请关闭所有扩展工具，并一个一个测试它们，这样就知道哪个扩展工具在进行劫持操作。</span><br></pre></td></tr></table></figure>
-</blockquote>
-    
-    <a class="article-more-a" href="/2021/03/01/2143-replace-favo-xrcch-com-Dns%E5%8A%AB%E6%8C%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">windows10</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DNS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/windows10//" class="article-tag-list-link color5">windows10</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/01/2143-replace-favo-xrcch-com-Dns%E5%8A%AB%E6%8C%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【Pytorch】pytorch安装（包含cuda详细安装）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/">【Pytorch】pytorch安装（包含cuda详细安装）</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/" class="archive-article-date">
-        <time datetime="2021-02-26T16:37:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Pytorch安装"><a href="#Pytorch安装" class="headerlink" title="Pytorch安装"></a>Pytorch安装</h1><h2 id="一、安装anaconda"><a href="#一、安装anaconda" class="headerlink" title="一、安装anaconda"></a>一、安装anaconda</h2><p>网址：<a href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a></p>
-<p>网页翻到最下面，选择下载Windows 32位/64位版本，傻瓜式安装，记得勾选【Add to Path】 可以将anaconda的环境安装到系统中去</p>
-<p><img src="%E3%80%90Pytorch%E3%80%91Pytorch%E5%AE%89%E8%A3%8501.png" alt="image-20210226184530041"></p>
-    
-    <a class="article-more-a" href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pytorch</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">cuda</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/pytorch//" class="article-tag-list-link color3">pytorch</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/27/%E3%80%90Pytorch%E3%80%91pytorch%E5%AE%89%E8%A3%85%EF%BC%88%E5%8C%85%E5%90%ABcuda%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%EF%BC%89/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【github】代码同步提交到github和码云" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/">【Github】代码同步提交到github和码云</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/" class="archive-article-date">
-        <time datetime="2021-02-25T12:39:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-25</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>现在很多朋友在git clone  github代码的时候会发现速度慢的实在是难以吐槽，于是我们就像个方法，将我们的代码同步码云上，我们再去下载速度，是不是快了很多呢。&gt;。&lt;！！!</p>
-<p>但是随着我们提交代码的时候，我们就面临着，代码提交到哪里呢？码云还是github呢？本文将进行详细的介绍。</p>
-    
-    <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/github//" class="article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E6%8F%90%E4%BA%A4%E5%88%B0github%E5%92%8C%E7%A0%81%E4%BA%91/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【github】提升github访问速度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/">【Github】提升github访问速度</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/" class="archive-article-date">
-        <time datetime="2021-02-25T11:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-25</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>此方式适用于各种操作系统，主要方式为修改host文件，添加配置的方式</p>
-<h4 id="1-查找域名对应的ip地址，并修改hosts文件"><a href="#1-查找域名对应的ip地址，并修改hosts文件" class="headerlink" title="1.查找域名对应的ip地址，并修改hosts文件"></a>1.查找域名对应的ip地址，并修改hosts文件</h4><p>windows/Macos/linux通用的方式：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nslookup github.com</span><br><span class="line">nslookup github.global.ssl.fastly.net</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/github//" class="article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/25/%E3%80%90github%E3%80%91%E6%8F%90%E5%8D%87github%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【springboot】springboot-mybatis自动创建表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/02/13/%E3%80%90springboot%E3%80%91springboot-mybatis%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BA%E8%A1%A8/">【Springboot】springboot+mybatis自动创建表</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/02/13/%E3%80%90springboot%E3%80%91springboot-mybatis%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BA%E8%A1%A8/" class="archive-article-date">
-        <time datetime="2021-02-13T10:20:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-13</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot//" class="article-tag-list-link color1">springBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/02/13/%E3%80%90springboot%E3%80%91springboot-mybatis%E8%87%AA%E5%8A%A8%E5%88%9B%E5%BB%BA%E8%A1%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">« Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next »</a>
+      <a class="extend prev" rel="prev" href="/">« Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next »</a>
     </nav>
   
 
@@ -1499,7 +1497,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">os</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1507,7 +1509,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
