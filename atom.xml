@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-03-02T04:55:11.143Z</updated>
+  <updated>2021-03-04T14:08:36.141Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Initializing libiomp5md.dll, but Found libiomp5md.dll Already Initialized错误解决方式</title>
+    <link href="http://www.novoice.top/2021/03/04/Initializing-libiomp5md-dll-but-found-libiomp5md-dll-already-initialized%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/"/>
+    <id>http://www.novoice.top/2021/03/04/Initializing-libiomp5md-dll-but-found-libiomp5md-dll-already-initialized%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</id>
+    <published>2021-03-04T14:07:21.000Z</published>
+    <updated>2021-03-04T14:08:36.141Z</updated>
+    
+    <content type="html"><![CDATA[<p>程序中添加</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">&#x27;KMP_DUPLICATE_LIB_OK&#x27;</span>] = <span class="string">&#x27;TRUE&#x27;</span></span><br></pre></td></tr></table></figure><p>成功解决</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;程序中添加&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="python" scheme="http://www.novoice.top/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://www.novoice.top/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>【设计模式浅谈一】 生产者 消费者模式</title>
@@ -459,27 +484,6 @@
     
     
     <category term="macos" scheme="http://www.novoice.top/tags/macos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mysql 优化浅析</title>
-    <link href="http://www.novoice.top/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/"/>
-    <id>http://www.novoice.top/2021/03/01/mysql-%E4%BC%98%E5%8C%96%E6%B5%85%E6%9E%90/</id>
-    <published>2021-03-01T13:32:43.000Z</published>
-    <updated>2021-03-02T04:09:04.244Z</updated>
-    
-    <content type="html"><![CDATA[<p>数据库优化从4个方向去优化<br>1、sql和索引，写出健壮的sql，索引不是越多越好<br>2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）<br>3、系统配置（打开文件系统次数，文件安全性）<br>4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）</p><a id="more"></a><blockquote><p>show variables like ‘slow_query_log’  查询慢查询日志<br>set globel slow_query_log_file = ‘/home/mysql/sql_log/mysql-slow.log’  设置慢查询日志的路径<br>set global log_queries_not_using_indexes = on;    设置慢查询日志是否记录未添加索引的字段<br>set global long_query_time = 1    设置记录慢查询日志时间<br>mysqldumpslow -t 3 url | more</p></blockquote>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;数据库优化从4个方向去优化&lt;br&gt;1、sql和索引，写出健壮的sql，索引不是越多越好&lt;br&gt;2、数据表结构（存储引擎，字段大小，字段类型，索引，第三规范）&lt;br&gt;3、系统配置（打开文件系统次数，文件安全性）&lt;br&gt;4、硬件（更合适的cup,更大的内存，更快的io，cup并不是越大越好）&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="mysql" scheme="http://www.novoice.top/categories/mysql/"/>
-    
-    
-    <category term="mysql" scheme="http://www.novoice.top/tags/mysql/"/>
     
   </entry>
   
