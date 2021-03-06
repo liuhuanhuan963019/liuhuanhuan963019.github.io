@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-03-06T05:14:10.845Z</updated>
+  <updated>2021-03-06T15:52:15.852Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Hexo】hexo新增文章显示目录</title>
+    <link href="http://www.novoice.top/2021/03/06/%E3%80%90hexo%E3%80%91hexo%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95/"/>
+    <id>http://www.novoice.top/2021/03/06/%E3%80%90hexo%E3%80%91hexo%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95/</id>
+    <published>2021-03-06T15:52:15.000Z</published>
+    <updated>2021-03-06T15:52:15.852Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>【hexo】hexo+yilia添加百度统计和Google统计</title>
@@ -442,34 +455,6 @@
     
     
     <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="http://www.novoice.top/categories/python/"/>
-    
-    <category term="Numpy" scheme="http://www.novoice.top/categories/python/Numpy/"/>
-    
-    
-    <category term="python" scheme="http://www.novoice.top/tags/python/"/>
-    
-    <category term="Numpy" scheme="http://www.novoice.top/tags/Numpy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Numpy】np.c_和np.r_的用法</title>
-    <link href="http://www.novoice.top/2021/03/02/%E3%80%90Numpy%E3%80%91np-c-%E5%92%8Cnp-r-%E7%9A%84%E7%94%A8%E6%B3%95/"/>
-    <id>http://www.novoice.top/2021/03/02/%E3%80%90Numpy%E3%80%91np-c-%E5%92%8Cnp-r-%E7%9A%84%E7%94%A8%E6%B3%95/</id>
-    <published>2021-03-02T04:32:10.000Z</published>
-    <updated>2021-03-02T04:33:12.383Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="numpy-c-and-numpy-r-的用法"><a href="#numpy-c-and-numpy-r-的用法" class="headerlink" title="numpy.c_()  and  numpy.r_()的用法"></a><a href="https://numpy.org/doc/stable/reference/generated/numpy.c_.html?highlight=c_#numpy.c_">numpy.c_()</a>  and  <a href="https://numpy.org/doc/stable/reference/generated/numpy.r_.html?highlight=r_#numpy.r_">numpy.r_()</a>的用法</h4><blockquote><p><strong>np.r_是按列连接两个矩阵，就是把两矩阵上下相加，要求列数相等。</strong></p><p><strong>np.c_是按行连接两个矩阵，就是把两矩阵左右相加，要求行数相等。</strong></p></blockquote><a id="more"></a><p>Demo:</p><p>1.numpy.c_:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">print(<span class="string">&#x27;x:&#x27;</span>,x, x.shape)</span><br><span class="line"></span><br><span class="line">y = np.arange(<span class="number">10</span>,<span class="number">22</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">print(<span class="string">&#x27;y:&#x27;</span>,y, y.shape)</span><br><span class="line"></span><br><span class="line">z = np.c_[x,y]</span><br><span class="line">print(<span class="string">&#x27;z:&#x27;</span>,z, z.shape)</span><br></pre></td></tr></table></figure><p>result:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x: [[ <span class="number">0</span>  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>]</span><br><span class="line"> [ <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span>]</span><br><span class="line"> [ <span class="number">8</span>  <span class="number">9</span> <span class="number">10</span> <span class="number">11</span>]] (<span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">y: [[<span class="number">10</span> <span class="number">11</span> <span class="number">12</span> <span class="number">13</span>]</span><br><span class="line"> [<span class="number">14</span> <span class="number">15</span> <span class="number">16</span> <span class="number">17</span>]</span><br><span class="line"> [<span class="number">18</span> <span class="number">19</span> <span class="number">20</span> <span class="number">21</span>]] (<span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">z: [[ <span class="number">0</span>  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span> <span class="number">10</span> <span class="number">11</span> <span class="number">12</span> <span class="number">13</span>]</span><br><span class="line"> [ <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span> <span class="number">14</span> <span class="number">15</span> <span class="number">16</span> <span class="number">17</span>]</span><br><span class="line"> [ <span class="number">8</span>  <span class="number">9</span> <span class="number">10</span> <span class="number">11</span> <span class="number">18</span> <span class="number">19</span> <span class="number">20</span> <span class="number">21</span>]] (<span class="number">3</span>, <span class="number">8</span>)</span><br></pre></td></tr></table></figure><p>2.numpy.r_用法:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.arange(<span class="number">12</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">print(<span class="string">&#x27;x:&#x27;</span>,x, x.shape)</span><br><span class="line"></span><br><span class="line">y = np.arange(<span class="number">10</span>,<span class="number">22</span>).reshape(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">print(<span class="string">&#x27;y:&#x27;</span>,y, y.shape)</span><br><span class="line"></span><br><span class="line">z = np.r_[x,y]</span><br><span class="line">print(<span class="string">&#x27;z:&#x27;</span>,z, z.shape)</span><br></pre></td></tr></table></figure><p>result:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">x: [[ <span class="number">0</span>  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>]</span><br><span class="line"> [ <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span>]</span><br><span class="line"> [ <span class="number">8</span>  <span class="number">9</span> <span class="number">10</span> <span class="number">11</span>]] (<span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">y: [[<span class="number">10</span> <span class="number">11</span> <span class="number">12</span> <span class="number">13</span>]</span><br><span class="line"> [<span class="number">14</span> <span class="number">15</span> <span class="number">16</span> <span class="number">17</span>]</span><br><span class="line"> [<span class="number">18</span> <span class="number">19</span> <span class="number">20</span> <span class="number">21</span>]] (<span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">z: [[ <span class="number">0</span>  <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>]</span><br><span class="line"> [ <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>  <span class="number">7</span>]</span><br><span class="line"> [ <span class="number">8</span>  <span class="number">9</span> <span class="number">10</span> <span class="number">11</span>]</span><br><span class="line"> [<span class="number">10</span> <span class="number">11</span> <span class="number">12</span> <span class="number">13</span>]</span><br><span class="line"> [<span class="number">14</span> <span class="number">15</span> <span class="number">16</span> <span class="number">17</span>]</span><br><span class="line"> [<span class="number">18</span> <span class="number">19</span> <span class="number">20</span> <span class="number">21</span>]] (<span class="number">6</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;h4 id=&quot;numpy-c-and-numpy-r-的用法&quot;&gt;&lt;a href=&quot;#numpy-c-and-numpy-r-的用法&quot; class=&quot;headerlink&quot; title=&quot;numpy.c_()  and  numpy.r_()的用法&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://numpy.org/doc/stable/reference/generated/numpy.c_.html?highlight=c_#numpy.c_&quot;&gt;numpy.c_()&lt;/a&gt;  and  &lt;a href=&quot;https://numpy.org/doc/stable/reference/generated/numpy.r_.html?highlight=r_#numpy.r_&quot;&gt;numpy.r_()&lt;/a&gt;的用法&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;np.r_是按列连接两个矩阵，就是把两矩阵上下相加，要求列数相等。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;np.c_是按行连接两个矩阵，就是把两矩阵左右相加，要求行数相等。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
     
     
     
