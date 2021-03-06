@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-03-05T11:53:56.229Z</updated>
+  <updated>2021-03-06T05:11:08.502Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【hexo】hexo+yilia添加百度统计和Google统计</title>
+    <link href="http://www.novoice.top/2021/03/06/%E3%80%90hexo%E3%80%91hexo-yilia%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8CGoogle%E7%BB%9F%E8%AE%A1/"/>
+    <id>http://www.novoice.top/2021/03/06/%E3%80%90hexo%E3%80%91hexo-yilia%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8CGoogle%E7%BB%9F%E8%AE%A1/</id>
+    <published>2021-03-06T04:44:34.000Z</published>
+    <updated>2021-03-06T05:11:08.502Z</updated>
+    
+    <content type="html"><![CDATA[<p>[TOC]</p><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h3><p>百度统计和Google统计主要用于分析网站数据：流量、访客量等。</p><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo-yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A1.png" alt="image-20210306125157943"></p><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A102.png" alt="image-20210306125319828"></p><p>需要注册账号，将相应的提示代码加入到博客代码中去</p><ul><li>百度统计网址：<a href="https://tongji.baidu.com/">https://tongji.baidu.com</a></li><li>Google统计网址：<a href="https://analytics.google.com/analytics/web/">https://analytics.google.com/analytics/web/</a></li></ul><h3 id="文件地址"><a href="#文件地址" class="headerlink" title="文件地址"></a><strong>文件地址</strong></h3><p>yilia主题已集成，位置如下，我们只需要在主题的配置文件中进行配置即可。</p><ul><li><code>F:\IdeaProjects\hexo\themes\yilia\layout\_partial\baidu-analytics.ejs</code></li><li><code>F:\IdeaProjects\hexo\themes\yilia\layout\_partial\google-analytics.ejs</code></li></ul><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a><strong>配置</strong></h3><p><code>themes\yilia\_config.yml</code>原内容：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baidu_analytics: &#x27;&#x27;</span><br><span class="line">google_analytics: &#x27;&#x27;</span><br></pre></td></tr></table></figure><p>括号中填写配置对应的id即可</p><h4 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h4><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A103.png" alt="image-20210306130119050"></p><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A104.png" alt="image-20210306130204927"></p><p>找到对应的配置文件：</p><p><code>F:\IdeaProjects\hexo\themes\yilia\layout\_partial\baidu-analytics.ejs</code></p><p>修改里面的代码为：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.baidu_a)&#123; %&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var _hmt = _hmt || [];</span><br><span class="line">(function() &#123;</span><br><span class="line">  var hm = document.createElement(&quot;script&quot;);</span><br><span class="line">  hm.src = &quot;https://hm.baidu.com/hm.js?此处填写id&quot;;</span><br><span class="line">  var s = document.getElementsByTagName(&quot;script&quot;)[0]; </span><br><span class="line">  s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="谷歌"><a href="#谷歌" class="headerlink" title="谷歌"></a>谷歌</h4><p><strong>生成代码</strong>：控制台–&gt;（左下角）管理–&gt;管理–&gt;（中间）媒体资源–&gt;（中间）跟踪信息–&gt;跟踪代码</p><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A106.png" alt="image-20210306130559427"></p><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A107.png" alt="image-20210306130710805"></p><p><code>找到代码，此操作方式与百度的方式相同，不再赘述。</code></p><h4 id="配置id"><a href="#配置id" class="headerlink" title="配置id"></a>配置id</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baidu_analytics: &#x27;百度统计id&#x27;</span><br><span class="line">google_analytics: &#x27;Google统计id&#x27;</span><br></pre></td></tr></table></figure><p>Google虽然好，但是因为墙的原因，所以有时候可能会出现问题。所以建议还是使用百度账号的使用方式。</p><p>最终效果图：</p><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A108.png" alt="image-20210306131030163"></p><p>欢迎访问我的博客:<a href="http://www.novoice.top/">www.novoice.top</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;百度统计和Google统计主要用于分析网站数据：流量、访客量等。&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="http://www.novoice.top/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://www.novoice.top/tags/hexo/"/>
+    
+    <category term="yilia" scheme="http://www.novoice.top/tags/yilia/"/>
+    
+  </entry>
   
   <entry>
     <title>【Python】zip函数的使用</title>
@@ -446,33 +474,6 @@
 &lt;p&gt;&lt;strong&gt;np.r_是按列连接两个矩阵，就是把两矩阵上下相加，要求列数相等。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;np.c_是按行连接两个矩阵，就是把两矩阵左右相加，要求行数相等。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="http://www.novoice.top/categories/python/"/>
-    
-    <category term="Numpy" scheme="http://www.novoice.top/categories/python/Numpy/"/>
-    
-    
-    <category term="python" scheme="http://www.novoice.top/tags/python/"/>
-    
-    <category term="Numpy" scheme="http://www.novoice.top/tags/Numpy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Numpy】meshgrid()函数</title>
-    <link href="http://www.novoice.top/2021/03/02/%E3%80%90Numpy%E3%80%91meshgrid-%E5%87%BD%E6%95%B0/"/>
-    <id>http://www.novoice.top/2021/03/02/%E3%80%90Numpy%E3%80%91meshgrid-%E5%87%BD%E6%95%B0/</id>
-    <published>2021-03-02T04:30:01.000Z</published>
-    <updated>2021-03-02T04:31:40.307Z</updated>
-    
-    <content type="html"><![CDATA[<p>np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。</p><p>可以接受两个一维数组生成两个二维矩阵。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mesharid(np.arange(<span class="number">4</span>),np.arange(<span class="number">4</span>)) </span><br></pre></td></tr></table></figure><a id="more"></a><blockquote><p>根据传入的两个一维数组参数生成两个数组元素的列表。</p><p>如果第一个参数是xarray，维度是xdimesion，</p><p>第二个参数是yarray，维度是ydimesion。</p><p>那么生成的第一个二维数组是以xarray为行，共ydimesion行的向量；而第二个二维数组是以yarray的转置为列，共xdimesion列的向量。</p></blockquote><p>直观的感受：x-y坐标系中，x可取（1，2，3） y可取（4，5）</p><p>共有6个点    （1，4）（1，5）（2，4）（2，5）（3，4）（3，5）</p><p>np.mesharid()函数就是生成类似的数据网格</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg" alt="image-20201209180432323"></p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrjzdsrej31f80d8dh5.jpg"></p><p>==测试代码：==</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment"># np建立一个等差数列</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>,<span class="number">30</span>,<span class="number">3</span>)</span><br><span class="line">print(<span class="string">f&quot;x的维度:<span class="subst">&#123;x.ndim&#125;</span>,shape:<span class="subst">&#123;x.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(x)</span><br><span class="line">y = np.linspace(<span class="number">0</span>,<span class="number">20</span>,<span class="number">2</span>)</span><br><span class="line">print(<span class="string">f&quot;y的维度:<span class="subst">&#123;y.ndim&#125;</span>,shape:<span class="subst">&#123;y.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(y)</span><br><span class="line"></span><br><span class="line">xx,yy = np.meshgrid(x, y)</span><br><span class="line">print(<span class="string">f&quot;xv的维度:<span class="subst">&#123;xx.ndim&#125;</span>,shape:<span class="subst">&#123;xx.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(<span class="string">f&quot;yv的维度:<span class="subst">&#123;yy.ndim&#125;</span>,shape:<span class="subst">&#123;yy.shape&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.plot(xx, yy,<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p>result:</p><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrq4qr4wj31fk0podio.jpg" alt="image-20201209181329819"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。&lt;/p&gt;
-&lt;p&gt;可以接受两个一维数组生成两个二维矩阵。&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;np.mesharid(np.arange(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;),np.arange(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)) &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
