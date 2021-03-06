@@ -463,10 +463,6 @@ var _hmt = _hmt || [];
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--主题区域--&gt;</span><br><span class="line">&lt;section id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">    &lt;!--输入框--&gt;</span><br><span class="line">    &lt;header <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;header&quot;</span>&gt;</span><br><span class="line">        &lt;h1&gt;欢欢笔记本&lt;/h1&gt;</span><br><span class="line">        &lt;input type=<span class="string">&quot;text&quot;</span> autocomplete=<span class="string">&quot;off&quot;</span> autofocus=<span class="string">&quot;autofocus&quot;</span></span><br><span class="line">               placeholder=<span class="string">&quot;请输入&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;new-todo&quot;</span> v-model=<span class="string">&quot;inputValue&quot;</span></span><br><span class="line">               @keyup.enter=<span class="string">&quot;add&quot;</span>&gt;</span><br><span class="line">        &lt;!--列表区域--&gt;</span><br><span class="line">        &lt;section <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;main&quot;</span> v-show=<span class="string">&quot;list.length!=0&quot;</span>&gt;</span><br><span class="line">            &lt;ul <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;todo-list&quot;</span>&gt;</span><br><span class="line">                &lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;todo&quot;</span> v-<span class="keyword">for</span>=<span class="string">&quot;(item,index) in list&quot;</span>&gt;</span><br><span class="line">                    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;index&quot;</span>&gt;&#123;&#123;index+<span class="number">1</span>&#125;&#125;.&lt;/span&gt;</span><br><span class="line">                    &lt;label <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;item&quot;</span>&gt;&#123;&#123;item&#125;&#125;&lt;/label&gt;</span><br><span class="line">                    &lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;destroy&quot;</span> @click=<span class="string">&quot;del(index)&quot;</span>&gt;del&lt;/button&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">        &lt;!--统计和清空--&gt;</span><br><span class="line">        &lt;footer <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;footer&quot;</span> v-show=<span class="string">&quot;list.length!=0&quot;</span>&gt;</span><br><span class="line">            &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;todo-count&quot;</span> v-<span class="keyword">if</span>=<span class="string">&quot;list.length!=0&quot;</span>&gt;</span><br><span class="line">        &lt;strong&gt;&#123;&#123;list.length&#125;&#125;&lt;/strong&gt;items left</span><br><span class="line">             &lt;/span&gt;</span><br><span class="line">            &lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;clear-completed&quot;</span> @click=<span class="string">&quot;clear&quot;</span>&gt;clear&lt;/button&gt;</span><br><span class="line">        &lt;/footer&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&lt;!--底部文件--&gt;</span><br><span class="line">&lt;footer <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;info&quot;</span>&gt;</span><br><span class="line">&lt;/footer&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">        el:<span class="string">&quot;#app&quot;</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            list:[<span class="string">&quot;语文&quot;</span>,<span class="string">&quot;高数&quot;</span>,<span class="string">&quot;政治&quot;</span>,<span class="string">&quot;外语&quot;</span>],</span><br><span class="line">            inputValue:<span class="string">&quot;你是我的人了&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            add:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.list.push(<span class="built_in">this</span>.inputValue);</span><br><span class="line">            &#125;,</span><br><span class="line">            del:<span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.list.splice(index,<span class="number">1</span>);</span><br><span class="line">            &#125;,</span><br><span class="line">            clear:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.list=[];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
     
-        <!-- 目录内容 -->
-             
-        <!-- 目录内容结束 -->
-    
     
     <div class="page-reward">
       <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
@@ -648,6 +644,19 @@ var _hmt = _hmt || [];
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -885,6 +894,10 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">brew</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
              
@@ -893,15 +906,11 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">brew</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
