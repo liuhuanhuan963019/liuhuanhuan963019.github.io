@@ -380,7 +380,7 @@ var _hmt = _hmt || [];
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">148字</span>
+      <span class="post-count">296字</span>
     </span>
   </span>
 
@@ -412,7 +412,20 @@ var _hmt = _hmt || [];
 <p>  (2) hexo 主题目录_config.yml 中新增</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> RSS订阅</span></span><br><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
 <h3 id="4、生成RSS订阅文件"><a href="#4、生成RSS订阅文件" class="headerlink" title="4、生成RSS订阅文件"></a><strong>4、生成RSS订阅文件</strong></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p><img src="%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E5%9B%9B-%E6%96%B0%E5%A2%9ERSS%E8%AE%A2%E9%98%8501.png" alt="【hexo】基础教程-四-新增RSS订阅01"></p>
+
+<p>使用<strong>hexo-generator-feed</strong>插件生成RSS文件<code>atom.xml</code>，实现RSS订阅功能。</p>
+<p>插件github网址：<a href="https://github.com/hexojs/hexo-generator-feed%E3%80%82">https://github.com/hexojs/hexo-generator-feed。</a></p>
+<p>参考文章：<a href="https://www.jianshu.com/p/2aaac7a19736%EF%BC%8Chttps://wxnacy.com/2018/12/12/hexo-add-rss/%E3%80%82">https://www.jianshu.com/p/2aaac7a19736，https://wxnacy.com/2018/12/12/hexo-add-rss/。</a></p>
+<!--more-->
+
+<h3 id="1、首先添加插件，在hexo根目录下执行-1"><a href="#1、首先添加插件，在hexo根目录下执行-1" class="headerlink" title="1、首先添加插件，在hexo根目录下执行"></a>1、<strong>首先添加插件，在hexo根目录下执行</strong></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure>
+<h3 id="2、配置-config-yml文件，启用插件-1"><a href="#2、配置-config-yml文件，启用插件-1" class="headerlink" title="2、配置_config.yml文件，启用插件"></a><strong>2、配置<code>_config.yml</code>文件，启用插件</strong></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Extensions</span></span><br><span class="line">plugins:</span><br><span class="line">  hexo-generator-feed</span><br><span class="line"><span class="meta">#</span><span class="bash">Feed Atom</span></span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br></pre></td></tr></table></figure>
+<h3 id="3、在yilia主题添加RSS订阅配置-1"><a href="#3、在yilia主题添加RSS订阅配置-1" class="headerlink" title="3、在yilia主题添加RSS订阅配置"></a><strong>3、在yilia主题添加RSS订阅配置</strong></h3><p>（1）hexo 根目录下_config.yml中新增</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Extensions</span></span><br><span class="line">plugins:</span><br><span class="line">  hexo-generator-feed</span><br></pre></td></tr></table></figure>
+<p>  (2) hexo 主题目录_config.yml 中新增</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> RSS订阅</span></span><br><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
+<h3 id="4、生成RSS订阅文件-1"><a href="#4、生成RSS订阅文件-1" class="headerlink" title="4、生成RSS订阅文件"></a><strong>4、生成RSS订阅文件</strong></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p><img src="/2021/02/05/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E5%9B%9B-%E6%96%B0%E5%A2%9ERSS%E8%AE%A2%E9%98%85/%E3%80%90hexo%E3%80%91%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E5%9B%9B-%E6%96%B0%E5%A2%9ERSS%E8%AE%A2%E9%98%8501.png" alt="【hexo】基础教程-四-新增RSS订阅01"></p>
 
     
     
@@ -604,7 +617,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%A6%96%E5%85%88%E6%B7%BB%E5%8A%A0%E6%8F%92%E4%BB%B6%EF%BC%8C%E5%9C%A8hexo%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%A7%E8%A1%8C"><span class="toc-number">1.</span> <span class="toc-text">1、首先添加插件，在hexo根目录下执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE-config-yml%E6%96%87%E4%BB%B6%EF%BC%8C%E5%90%AF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">2、配置_config.yml文件，启用插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%9C%A8yilia%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">3、在yilia主题添加RSS订阅配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%94%9F%E6%88%90RSS%E8%AE%A2%E9%98%85%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">4、生成RSS订阅文件</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%A6%96%E5%85%88%E6%B7%BB%E5%8A%A0%E6%8F%92%E4%BB%B6%EF%BC%8C%E5%9C%A8hexo%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%A7%E8%A1%8C"><span class="toc-number">1.</span> <span class="toc-text">1、首先添加插件，在hexo根目录下执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE-config-yml%E6%96%87%E4%BB%B6%EF%BC%8C%E5%90%AF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">2、配置_config.yml文件，启用插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%9C%A8yilia%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">3、在yilia主题添加RSS订阅配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%94%9F%E6%88%90RSS%E8%AE%A2%E9%98%85%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">4、生成RSS订阅文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%A6%96%E5%85%88%E6%B7%BB%E5%8A%A0%E6%8F%92%E4%BB%B6%EF%BC%8C%E5%9C%A8hexo%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%A7%E8%A1%8C-1"><span class="toc-number">5.</span> <span class="toc-text">1、首先添加插件，在hexo根目录下执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AE-config-yml%E6%96%87%E4%BB%B6%EF%BC%8C%E5%90%AF%E7%94%A8%E6%8F%92%E4%BB%B6-1"><span class="toc-number">6.</span> <span class="toc-text">2、配置_config.yml文件，启用插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%9C%A8yilia%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0RSS%E8%AE%A2%E9%98%85%E9%85%8D%E7%BD%AE-1"><span class="toc-number">7.</span> <span class="toc-text">3、在yilia主题添加RSS订阅配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%94%9F%E6%88%90RSS%E8%AE%A2%E9%98%85%E6%96%87%E4%BB%B6-1"><span class="toc-number">8.</span> <span class="toc-text">4、生成RSS订阅文件</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -846,10 +859,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">brew</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
              
@@ -858,11 +867,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color5">brew</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">

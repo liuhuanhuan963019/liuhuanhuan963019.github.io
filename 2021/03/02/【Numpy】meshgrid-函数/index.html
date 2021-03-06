@@ -20,6 +20,12 @@
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrjzdsrej31f80d8dh5.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrq4qr4wj31fk0podio.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrjzdsrej31f80d8dh5.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrq4qr4wj31fk0podio.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrjzdsrej31f80d8dh5.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrq4qr4wj31fk0podio.jpg">
 <meta property="article:published_time" content="2021-03-02T04:30:01.000Z">
 <meta property="article:modified_time" content="2021-03-02T04:31:40.307Z">
 <meta property="article:author" content="最爱吃大米">
@@ -382,7 +388,7 @@ var _hmt = _hmt || [];
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">336字</span>
+      <span class="post-count">1.3k字</span>
     </span>
   </span>
 
@@ -391,7 +397,7 @@ var _hmt = _hmt || [];
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">6分</span>
     </span>
   </span>
 </div>
@@ -406,6 +412,63 @@ var _hmt = _hmt || [];
 <p>可以接受两个一维数组生成两个二维矩阵。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mesharid(np.arange(<span class="number">4</span>),np.arange(<span class="number">4</span>)) </span><br></pre></td></tr></table></figure>
 <a id="more"></a>
+
+<blockquote>
+<p>根据传入的两个一维数组参数生成两个数组元素的列表。</p>
+<p>如果第一个参数是xarray，维度是xdimesion，</p>
+<p>第二个参数是yarray，维度是ydimesion。</p>
+<p>那么生成的第一个二维数组是以xarray为行，共ydimesion行的向量；而第二个二维数组是以yarray的转置为列，共xdimesion列的向量。</p>
+</blockquote>
+<p>直观的感受：x-y坐标系中，x可取（1，2，3） y可取（4，5）</p>
+<p>共有6个点    （1，4）（1，5）（2，4）（2，5）（3，4）（3，5）</p>
+<p>np.mesharid()函数就是生成类似的数据网格</p>
+<p>np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。</p>
+<p>可以接受两个一维数组生成两个二维矩阵。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mesharid(np.arange(<span class="number">4</span>),np.arange(<span class="number">4</span>)) </span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<blockquote>
+<p>根据传入的两个一维数组参数生成两个数组元素的列表。</p>
+<p>如果第一个参数是xarray，维度是xdimesion，</p>
+<p>第二个参数是yarray，维度是ydimesion。</p>
+<p>那么生成的第一个二维数组是以xarray为行，共ydimesion行的向量；而第二个二维数组是以yarray的转置为列，共xdimesion列的向量。</p>
+</blockquote>
+<p>直观的感受：x-y坐标系中，x可取（1，2，3） y可取（4，5）</p>
+<p>共有6个点    （1，4）（1，5）（2，4）（2，5）（3，4）（3，5）</p>
+<p>np.mesharid()函数就是生成类似的数据网格</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg" alt="image-20201209180432323"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrjzdsrej31f80d8dh5.jpg"></p>
+<p>==测试代码：==</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment"># np建立一个等差数列</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>,<span class="number">30</span>,<span class="number">3</span>)</span><br><span class="line">print(<span class="string">f&quot;x的维度:<span class="subst">&#123;x.ndim&#125;</span>,shape:<span class="subst">&#123;x.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(x)</span><br><span class="line">y = np.linspace(<span class="number">0</span>,<span class="number">20</span>,<span class="number">2</span>)</span><br><span class="line">print(<span class="string">f&quot;y的维度:<span class="subst">&#123;y.ndim&#125;</span>,shape:<span class="subst">&#123;y.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(y)</span><br><span class="line"></span><br><span class="line">xx,yy = np.meshgrid(x, y)</span><br><span class="line">print(<span class="string">f&quot;xv的维度:<span class="subst">&#123;xx.ndim&#125;</span>,shape:<span class="subst">&#123;xx.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(<span class="string">f&quot;yv的维度:<span class="subst">&#123;yy.ndim&#125;</span>,shape:<span class="subst">&#123;yy.shape&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.plot(xx, yy,<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>result:</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrq4qr4wj31fk0podio.jpg" alt="image-20201209181329819"></p>
+<p>np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。</p>
+<p>可以接受两个一维数组生成两个二维矩阵。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mesharid(np.arange(<span class="number">4</span>),np.arange(<span class="number">4</span>)) </span><br></pre></td></tr></table></figure>
+<!--more-->
+
+<blockquote>
+<p>根据传入的两个一维数组参数生成两个数组元素的列表。</p>
+<p>如果第一个参数是xarray，维度是xdimesion，</p>
+<p>第二个参数是yarray，维度是ydimesion。</p>
+<p>那么生成的第一个二维数组是以xarray为行，共ydimesion行的向量；而第二个二维数组是以yarray的转置为列，共xdimesion列的向量。</p>
+</blockquote>
+<p>直观的感受：x-y坐标系中，x可取（1，2，3） y可取（4，5）</p>
+<p>共有6个点    （1，4）（1，5）（2，4）（2，5）（3，4）（3，5）</p>
+<p>np.mesharid()函数就是生成类似的数据网格</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrguqrl1j31fg08ewfd.jpg" alt="image-20201209180432323"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrjzdsrej31f80d8dh5.jpg"></p>
+<p>==测试代码：==</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment"># np建立一个等差数列</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>,<span class="number">30</span>,<span class="number">3</span>)</span><br><span class="line">print(<span class="string">f&quot;x的维度:<span class="subst">&#123;x.ndim&#125;</span>,shape:<span class="subst">&#123;x.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(x)</span><br><span class="line">y = np.linspace(<span class="number">0</span>,<span class="number">20</span>,<span class="number">2</span>)</span><br><span class="line">print(<span class="string">f&quot;y的维度:<span class="subst">&#123;y.ndim&#125;</span>,shape:<span class="subst">&#123;y.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(y)</span><br><span class="line"></span><br><span class="line">xx,yy = np.meshgrid(x, y)</span><br><span class="line">print(<span class="string">f&quot;xv的维度:<span class="subst">&#123;xx.ndim&#125;</span>,shape:<span class="subst">&#123;xx.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(<span class="string">f&quot;yv的维度:<span class="subst">&#123;yy.ndim&#125;</span>,shape:<span class="subst">&#123;yy.shape&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.plot(xx, yy,<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>result:</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glhrq4qr4wj31fk0podio.jpg" alt="image-20201209181329819"></p>
+<p>==测试代码：==</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="comment"># np建立一个等差数列</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>,<span class="number">30</span>,<span class="number">3</span>)</span><br><span class="line">print(<span class="string">f&quot;x的维度:<span class="subst">&#123;x.ndim&#125;</span>,shape:<span class="subst">&#123;x.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(x)</span><br><span class="line">y = np.linspace(<span class="number">0</span>,<span class="number">20</span>,<span class="number">2</span>)</span><br><span class="line">print(<span class="string">f&quot;y的维度:<span class="subst">&#123;y.ndim&#125;</span>,shape:<span class="subst">&#123;y.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(y)</span><br><span class="line"></span><br><span class="line">xx,yy = np.meshgrid(x, y)</span><br><span class="line">print(<span class="string">f&quot;xv的维度:<span class="subst">&#123;xx.ndim&#125;</span>,shape:<span class="subst">&#123;xx.shape&#125;</span>&quot;</span>)</span><br><span class="line">print(<span class="string">f&quot;yv的维度:<span class="subst">&#123;yy.ndim&#125;</span>,shape:<span class="subst">&#123;yy.shape&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.plot(xx, yy,<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>result:</p>
+<p>np.mesharid()函数通常用来生成二维数据网格，例如一张灰度图片中长为x轴，宽为y轴，图中每一个像素点。</p>
+<p>可以接受两个一维数组生成两个二维矩阵。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.mesharid(np.arange(<span class="number">4</span>),np.arange(<span class="number">4</span>)) </span><br></pre></td></tr></table></figure>
+<!--more-->
 
 <blockquote>
 <p>根据传入的两个一维数组参数生成两个数组元素的列表。</p>
@@ -859,10 +922,6 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">brew</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
              
@@ -871,11 +930,15 @@ var _hmt = _hmt || [];
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color5">brew</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
