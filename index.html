@@ -379,37 +379,9 @@ var _hmt = _hmt || [];
     
     <p>[TOC]</p>
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h3><p>百度统计和Google统计主要用于分析网站数据：流量、访客量等。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo-yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A1.png" alt="image-20210306125157943"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A102.png" alt="image-20210306125319828"></p>
-<p>需要注册账号，将相应的提示代码加入到博客代码中去</p>
-<ul>
-<li>百度统计网址：<a href="https://tongji.baidu.com/">https://tongji.baidu.com</a></li>
-<li>Google统计网址：<a href="https://analytics.google.com/analytics/web/">https://analytics.google.com/analytics/web/</a></li>
-</ul>
-<h3 id="文件地址"><a href="#文件地址" class="headerlink" title="文件地址"></a><strong>文件地址</strong></h3><p>yilia主题已集成，位置如下，我们只需要在主题的配置文件中进行配置即可。</p>
-<ul>
-<li><code>F:\IdeaProjects\hexo\themes\yilia\layout\_partial\baidu-analytics.ejs</code></li>
-<li><code>F:\IdeaProjects\hexo\themes\yilia\layout\_partial\google-analytics.ejs</code></li>
-</ul>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a><strong>配置</strong></h3><p><code>themes\yilia\_config.yml</code>原内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baidu_analytics: &#x27;&#x27;</span><br><span class="line">google_analytics: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
-<p>括号中填写配置对应的id即可</p>
-<h4 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h4><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A103.png" alt="image-20210306130119050"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A104.png" alt="image-20210306130204927"></p>
-<p>找到对应的配置文件：</p>
-<p><code>F:\IdeaProjects\hexo\themes\yilia\layout\_partial\baidu-analytics.ejs</code></p>
-<p>修改里面的代码为：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.baidu_a)&#123; %&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var _hmt = _hmt || [];</span><br><span class="line">(function() &#123;</span><br><span class="line">  var hm = document.createElement(&quot;script&quot;);</span><br><span class="line">  hm.src = &quot;https://hm.baidu.com/hm.js?此处填写id&quot;;</span><br><span class="line">  var s = document.getElementsByTagName(&quot;script&quot;)[0]; </span><br><span class="line">  s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="谷歌"><a href="#谷歌" class="headerlink" title="谷歌"></a>谷歌</h4><p><strong>生成代码</strong>：控制台–&gt;（左下角）管理–&gt;管理–&gt;（中间）媒体资源–&gt;（中间）跟踪信息–&gt;跟踪代码</p>
-<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A106.png" alt="image-20210306130559427"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A107.png" alt="image-20210306130710805"></p>
-<p><code>找到代码，此操作方式与百度的方式相同，不再赘述。</code></p>
-<h4 id="配置id"><a href="#配置id" class="headerlink" title="配置id"></a>配置id</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baidu_analytics: &#x27;百度统计id&#x27;</span><br><span class="line">google_analytics: &#x27;Google统计id&#x27;</span><br></pre></td></tr></table></figure>
-<p>Google虽然好，但是因为墙的原因，所以有时候可能会出现问题。所以建议还是使用百度账号的使用方式。</p>
-<p>最终效果图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90hexo%E3%80%91hexo+yilia%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8C%E8%B0%B7%E6%AD%8C%E7%BB%9F%E8%AE%A108.png" alt="image-20210306131030163"></p>
-<p>欢迎访问我的博客:<a href="http://www.novoice.top/">www.novoice.top</a></p>
-
+    
+    <a class="article-more-a" href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo-yilia%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8CGoogle%E7%BB%9F%E8%AE%A1/#more">more >></a>
+    
     
 
     
