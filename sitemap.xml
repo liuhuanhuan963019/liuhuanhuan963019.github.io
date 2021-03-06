@@ -326,6 +326,20 @@
 
   
   <url>
+    <loc>http://www.novoice.top/tags/md/</loc>
+    <lastmod>2021-03-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/tags/markdown/</loc>
+    <lastmod>2021-03-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.novoice.top/tags/windows10/</loc>
     <lastmod>2021-03-06</lastmod>
     <changefreq>daily</changefreq>
@@ -341,20 +355,6 @@
   
   <url>
     <loc>http://www.novoice.top/tags/python/</loc>
-    <lastmod>2021-03-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.novoice.top/tags/md/</loc>
-    <lastmod>2021-03-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.novoice.top/tags/markdown/</loc>
     <lastmod>2021-03-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -517,6 +517,13 @@
 
   
   <url>
+    <loc>http://www.novoice.top/categories/markdown/</loc>
+    <lastmod>2021-03-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.novoice.top/categories/windows10/</loc>
     <lastmod>2021-03-06</lastmod>
     <changefreq>daily</changefreq>
@@ -525,13 +532,6 @@
   
   <url>
     <loc>http://www.novoice.top/categories/python/</loc>
-    <lastmod>2021-03-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.novoice.top/categories/markdown/</loc>
     <lastmod>2021-03-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
