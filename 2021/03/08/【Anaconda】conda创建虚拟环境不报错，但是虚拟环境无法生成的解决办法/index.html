@@ -6,23 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.novoice.top">
-  <title>【Python】zip函数的使用 | 最爱吃大米的博客</title>
+  <title>【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法 | 最爱吃大米的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Python3 zip() 函数描述zip() 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象，这样做的好处是节约了不少的内存。 我们可以使用 list() 转换来输出列表。 如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 ***** 号操作符，可以将元组解压为列表。">
+  <meta name="description" content="python新建虚拟环境，有两种方式 1conda create -n DeepLearning python&#x3D;3.8 或者通过Anaconda的方式新建（可能打开Anaconda的过程很漫长。。。。）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Python】zip函数的使用">
-<meta property="og:url" content="http://www.novoice.top/2021/03/05/%E3%80%90Python%E3%80%91zip%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法">
+<meta property="og:url" content="http://www.novoice.top/2021/03/08/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/index.html">
 <meta property="og:site_name" content="最爱吃大米的博客">
-<meta property="og:description" content="Python3 zip() 函数描述zip() 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象，这样做的好处是节约了不少的内存。 我们可以使用 list() 转换来输出列表。 如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 ***** 号操作符，可以将元组解压为列表。">
+<meta property="og:description" content="python新建虚拟环境，有两种方式 1conda create -n DeepLearning python&#x3D;3.8 或者通过Anaconda的方式新建（可能打开Anaconda的过程很漫长。。。。）">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-05T11:53:05.000Z">
-<meta property="article:modified_time" content="2021-03-05T11:53:56.229Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9501.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9502.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9503.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9501.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9502.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9503.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9501.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9502.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9503.png">
+<meta property="article:published_time" content="2021-03-08T13:48:29.000Z">
+<meta property="article:modified_time" content="2021-03-08T13:49:34.470Z">
 <meta property="article:author" content="最爱吃大米">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="zip">
+<meta property="article:tag" content="anaconda">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9501.png">
   
     <link rel="alternative" href="/atom.xml" title="最爱吃大米的博客" type="application/atom+xml">
   
@@ -345,14 +355,14 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-【Python】zip函数的使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      【Python】zip函数的使用
+      【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法
     </h1>
   
 
@@ -364,8 +374,8 @@ var _hmt = _hmt || [];
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2021/03/05/%E3%80%90Python%E3%80%91zip%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2021-03-05T11:53:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
+<a href="/2021/03/08/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
+        <time datetime="2021-03-08T13:48:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-08</time>
 </a>
 
   
@@ -378,7 +388,7 @@ var _hmt = _hmt || [];
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">691字</span>
+      <span class="post-count">932字</span>
     </span>
   </span>
 
@@ -398,48 +408,83 @@ var _hmt = _hmt || [];
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="Python3-zip-函数"><a href="#Python3-zip-函数" class="headerlink" title="Python3 zip() 函数"></a>Python3 zip() 函数</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p><strong>zip()</strong> 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象，这样做的好处是节约了不少的内存。</p>
-<p>我们可以使用 list() 转换来输出列表。</p>
-<p>如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 ***** 号操作符，可以将元组解压为列表。</p>
+    <p>python新建虚拟环境，有两种方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n DeepLearning python=<span class="number">3.8</span></span><br></pre></td></tr></table></figure>
+<p>或者通过Anaconda的方式新建（可能打开Anaconda的过程很漫长。。。。）</p>
 <a id="more"></a>
 
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>zip 语法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">zip</span>([iterable, ...])</span><br></pre></td></tr></table></figure>
-<p>参数说明：</p>
-<ul>
-<li>iterabl – 一个或多个迭代器;</li>
-</ul>
-<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><p>返回一个对象。</p>
-<h2 id="实例demo"><a href="#实例demo" class="headerlink" title="实例demo"></a>实例demo</h2><p> <strong><code>返回一个对象</code></strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">c = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">d = <span class="built_in">zip</span>(a,b)</span><br><span class="line">print(d)</span><br><span class="line"><span class="comment"># 转换为list的形式,返回的是一个元组的形式</span></span><br><span class="line">d_list = <span class="built_in">list</span>(d)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> d_list:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
-<p>print:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print    &lt;zip object at 0x7f94a3699140&gt;</span></span><br><span class="line"><span class="comment"># print(1, 4)</span></span><br><span class="line"><span class="comment">#      (2, 5)</span></span><br><span class="line"><span class="comment">#      (3, 6)</span></span><br></pre></td></tr></table></figure>
-<p><strong><code>当只有一个参数的时候</code></strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">zz=<span class="built_in">list</span>(<span class="built_in">zip</span>(a))</span><br><span class="line">print(zz)</span><br></pre></td></tr></table></figure>
-<p>print:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print [(1,), (2,), (3,)]</span></span><br></pre></td></tr></table></figure>
-<p><strong><code>当没有参数的时候</code></strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">zz=<span class="built_in">list</span>(<span class="built_in">zip</span>())</span><br><span class="line">print(zz)</span><br></pre></td></tr></table></figure>
-<p>print:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br></pre></td></tr></table></figure>
-<p><strong><code>压缩长度不一致的数组，元素的个数与长度最短的数组相关</code></strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">c = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">e_list =  <span class="built_in">list</span>(<span class="built_in">zip</span>(a,c))</span><br><span class="line">print(e_list)</span><br></pre></td></tr></table></figure>
-<p>print:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print [(1, 4), (2, 5), (3, 6)]</span></span><br></pre></td></tr></table></figure>
-<p><strong><code>与 zip 相反，zip(*) 可理解为解压，返回二维矩阵式</code></strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">a1,a2 = <span class="built_in">zip</span>(*<span class="built_in">zip</span>(a,b))</span><br><span class="line">print(a1,a2)</span><br></pre></td></tr></table></figure>
-<p>print:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print (1, 2, 3) (4, 5, 6)</span></span><br></pre></td></tr></table></figure>
-<p><strong><code>通过解压操作之后，输出的是元组类型，而并不是原来的类型，但是值并不会发生改变，除非原来的参数列表长度不一样，看下面的代码</code></strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line"><span class="comment"># zz = list(zip(a,b))</span></span><br><span class="line">a,b = <span class="built_in">zip</span>(*<span class="built_in">zip</span>(a,b))</span><br><span class="line">print(a,b)</span><br></pre></td></tr></table></figure>
-<p>print</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) (<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-<p>unzip后的列表b的值都少了，但是里面的值还是不变的。</p>
-<p><code>扩展</code>：</p>
-<p>机器学习模型训练中，经常需要打乱数据集，用 zip() 函数可以实现如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#encoding=utf-8</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置随机种子,保证每次生成随机相同，方便重现</span></span><br><span class="line">random.seed(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">y = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">zipped_data = <span class="built_in">list</span>(<span class="built_in">zip</span>(x,y))</span><br><span class="line"><span class="comment"># 打乱样本的数据 打乱样本的数据 random使用的是原地操作的方式，没有任何 返回值</span></span><br><span class="line">random.shuffle(zipped_data)</span><br><span class="line"><span class="comment"># print(zipped_data)</span></span><br><span class="line"><span class="comment"># 打乱后[(1, 0), (4, 0), (2, 1), (5, 1), (3, 0), (6, 1)]</span></span><br><span class="line"><span class="comment"># 原始 [(1, 0), (2, 1), (3, 0), (4, 0), (5, 1), (6, 1)]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># zip(*)反向解压，map()逐项转换类型，list()做最后转换</span></span><br><span class="line">zipped_data2 = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">list</span>,<span class="built_in">zip</span>(*zipped_data)))</span><br><span class="line">print(zipped_data2)</span><br><span class="line"></span><br><span class="line">print(zipped_data2[<span class="number">0</span>])</span><br><span class="line">print(zipped_data2[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
-<p>print:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">2</span>], [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>]]</span><br><span class="line">[<span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">2</span>]</span><br><span class="line">[<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>python新建虚拟环境，有两种方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n DeepLearning python=<span class="number">3.8</span></span><br></pre></td></tr></table></figure>
+<p>或者通过Anaconda的方式新建（可能打开Anaconda的过程很漫长。。。。）</p>
+<!--more-->
+
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9501.png" alt="image-20210308212646461"></p>
+<p>按照上图的方式，即可安装，但是不如命令来的快一些</p>
+<p>现在出现了一写问题！！！！</p>
+<p>我在新建虚拟环境的时候：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n pytorch python=<span class="number">3.7</span></span><br></pre></td></tr></table></figure>
+<p>出现了如下情况：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9502.png" alt="img"></p>
+<p>在新建的环境中，使用pip命令，出现错误，提示python什么什么文件丢失。意思就是找不到python执行程序。我以为是我创建错了，我删掉，重新建立，最后还是出现这个问题，最后发现是多余的环境，导致系统环境乱掉了。</p>
+<p>清除之前未完成的conda安装的包就可以正常创建环境了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda clean --<span class="built_in">all</span></span><br></pre></td></tr></table></figure>
+<p>此过程需要等待一段时间</p>
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9503.png" alt="image-20210308213735100"></p>
+<p>然后就可以正常的创建虚拟环境了</p>
+<p>ok!!!!!!</p>
+<p>按照上图的方式，即可安装，但是不如命令来的快一些</p>
+<p>现在出现了一写问题！！！！</p>
+<p>我在新建虚拟环境的时候：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n pytorch python=<span class="number">3.7</span></span><br></pre></td></tr></table></figure>
+<p>出现了如下情况：</p>
+<p>python新建虚拟环境，有两种方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n DeepLearning python=<span class="number">3.8</span></span><br></pre></td></tr></table></figure>
+<p>或者通过Anaconda的方式新建（可能打开Anaconda的过程很漫长。。。。）</p>
+<!--more-->
+
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9501.png" alt="image-20210308212646461"></p>
+<p>按照上图的方式，即可安装，但是不如命令来的快一些</p>
+<p>现在出现了一写问题！！！！</p>
+<p>我在新建虚拟环境的时候：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n pytorch python=<span class="number">3.7</span></span><br></pre></td></tr></table></figure>
+<p>出现了如下情况：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9502.png" alt="img"></p>
+<p>在新建的环境中，使用pip命令，出现错误，提示python什么什么文件丢失。意思就是找不到python执行程序。我以为是我创建错了，我删掉，重新建立，最后还是出现这个问题，最后发现是多余的环境，导致系统环境乱掉了。</p>
+<p>清除之前未完成的conda安装的包就可以正常创建环境了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda clean --<span class="built_in">all</span></span><br></pre></td></tr></table></figure>
+<p>此过程需要等待一段时间</p>
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9503.png" alt="image-20210308213735100"></p>
+<p>然后就可以正常的创建虚拟环境了</p>
+<p>ok!!!!!!</p>
+<p>在新建的环境中，使用pip命令，出现错误，提示python什么什么文件丢失。意思就是找不到python执行程序。我以为是我创建错了，我删掉，重新建立，最后还是出现这个问题，最后发现是多余的环境，导致系统环境乱掉了。</p>
+<p>清除之前未完成的conda安装的包就可以正常创建环境了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda clean --<span class="built_in">all</span></span><br></pre></td></tr></table></figure>
+<p>此过程需要等待一段时间</p>
+<p>python新建虚拟环境，有两种方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n DeepLearning python=<span class="number">3.8</span></span><br></pre></td></tr></table></figure>
+<p>或者通过Anaconda的方式新建（可能打开Anaconda的过程很漫长。。。。）</p>
+<!--more-->
+
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9501.png" alt="image-20210308212646461"></p>
+<p>按照上图的方式，即可安装，但是不如命令来的快一些</p>
+<p>现在出现了一写问题！！！！</p>
+<p>我在新建虚拟环境的时候：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n pytorch python=<span class="number">3.7</span></span><br></pre></td></tr></table></figure>
+<p>出现了如下情况：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9502.png" alt="img"></p>
+<p>在新建的环境中，使用pip命令，出现错误，提示python什么什么文件丢失。意思就是找不到python执行程序。我以为是我创建错了，我删掉，重新建立，最后还是出现这个问题，最后发现是多余的环境，导致系统环境乱掉了。</p>
+<p>清除之前未完成的conda安装的包就可以正常创建环境了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda clean --<span class="built_in">all</span></span><br></pre></td></tr></table></figure>
+<p>此过程需要等待一段时间</p>
+<p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%9503.png" alt="image-20210308213735100"></p>
+<p>然后就可以正常的创建虚拟环境了</p>
+<p>ok!!!!!!</p>
+<p>然后就可以正常的创建虚拟环境了</p>
+<p>ok!!!!!!</p>
+
     
     
     <div class="page-reward">
@@ -484,7 +529,7 @@ var _hmt = _hmt || [];
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://www.novoice.top/2021/03/05/【Python】zip函数的使用/" title="【Python】zip函数的使用" target="_blank">http://www.novoice.top/2021/03/05/【Python】zip函数的使用/</a>
+          <a href="http://www.novoice.top/2021/03/08/【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法/" title="【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法" target="_blank">http://www.novoice.top/2021/03/08/【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法/</a>
         </li>
         
         <li>
@@ -510,7 +555,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">zip</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">anaconda</a>
         		</li>
       		
 		</ul>
@@ -577,7 +622,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.novoice.top/2021/03/05/%E3%80%90Python%E3%80%91zip%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.novoice.top/2021/03/08/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -592,18 +637,9 @@ var _hmt = _hmt || [];
 
 <nav id="article-nav">
   
-    <a href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo-yilia%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8CGoogle%E7%BB%9F%E8%AE%A1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          【hexo】hexo+yilia添加百度统计和Google统计
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/03/04/Initializing-libiomp5md-dll-but-found-libiomp5md-dll-already-initialized%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Initializing libiomp5md.dll, but Found libiomp5md.dll Already Initialized错误解决方式</div>
+    <a href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【Hexo】hexo新增文章显示目录</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -630,7 +666,7 @@ var _hmt = _hmt || [];
 
 
 
-<div id="SOHUCS" sid="【Python】zip函数的使用" ></div> 
+<div id="SOHUCS" sid="【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -651,9 +687,9 @@ var _hmt = _hmt || [];
     <script src="/lib/giteement.browser.js"></script>
   
   <script>
-  <!-- id: "【Python】zip函数的使用" -->
+  <!-- id: "【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法" -->
   var giteement = new Giteement({
-    id: '20210305195305',
+    id: '20210308214829',
     owner: 'liuhuanhuan963019',
     repo: 'gitmeet',
     backcall_uri: 'http://www.novoice.top',
