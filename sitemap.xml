@@ -389,13 +389,6 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/mysql/</loc>
-    <lastmod>2021-03-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.novoice.top/tags/macos/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
@@ -403,7 +396,7 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/Numpy/</loc>
+    <loc>http://www.novoice.top/tags/mysql/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -411,6 +404,13 @@
   
   <url>
     <loc>http://www.novoice.top/tags/anaconda/</loc>
+    <lastmod>2021-03-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/tags/Numpy/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -438,14 +438,14 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/typora/</loc>
+    <loc>http://www.novoice.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://www.novoice.top/tags/typora/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -487,6 +487,13 @@
   </url>
   
   <url>
+    <loc>http://www.novoice.top/tags/yilia/</loc>
+    <lastmod>2021-03-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.novoice.top/tags/yilia%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
@@ -495,13 +502,6 @@
   
   <url>
     <loc>http://www.novoice.top/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-03-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.novoice.top/tags/yilia/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -573,14 +573,14 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/categories/mysql/</loc>
+    <loc>http://www.novoice.top/categories/macos/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.novoice.top/categories/macos/</loc>
+    <loc>http://www.novoice.top/categories/mysql/</loc>
     <lastmod>2021-03-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
