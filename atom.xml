@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-03-17T14:07:43.793Z</updated>
+  <updated>2021-04-15T13:07:10.738Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac设置redis开机启动</title>
+    <link href="http://www.novoice.top/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/"/>
+    <id>http://www.novoice.top/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</id>
+    <published>2021-04-15T13:06:41.000Z</published>
+    <updated>2021-04-15T13:07:10.738Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-创建-plist配置文件"><a href="#1-创建-plist配置文件" class="headerlink" title="1.创建.plist配置文件"></a>1.创建.plist配置文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /Library/LaunchDaemons/io.redis.redis-server.plist</span><br></pre></td></tr></table></figure><p>按 <code>i </code>进入编辑模式</p><p>拷贝如下内容：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;plist version=&quot;1.0&quot;&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;Label&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;io.redis.redis-server&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">    &lt;array&gt;</span><br><span class="line">        &lt;string&gt;/usr/local/bin/redis-server&lt;/string&gt;</span><br><span class="line">        &lt;string&gt;/usr/local/redis-5.0.5/redis.conf&lt;/string&gt;</span><br><span class="line">    &lt;/array&gt;</span><br><span class="line">    &lt;key&gt;RunAtLoad&lt;/key&gt;</span><br><span class="line">    &lt;true/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br></pre></td></tr></table></figure><p>其中<code>redis-server</code>路径与<code>redis.conf</code>路径根据实际情况修改</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which redis-server   # 查看redis-server路径</span><br></pre></td></tr></table></figure><p> 建议使用brew安装redis，便于管理</p><p>保存并退出：<code>esc</code>+<code>:+wq</code></p><h3 id="2-使用launchctl将配置加入launchd"><a href="#2-使用launchctl将配置加入launchd" class="headerlink" title="2.使用launchctl将配置加入launchd"></a>2.使用launchctl将配置加入launchd</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl load /Library/LaunchDaemons/io.redis.redis-server.plist</span><br></pre></td></tr></table></figure><p>此时Mac开机或重启都会自动启动redis</p><h3 id="3-使用launchctl手动启动-关闭redis"><a href="#3-使用launchctl手动启动-关闭redis" class="headerlink" title="3.使用launchctl手动启动/关闭redis"></a>3.使用launchctl手动启动/关闭redis</h3><p>启动redis</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl start io.redis.redis-server</span><br></pre></td></tr></table></figure><p>关闭redis</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl stop io.redis.redis-server</span><br></pre></td></tr></table></figure><p>可对上述命令进行简化（通过设置别名的方式）<br>切换到用户目录<code>cd</code><br>编辑环境变量配置<code>vim .bash_profile</code><br>将别名设置粘贴到配置文件</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias redisstart=&#x27;sudo launchctl start io.redis.redis-server&#x27;</span><br><span class="line">alias redisstop=&#x27;sudo launchctl stop io.redis.redis-server&#x27;</span><br></pre></td></tr></table></figure><p>退出并保存<code>esc</code> - <code>:</code> - <code>wq</code><br>最后使用source命令使别名生效<code>source .bash_profile</code>，如果提示无此文件可使用下面几种方式：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br><span class="line">source ./.bash_profile</span><br></pre></td></tr></table></figure><p>参考文档：<a href="https://www.jianshu.com/p/afb1b1796cc6">https://www.jianshu.com/p/afb1b1796cc6</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-创建-plist配置文件&quot;&gt;&lt;a href=&quot;#1-创建-plist配置文件&quot; class=&quot;headerlink&quot; title=&quot;1.创建.plist配置文件&quot;&gt;&lt;/a&gt;1.创建.plist配置文件&lt;/h3&gt;&lt;figure class=&quot;highlight </summary>
+      
+    
+    
+    
+    <category term="redis" scheme="http://www.novoice.top/categories/redis/"/>
+    
+    
+    <category term="redis" scheme="http://www.novoice.top/tags/redis/"/>
+    
+  </entry>
   
   <entry>
     <title>【Pytorch】六大学习率调整策略</title>
@@ -440,27 +464,6 @@
     <summary type="html">&lt;h1 id=&quot;Python3-SMTP发送邮件&quot;&gt;&lt;a href=&quot;#Python3-SMTP发送邮件&quot; class=&quot;headerlink&quot; title=&quot;Python3 SMTP发送邮件&quot;&gt;&lt;/a&gt;Python3 SMTP发送邮件&lt;/h1&gt;&lt;p&gt;SMTP（Simple Mail Transfer Protocol）即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式。&lt;/p&gt;
 &lt;p&gt;python的smtplib提供了一种很方便的途径发送电子邮件。它对smtp协议进行了简单的封装。&lt;/p&gt;
 &lt;p&gt;Python创建 SMTP 对象语法如下：&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="http://www.novoice.top/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://www.novoice.top/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Python 强化】Assert的使用方式</title>
-    <link href="http://www.novoice.top/2021/03/02/%E3%80%90Python-%E5%BC%BA%E5%8C%96%E3%80%91assert%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
-    <id>http://www.novoice.top/2021/03/02/%E3%80%90Python-%E5%BC%BA%E5%8C%96%E3%80%91assert%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/</id>
-    <published>2021-03-02T04:38:20.000Z</published>
-    <updated>2021-03-02T04:39:11.142Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="assert断言"><a href="#assert断言" class="headerlink" title="assert断言"></a>assert断言</h1><h2 id="assert-的作用"><a href="#assert-的作用" class="headerlink" title="assert 的作用"></a>assert 的作用</h2><h3 id="一、python-assert的作用："><a href="#一、python-assert的作用：" class="headerlink" title="一、python assert的作用："></a>一、python assert的作用：</h3><a id="more"></a><p><a href="https://docs.python.org/3/reference/simple_stmts.html#assert">官方文档：</a></p><blockquote><p>assert 断言成功则继续进行，断言失败则<strong>程序报错（类似于java中的异常捕捉，自定义异常</strong>）</p><p>1.断言能够别人更好的理解自己的代码</p><p>2.找出程序中逻辑不对的一方面</p><p>3.断言会提示某个对象会处于何种状态</p><p>4.另一方面，如果断言为假会抛出异常，很有可能终止程序</p></blockquote><h3 id="二、一般用法"><a href="#二、一般用法" class="headerlink" title="二、一般用法"></a>二、一般用法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assert</span> condition</span><br><span class="line"><span class="comment"># 用来让程序测试这个condition，如果condition为false，那么raise一个AssertionError出来。逻辑上等同于：</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> condition:</span><br><span class="line">    <span class="keyword">raise</span> AssertionError()</span><br></pre></td></tr></table></figure><p>语法：<code>assert expression1 [, expression2]</code></p><blockquote><p><code>expresssion1</code> 是要判断的表达式，<code>expression2</code> 是可选的，用于返回错误信息</p></blockquote><p>【注意】</p><ul><li>不要使用断言验证数据，因为有可能程序被禁用断言</li><li>不要写出永远不会失败的断言</li></ul><p>例如：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span>(<span class="params">a</span>):</span></span><br><span class="line">    <span class="keyword">assert</span> a == <span class="number">2</span>,Exception(<span class="string">&#x27;不等于2&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;ok&#x27;</span>,<span class="number">2</span>)</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span>  __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    foo(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;assert断言&quot;&gt;&lt;a href=&quot;#assert断言&quot; class=&quot;headerlink&quot; title=&quot;assert断言&quot;&gt;&lt;/a&gt;assert断言&lt;/h1&gt;&lt;h2 id=&quot;assert-的作用&quot;&gt;&lt;a href=&quot;#assert-的作用&quot; class=&quot;headerlink&quot; title=&quot;assert 的作用&quot;&gt;&lt;/a&gt;assert 的作用&lt;/h2&gt;&lt;h3 id=&quot;一、python-assert的作用：&quot;&gt;&lt;a href=&quot;#一、python-assert的作用：&quot; class=&quot;headerlink&quot; title=&quot;一、python assert的作用：&quot;&gt;&lt;/a&gt;一、python assert的作用：&lt;/h3&gt;</summary>
     
     
     

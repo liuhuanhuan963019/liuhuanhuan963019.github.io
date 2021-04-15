@@ -355,6 +355,124 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-Mac设置redis开机启动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">Mac设置redis开机启动</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/" class="archive-article-date">
+        <time datetime="2021-04-15T13:06:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-15</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="1-创建-plist配置文件"><a href="#1-创建-plist配置文件" class="headerlink" title="1.创建.plist配置文件"></a>1.创建.plist配置文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /Library/LaunchDaemons/io.redis.redis-server.plist</span><br></pre></td></tr></table></figure>
+<p>按 <code>i </code>进入编辑模式</p>
+<p>拷贝如下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;plist version=&quot;1.0&quot;&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;Label&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;io.redis.redis-server&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">    &lt;array&gt;</span><br><span class="line">        &lt;string&gt;/usr/local/bin/redis-server&lt;/string&gt;</span><br><span class="line">        &lt;string&gt;/usr/local/redis-5.0.5/redis.conf&lt;/string&gt;</span><br><span class="line">    &lt;/array&gt;</span><br><span class="line">    &lt;key&gt;RunAtLoad&lt;/key&gt;</span><br><span class="line">    &lt;true/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br></pre></td></tr></table></figure>
+<p>其中<code>redis-server</code>路径与<code>redis.conf</code>路径根据实际情况修改</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which redis-server   # 查看redis-server路径</span><br></pre></td></tr></table></figure>
+<p> 建议使用brew安装redis，便于管理</p>
+<p>保存并退出：<code>esc</code>+<code>:+wq</code></p>
+<h3 id="2-使用launchctl将配置加入launchd"><a href="#2-使用launchctl将配置加入launchd" class="headerlink" title="2.使用launchctl将配置加入launchd"></a>2.使用launchctl将配置加入launchd</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl load /Library/LaunchDaemons/io.redis.redis-server.plist</span><br></pre></td></tr></table></figure>
+<p>此时Mac开机或重启都会自动启动redis</p>
+<h3 id="3-使用launchctl手动启动-关闭redis"><a href="#3-使用launchctl手动启动-关闭redis" class="headerlink" title="3.使用launchctl手动启动/关闭redis"></a>3.使用launchctl手动启动/关闭redis</h3><p>启动redis</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl start io.redis.redis-server</span><br></pre></td></tr></table></figure>
+<p>关闭redis</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl stop io.redis.redis-server</span><br></pre></td></tr></table></figure>
+<p>可对上述命令进行简化（通过设置别名的方式）<br>切换到用户目录<code>cd</code><br>编辑环境变量配置<code>vim .bash_profile</code><br>将别名设置粘贴到配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias redisstart=&#x27;sudo launchctl start io.redis.redis-server&#x27;</span><br><span class="line">alias redisstop=&#x27;sudo launchctl stop io.redis.redis-server&#x27;</span><br></pre></td></tr></table></figure>
+<p>退出并保存<code>esc</code> - <code>:</code> - <code>wq</code><br>最后使用source命令使别名生效<code>source .bash_profile</code>，如果提示无此文件可使用下面几种方式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br><span class="line">source ./.bash_profile</span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>参考文档：<a href="https://www.jianshu.com/p/afb1b1796cc6">https://www.jianshu.com/p/afb1b1796cc6</a></p>
+
+    
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/redis//" class="article-tag-list-link color1">redis</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-【Pytorch】六大学习率调整策略" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1276,111 +1394,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-【Vue】vue基础知识二（网络数据操作）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/02/%E3%80%90Vue%E3%80%91vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BA%8C%EF%BC%88%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%89/">【Vue】vue基础知识二（网络数据操作）</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/02/%E3%80%90Vue%E3%80%91vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BA%8C%EF%BC%88%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%89/" class="archive-article-date">
-        <time datetime="2021-03-02T04:51:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a><strong>axios</strong></h3><p><strong>(1.先导入后使用 2.使用get和post即可发送相应的请求</strong></p>
-<p><strong>3.then方法中的回调函数会在请求成功和失败时触发</strong></p>
-<p><strong>4.通过回调函数的形参可以获取响音内容或错误信息)</strong></p>
-<p><strong>功能强大的网络请求库</strong></p>
-    
-    <a class="article-more-a" href="/2021/03/02/%E3%80%90Vue%E3%80%91vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BA%8C%EF%BC%88%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%89/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/02/%E3%80%90Vue%E3%80%91vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BA%8C%EF%BC%88%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%89/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next »</a>
@@ -1524,6 +1537,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
              
               <li class="article-tag-list-item">
