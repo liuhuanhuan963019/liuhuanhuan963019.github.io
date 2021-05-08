@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="1.创建.plist配置文件1sudo vim &#x2F;Library&#x2F;LaunchDaemons&#x2F;io.redis.redis-server.plist 按 i 进入编辑模式 拷贝如下内容： 123456789101112131415&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;&lt;!DOCTYPE plist PU">
+  <meta name="description" content="1.创建.plist配置文件1sudo vim &#x2F;Library&#x2F;LaunchDaemons&#x2F;io.redis.redis-server.plist 按 i 进入编辑模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac设置redis开机启动">
 <meta property="og:url" content="http://www.novoice.top/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/index.html">
 <meta property="og:site_name" content="最爱吃大米的博客">
-<meta property="og:description" content="1.创建.plist配置文件1sudo vim &#x2F;Library&#x2F;LaunchDaemons&#x2F;io.redis.redis-server.plist 按 i 进入编辑模式 拷贝如下内容： 123456789101112131415&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;&lt;!DOCTYPE plist PU">
+<meta property="og:description" content="1.创建.plist配置文件1sudo vim &#x2F;Library&#x2F;LaunchDaemons&#x2F;io.redis.redis-server.plist 按 i 进入编辑模式">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-15T13:06:41.000Z">
-<meta property="article:modified_time" content="2021-04-15T13:07:10.738Z">
+<meta property="article:modified_time" content="2021-05-08T00:05:46.117Z">
 <meta property="article:author" content="最爱吃大米">
 <meta property="article:tag" content="redis">
 <meta name="twitter:card" content="summary">
@@ -399,6 +399,8 @@ var _hmt = _hmt || [];
     
     <h3 id="1-创建-plist配置文件"><a href="#1-创建-plist配置文件" class="headerlink" title="1.创建.plist配置文件"></a>1.创建.plist配置文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /Library/LaunchDaemons/io.redis.redis-server.plist</span><br></pre></td></tr></table></figure>
 <p>按 <code>i </code>进入编辑模式</p>
+<a id="more"></a>
+
 <p>拷贝如下内容：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;plist version=&quot;1.0&quot;&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;Label&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;io.redis.redis-server&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">    &lt;array&gt;</span><br><span class="line">        &lt;string&gt;/usr/local/bin/redis-server&lt;/string&gt;</span><br><span class="line">        &lt;string&gt;/usr/local/redis-5.0.5/redis.conf&lt;/string&gt;</span><br><span class="line">    &lt;/array&gt;</span><br><span class="line">    &lt;key&gt;RunAtLoad&lt;/key&gt;</span><br><span class="line">    &lt;true/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br></pre></td></tr></table></figure>
 <p>其中<code>redis-server</code>路径与<code>redis.conf</code>路径根据实际情况修改</p>
@@ -568,6 +570,15 @@ var _hmt = _hmt || [];
 
 
 <nav id="article-nav">
+  
+    <a href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MongoDB安装
+        
+      </div>
+    </a>
   
   
     <a href="/2021/03/17/%E3%80%90Pytorch%E3%80%91%E5%85%AD%E5%A4%A7%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5/" id="article-nav-older" class="article-nav-link-wrap">
@@ -767,15 +778,15 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">windows10</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DNS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -788,6 +799,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
               </li>
              
               <li class="article-tag-list-item">

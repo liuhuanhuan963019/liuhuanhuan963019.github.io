@@ -355,6 +355,104 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-MongoDB安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/">MongoDB安装</a>
+	
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/" class="archive-article-date">
+        <time datetime="2021-05-08T00:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-08</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><h2 id="一、windows安装"><a href="#一、windows安装" class="headerlink" title="一、windows安装"></a>一、windows安装</h2><h3 id="1-官网下载"><a href="#1-官网下载" class="headerlink" title="1.官网下载"></a>1.官网下载</h3><p><a href="https://www.mongodb.com/try/download/community">MongoDB </a>    默认是安装的最新的版本，我比较佛系，只是用来学习的，感觉没啥太大区别，就选择了默认的方式。</p>
+    
+    <a class="article-more-a" href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/#more">more >></a>
+    
+    
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/mongodb//" class="article-tag-list-link color3">mongodb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Mac设置redis开机启动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -386,28 +484,9 @@ var _hmt = _hmt || [];
     
     <h3 id="1-创建-plist配置文件"><a href="#1-创建-plist配置文件" class="headerlink" title="1.创建.plist配置文件"></a>1.创建.plist配置文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /Library/LaunchDaemons/io.redis.redis-server.plist</span><br></pre></td></tr></table></figure>
 <p>按 <code>i </code>进入编辑模式</p>
-<p>拷贝如下内容：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;plist version=&quot;1.0&quot;&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;Label&lt;/key&gt;</span><br><span class="line">    &lt;string&gt;io.redis.redis-server&lt;/string&gt;</span><br><span class="line">    &lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">    &lt;array&gt;</span><br><span class="line">        &lt;string&gt;/usr/local/bin/redis-server&lt;/string&gt;</span><br><span class="line">        &lt;string&gt;/usr/local/redis-5.0.5/redis.conf&lt;/string&gt;</span><br><span class="line">    &lt;/array&gt;</span><br><span class="line">    &lt;key&gt;RunAtLoad&lt;/key&gt;</span><br><span class="line">    &lt;true/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br></pre></td></tr></table></figure>
-<p>其中<code>redis-server</code>路径与<code>redis.conf</code>路径根据实际情况修改</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which redis-server   # 查看redis-server路径</span><br></pre></td></tr></table></figure>
-<p> 建议使用brew安装redis，便于管理</p>
-<p>保存并退出：<code>esc</code>+<code>:+wq</code></p>
-<h3 id="2-使用launchctl将配置加入launchd"><a href="#2-使用launchctl将配置加入launchd" class="headerlink" title="2.使用launchctl将配置加入launchd"></a>2.使用launchctl将配置加入launchd</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl load /Library/LaunchDaemons/io.redis.redis-server.plist</span><br></pre></td></tr></table></figure>
-<p>此时Mac开机或重启都会自动启动redis</p>
-<h3 id="3-使用launchctl手动启动-关闭redis"><a href="#3-使用launchctl手动启动-关闭redis" class="headerlink" title="3.使用launchctl手动启动/关闭redis"></a>3.使用launchctl手动启动/关闭redis</h3><p>启动redis</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl start io.redis.redis-server</span><br></pre></td></tr></table></figure>
-<p>关闭redis</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl stop io.redis.redis-server</span><br></pre></td></tr></table></figure>
-<p>可对上述命令进行简化（通过设置别名的方式）<br>切换到用户目录<code>cd</code><br>编辑环境变量配置<code>vim .bash_profile</code><br>将别名设置粘贴到配置文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias redisstart=&#x27;sudo launchctl start io.redis.redis-server&#x27;</span><br><span class="line">alias redisstop=&#x27;sudo launchctl stop io.redis.redis-server&#x27;</span><br></pre></td></tr></table></figure>
-<p>退出并保存<code>esc</code> - <code>:</code> - <code>wq</code><br>最后使用source命令使别名生效<code>source .bash_profile</code>，如果提示无此文件可使用下面几种方式：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br><span class="line">source ./.bash_profile</span><br></pre></td></tr></table></figure>
-
-
-
-
-<p>参考文档：<a href="https://www.jianshu.com/p/afb1b1796cc6">https://www.jianshu.com/p/afb1b1796cc6</a></p>
-
+    
+    <a class="article-more-a" href="/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/#more">more >></a>
+    
     
     
 
@@ -609,41 +688,9 @@ var _hmt = _hmt || [];
     
     <p>Python中允许动态的对类或实例对象添加属性和方法，类方法大致分为 实例方法、静态方法和类方法，在Python中允许动态的添加，但是对于实例对象，我们只允许动态的添加实例方法，不能添加类方法和静态方法</p>
 <p><code>如果单纯的给实例对象添加方法，不会影响类的其他方法，如果给类添加方法的话，则会改变所有的实力对象</code></p>
-<p><strong>example</strong>:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#定义了一个实例方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">info1</span>(<span class="params">self</span>):</span></span><br><span class="line">    print(<span class="string">&quot;调用实例方法1&quot;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#使用注释的方式规定了这是一个类对象,约定俗称的方式规定为cls</span></span><br><span class="line"><span class="meta">@classmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">info2</span>(<span class="params">cls</span>):</span></span><br><span class="line">    print(<span class="string">&quot;调用类方法1&quot;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment">#使用注释的方式规定了这是一个静态对象,约定俗称的方式规定为cls</span></span><br><span class="line"><span class="meta">@staticmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">info3</span>(<span class="params">cls</span>):</span></span><br><span class="line">    print(<span class="string">&quot;调用静态方法&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#类可以动态添加以上 3 种方法，会影响所有实例对象</span></span><br><span class="line">Student.info1 = info1</span><br><span class="line">Student.info2 = info2</span><br><span class="line">Student.info3 = info3</span><br><span class="line"></span><br><span class="line">stu = Student()</span><br><span class="line"><span class="comment"># tu 可以使用上面三种方法</span></span><br><span class="line">stu.info1()</span><br><span class="line">stu.info2()</span><br><span class="line">stu.info3()</span><br><span class="line"></span><br><span class="line"><span class="comment">#类实例对象只能动态添加实例方法，不会影响其它实例对象</span></span><br><span class="line">stu1 = Student()</span><br><span class="line">stu1.info1 = info1</span><br></pre></td></tr></table></figure>
-<p><strong>print</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">调用实例方法<span class="number">1</span></span><br><span class="line">调用类方法<span class="number">1</span></span><br><span class="line">调用静态方法</span><br></pre></td></tr></table></figure>
-<p>显然，动态给类或者实例对象添加属性或方法，是非常灵活的。但与此同时，如果胡乱地使用，也会给程序带来一定的隐患，即程序中已经定义好的类，如果不做任何限制，是可以做动态的修改的。</p>
-<p>Python 提供了 <strong>slots</strong> 属性，限制了给实例对象动态地添加属性或方法。</p>
-<p><code>__slots__ 只能限制为实例对象动态添加属性和方法，而无法限制动态地为类添加属性和方法。</code></p>
-<p><strong>slots</strong> 属性值其实就是一个元组，只有其中指定的元素，才可以作为动态添加的属性或者方法的名称。如下列出：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    __slots__ = (<span class="string">&quot;name&quot;</span>,<span class="string">&quot;age&quot;</span>,<span class="string">&quot;id&quot;</span>)</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<p>可以看出， Student类中指定了 <strong>slots</strong> 属性，这意味着，该类的实例对象仅限于动态添加 name、age、id这 3 个属性以及 name()、age() 和 id() 这 3 个方法。</p>
-<blockquote>
-<p>对于动态添加的方法，<strong>slots</strong> 限制的是其方法名，并不限制参数的个数。</p>
-</blockquote>
-<p>比如，在 Student类的基础上，添加如下代码并运行：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">age</span>(<span class="params">self,name</span>):</span></span><br><span class="line">    print(<span class="string">&quot;正在调用实例方法&quot;</span>,self.name)</span><br><span class="line">stu = Student()</span><br><span class="line">stu.name = <span class="string">&quot;lhh&quot;</span></span><br><span class="line"><span class="comment">#为 clang 对象动态添加 info 实例方法</span></span><br><span class="line">stu.age = age</span><br><span class="line">stu.info(stu,<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
-<p><strong>print</strong>:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正在调用实例方法 lhh</span><br></pre></td></tr></table></figure>
-<p>还是在Student 类的基础上，添加如下代码并运行：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">id</span>(<span class="params">self,name</span>):</span></span><br><span class="line">    print(<span class="string">&quot;正在调用实例方法&quot;</span>,self.name)</span><br><span class="line">stu = Student ()</span><br><span class="line">stu.name = <span class="string">&quot;lhh&quot;</span></span><br><span class="line">stu.test = <span class="built_in">id</span></span><br><span class="line">stu.test(stu,<span class="string">&quot;haha&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>报错：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;F:/PycharmProjects/Pytorch_frame/python/python基础代码练习/__slots.py&quot;</span>, line <span class="number">52</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    stu.test = <span class="built_in">id</span></span><br><span class="line">AttributeError: <span class="string">&#x27;Student&#x27;</span> <span class="built_in">object</span> has no attribute <span class="string">&#x27;test&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>根据 <strong>slots</strong> 属性的设置，Student 类的实例对象是不能动态添加以 test为名称的方法的。</p>
-<p>另外本节前面提到，<strong>slots</strong> 属性限制的对象是类的实例对象，而不是类，因此下面的代码是合法的：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">    print(<span class="string">&quot;正在调用实例方法&quot;</span>)</span><br><span class="line">Student.test = info</span><br><span class="line">stu = Student()</span><br><span class="line">stu.test()</span><br></pre></td></tr></table></figure>
-<p><strong>可以正常执行</strong></p>
-<p>此外，<strong>slots</strong> 属性对由该类派生出来的子类，也是不起作用的。例如如下代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    __slots__ = (<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;add&#x27;</span>,<span class="string">&#x27;mul&#x27;</span>)</span><br><span class="line"><span class="comment">#Student 的空子类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Boy</span>(<span class="params">Student</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment">#定义的实例方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mul</span>(<span class="params">self</span>):</span></span><br><span class="line">    print(<span class="string">&quot;正在调用实例方法&quot;</span>)</span><br><span class="line">boy = Boy()</span><br><span class="line"><span class="comment">#为子类对象动态添加 say() 方法</span></span><br><span class="line">boy.say = mul</span><br><span class="line">boy.say(boy)</span><br></pre></td></tr></table></figure>
-<p>print:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正在调用实例方法</span><br></pre></td></tr></table></figure>
-
-
-<p>显然，<strong>slots</strong> 属性只对当前所在的类起限制作用。</p>
-<p>因此，如果子类也要限制外界为其实例对象动态地添加属性和方法，必须在子类中设置 <strong>slots</strong> 属性。</p>
-<p>参考文章：（<a href="http://c.biancheng.net/view/2291.html%EF%BC%89">http://c.biancheng.net/view/2291.html）</a></p>
-
+    
+    <a class="article-more-a" href="/2021/03/10/%E3%80%90Python%E5%BC%BA%E5%8C%96%E3%80%91-slots-%E9%99%90%E5%88%B6%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/#more">more >></a>
+    
     
     
 
@@ -1289,111 +1336,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-【Vue】vue基础知识一（本地数据操作）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/02/%E3%80%90Vue%E3%80%91vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%80%EF%BC%88%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%89/">【Vue】vue基础知识一（本地数据操作）</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/02/%E3%80%90Vue%E3%80%91vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%80%EF%BC%88%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%89/" class="archive-article-date">
-        <time datetime="2021-03-02T04:52:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>简单的vue程序：</p>
-<p>1.导入开发版本的vue.is</p>
-<p>2.创建vue实例对象，设置el属性和data属性</p>
-<p>3.使用简介的模版语法把数据渲染到页面上</p>
-    
-    <a class="article-more-a" href="/2021/03/02/%E3%80%90Vue%E3%80%91vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%80%EF%BC%88%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%89/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/02/%E3%80%90Vue%E3%80%91vue%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%80%EF%BC%88%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%EF%BC%89/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next »</a>
@@ -1528,15 +1470,15 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">windows10</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DNS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1549,6 +1491,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mongodb</a>
               </li>
              
               <li class="article-tag-list-item">
