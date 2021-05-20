@@ -6,23 +6,104 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.novoice.top">
-  <title>最爱吃大米的博客</title>
+  <title>“Java8新特性解读” | 最爱吃大米的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content="学习笔记记录"> -->
-  
-  <meta name="description" content="学习笔记记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="最爱吃大米的博客">
-<meta property="og:url" content="http://www.novoice.top/index.html">
+  <meta name="description" content="Java8一、新特性1.1 生态 Lambda 表达式 函数式接口 方法引用 &#x2F; 构造器引用 Stream API 接口中的默认方法 &#x2F; 静态方法 新时间日期 API 其他新特性  1.2 新特性 速度更快 代码更少 强大的 Stream API 便于并行 最大化减少空指针异常 Optional (Kotlin ?)  1.3 温故而知新 Hashmap 底层结构&#x2F;原理 老话题不再阐述 … 并发h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“Java8新特性解读”">
+<meta property="og:url" content="http://www.novoice.top/2021/05/20/%E2%80%9Cjava8%E6%96%B0%E7%89%B9%E6%80%A7%E8%A7%A3%E8%AF%BB%E2%80%9D/index.html">
 <meta property="og:site_name" content="最爱吃大米的博客">
-<meta property="og:description" content="学习笔记记录">
+<meta property="og:description" content="Java8一、新特性1.1 生态 Lambda 表达式 函数式接口 方法引用 &#x2F; 构造器引用 Stream API 接口中的默认方法 &#x2F; 静态方法 新时间日期 API 其他新特性  1.2 新特性 速度更快 代码更少 强大的 Stream API 便于并行 最大化减少空指针异常 Optional (Kotlin ?)  1.3 温故而知新 Hashmap 底层结构&#x2F;原理 老话题不再阐述 … 并发h">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225358689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225430446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200518225456187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7ct3ntej30vw0hawnd.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7iaefmkj30vv0m0wn0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqo7nceunij30x80g7nao.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozjmeopzj30uq0kbthx.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gqozrjuwgdj30v80jljze.jpg">
+<meta property="article:published_time" content="2021-05-20T11:31:12.000Z">
+<meta property="article:modified_time" content="2021-05-20T11:43:20.753Z">
 <meta property="article:author" content="最爱吃大米">
+<meta property="article:tag" content="-java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200518225311406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTIyNTU5NQ==,size_16,color_FFFFFF,t_70#pic_center">
   
     <link rel="alternative" href="/atom.xml" title="最爱吃大米的博客" type="application/atom+xml">
   
@@ -345,32 +426,25 @@ var _hmt = _hmt || [];
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <script src="/lib/oauthcallback.browser.js"></script>
-  
-  <script>
-    Oauthcallback();
-  </script>
-
-
-  
-    <article id="post-“java8新特性解读”" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-“java8新特性解读”" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/05/20/%E2%80%9Cjava8%E6%96%B0%E7%89%B9%E6%80%A7%E8%A7%A3%E8%AF%BB%E2%80%9D/">“Java8新特性解读”</a>
-	
+    <h1 class="article-title" itemprop="name">
+      “Java8新特性解读”
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2021/05/20/%E2%80%9Cjava8%E6%96%B0%E7%89%B9%E6%80%A7%E8%A7%A3%E8%AF%BB%E2%80%9D/" class="archive-article-date">
         <time datetime="2021-05-20T11:31:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-20</time>
 </a>
@@ -378,6 +452,27 @@ var _hmt = _hmt || [];
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">88.2k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">450分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -3515,7 +3610,59 @@ var _hmt = _hmt || [];
 
     
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/aipay.png">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/wechat_pay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          最爱吃大米
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://www.novoice.top/2021/05/20/“java8新特性解读”/" title="“Java8新特性解读”" target="_blank">http://www.novoice.top/2021/05/20/“java8新特性解读”/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -3547,16 +3694,76 @@ var _hmt = _hmt || [];
 
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/05/20/%E2%80%9Cjava8%E6%96%B0%E7%89%B9%E6%80%A7%E8%A7%A3%E8%AF%BB%E2%80%9D/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.novoice.top/2021/05/20/%E2%80%9Cjava8%E6%96%B0%E7%89%B9%E6%80%A7%E8%A7%A3%E8%AF%BB%E2%80%9D/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/12/Python%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python文件监听</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -3571,902 +3778,66 @@ var _hmt = _hmt || [];
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python文件监听" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/05/12/Python%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC/">Python文件监听</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/05/12/Python%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC/" class="archive-article-date">
-        <time datetime="2021-05-12T06:45:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="文件监听"><a href="#文件监听" class="headerlink" title="文件监听"></a>文件监听</h1><h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><p>Windows环境下打开Cmd(开始—运行—CMD)，苹果系统环境下请打开Terminal(command+空格输入Terminal)，准备开始输入命令安装依赖。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install watchdog</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2021/05/12/Python%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/05/12/Python%E6%96%87%E4%BB%B6%E7%9B%91%E5%90%AC/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8"><span class="toc-number">1.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba"><span class="toc-number">1.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-1"><span class="toc-number">2.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-1"><span class="toc-number">2.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-1"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-1"><span class="toc-number">2.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-1"><span class="toc-number">2.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-1"><span class="toc-number">2.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-1"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-1"><span class="toc-number">2.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-1"><span class="toc-number">2.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-1"><span class="toc-number">2.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-1"><span class="toc-number">2.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-1"><span class="toc-number">2.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-1"><span class="toc-number">2.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-1"><span class="toc-number">2.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8"><span class="toc-number">2.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-number">2.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8"><span class="toc-number">2.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8"><span class="toc-number">2.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API"><span class="toc-number">2.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA"><span class="toc-number">2.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87"><span class="toc-number">2.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84"><span class="toc-number">2.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F"><span class="toc-number">2.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D"><span class="toc-number">2.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86"><span class="toc-number">2.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0"><span class="toc-number">2.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81"><span class="toc-number">2.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional"><span class="toc-number">2.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95"><span class="toc-number">2.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">2.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API"><span class="toc-number">2.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="toc-number">2.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F"><span class="toc-number">2.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3"><span class="toc-number">2.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE"><span class="toc-number">2.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8"><span class="toc-number">2.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-number">2.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86"><span class="toc-number">2.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A"><span class="toc-number">2.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A"><span class="toc-number">2.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3"><span class="toc-number">2.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-1"><span class="toc-number">2.10.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-1"><span class="toc-number">2.10.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-1"><span class="toc-number">2.10.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-1"><span class="toc-number">2.10.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-1"><span class="toc-number">2.11.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-1"><span class="toc-number">2.11.1.</span> <span class="toc-text">5.1 创建</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-2"><span class="toc-number">3.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-2"><span class="toc-number">3.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-2"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-2"><span class="toc-number">3.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-2"><span class="toc-number">3.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-2"><span class="toc-number">3.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-2"><span class="toc-number">3.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-2"><span class="toc-number">3.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-2"><span class="toc-number">3.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-2"><span class="toc-number">3.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-2"><span class="toc-number">3.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-2"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-2"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-2"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-2"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-2"><span class="toc-number">3.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-2"><span class="toc-number">3.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-2"><span class="toc-number">3.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-2"><span class="toc-number">3.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-2"><span class="toc-number">3.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-2"><span class="toc-number">3.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-2"><span class="toc-number">3.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-1"><span class="toc-number">3.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-1"><span class="toc-number">3.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-1"><span class="toc-number">3.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-1"><span class="toc-number">3.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-1"><span class="toc-number">3.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-1"><span class="toc-number">3.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-1"><span class="toc-number">3.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-1"><span class="toc-number">3.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-1"><span class="toc-number">3.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-1"><span class="toc-number">3.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-1"><span class="toc-number">3.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-1"><span class="toc-number">3.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-1"><span class="toc-number">3.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-1"><span class="toc-number">3.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-1"><span class="toc-number">3.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-1"><span class="toc-number">3.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-1"><span class="toc-number">3.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-1"><span class="toc-number">3.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-1"><span class="toc-number">3.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-1"><span class="toc-number">3.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-1"><span class="toc-number">3.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-1"><span class="toc-number">3.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-3"><span class="toc-number">4.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-3"><span class="toc-number">4.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-3"><span class="toc-number">4.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-3"><span class="toc-number">4.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-3"><span class="toc-number">4.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-3"><span class="toc-number">4.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-3"><span class="toc-number">4.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-3"><span class="toc-number">4.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-3"><span class="toc-number">4.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-3"><span class="toc-number">4.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-3"><span class="toc-number">4.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-3"><span class="toc-number">4.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-3"><span class="toc-number">4.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-3"><span class="toc-number">4.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-3"><span class="toc-number">4.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-3"><span class="toc-number">4.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-3"><span class="toc-number">4.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-3"><span class="toc-number">4.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-3"><span class="toc-number">4.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-3"><span class="toc-number">4.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-3"><span class="toc-number">4.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-3"><span class="toc-number">4.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-2"><span class="toc-number">4.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-2"><span class="toc-number">4.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-2"><span class="toc-number">4.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-2"><span class="toc-number">4.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-2"><span class="toc-number">4.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-2"><span class="toc-number">4.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-2"><span class="toc-number">4.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-2"><span class="toc-number">4.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-2"><span class="toc-number">4.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-2"><span class="toc-number">4.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-2"><span class="toc-number">4.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-2"><span class="toc-number">4.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-2"><span class="toc-number">4.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-2"><span class="toc-number">4.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-2"><span class="toc-number">4.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-2"><span class="toc-number">4.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-2"><span class="toc-number">4.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-2"><span class="toc-number">4.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-2"><span class="toc-number">4.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-2"><span class="toc-number">4.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-2"><span class="toc-number">4.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-2"><span class="toc-number">4.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-3"><span class="toc-number">4.9.3.</span> <span class="toc-text">5.2 筛选、切片</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-4"><span class="toc-number">5.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-4"><span class="toc-number">5.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-4"><span class="toc-number">5.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-4"><span class="toc-number">5.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-4"><span class="toc-number">5.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-4"><span class="toc-number">5.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-4"><span class="toc-number">5.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-4"><span class="toc-number">5.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-4"><span class="toc-number">5.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-4"><span class="toc-number">5.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-4"><span class="toc-number">5.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-4"><span class="toc-number">5.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-4"><span class="toc-number">5.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-4"><span class="toc-number">5.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-4"><span class="toc-number">5.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-4"><span class="toc-number">5.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-4"><span class="toc-number">5.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-4"><span class="toc-number">5.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-4"><span class="toc-number">5.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-4"><span class="toc-number">5.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-4"><span class="toc-number">5.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-4"><span class="toc-number">5.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-4"><span class="toc-number">5.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-3"><span class="toc-number">5.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-3"><span class="toc-number">5.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-3"><span class="toc-number">5.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-3"><span class="toc-number">5.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-3"><span class="toc-number">5.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-3"><span class="toc-number">5.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-3"><span class="toc-number">5.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-3"><span class="toc-number">5.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-3"><span class="toc-number">5.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-3"><span class="toc-number">5.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-3"><span class="toc-number">5.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-3"><span class="toc-number">5.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-3"><span class="toc-number">5.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-3"><span class="toc-number">5.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-3"><span class="toc-number">5.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-3"><span class="toc-number">5.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-3"><span class="toc-number">5.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-3"><span class="toc-number">5.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-3"><span class="toc-number">5.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-3"><span class="toc-number">5.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-3"><span class="toc-number">5.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-4"><span class="toc-number">5.9.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-4"><span class="toc-number">5.9.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-4"><span class="toc-number">5.9.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-4"><span class="toc-number">5.9.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-5"><span class="toc-number">6.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-5"><span class="toc-number">6.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-5"><span class="toc-number">6.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-5"><span class="toc-number">6.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-5"><span class="toc-number">6.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-5"><span class="toc-number">6.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-5"><span class="toc-number">6.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-5"><span class="toc-number">6.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-5"><span class="toc-number">6.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-5"><span class="toc-number">6.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-5"><span class="toc-number">6.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-5"><span class="toc-number">6.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-5"><span class="toc-number">6.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-5"><span class="toc-number">6.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-5"><span class="toc-number">6.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-5"><span class="toc-number">6.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-5"><span class="toc-number">6.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-5"><span class="toc-number">6.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-5"><span class="toc-number">6.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-5"><span class="toc-number">6.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-5"><span class="toc-number">6.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-5"><span class="toc-number">6.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-5"><span class="toc-number">6.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-5"><span class="toc-number">6.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-5"><span class="toc-number">6.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-5"><span class="toc-number">6.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-5"><span class="toc-number">6.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-4"><span class="toc-number">6.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-4"><span class="toc-number">6.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-4"><span class="toc-number">6.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-4"><span class="toc-number">6.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-4"><span class="toc-number">6.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-4"><span class="toc-number">6.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-4"><span class="toc-number">6.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-4"><span class="toc-number">6.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-4"><span class="toc-number">6.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-4"><span class="toc-number">6.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-4"><span class="toc-number">6.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-4"><span class="toc-number">6.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-4"><span class="toc-number">6.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-4"><span class="toc-number">6.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-4"><span class="toc-number">6.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-4"><span class="toc-number">6.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-4"><span class="toc-number">6.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-5"><span class="toc-number">6.9.3.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-5"><span class="toc-number">6.9.4.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-6"><span class="toc-number">7.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-6"><span class="toc-number">7.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-6"><span class="toc-number">7.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-6"><span class="toc-number">7.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-6"><span class="toc-number">7.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-6"><span class="toc-number">7.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-6"><span class="toc-number">7.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-6"><span class="toc-number">7.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-6"><span class="toc-number">7.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-6"><span class="toc-number">7.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-6"><span class="toc-number">7.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-6"><span class="toc-number">7.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-6"><span class="toc-number">7.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-6"><span class="toc-number">7.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-6"><span class="toc-number">7.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-6"><span class="toc-number">7.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-6"><span class="toc-number">7.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-6"><span class="toc-number">7.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-6"><span class="toc-number">7.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-6"><span class="toc-number">7.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-6"><span class="toc-number">7.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-6"><span class="toc-number">7.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-6"><span class="toc-number">7.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-6"><span class="toc-number">7.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-6"><span class="toc-number">7.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-6"><span class="toc-number">7.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-6"><span class="toc-number">7.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-6"><span class="toc-number">7.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-6"><span class="toc-number">7.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-5"><span class="toc-number">7.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-5"><span class="toc-number">7.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-5"><span class="toc-number">7.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-5"><span class="toc-number">7.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-5"><span class="toc-number">7.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-5"><span class="toc-number">7.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-5"><span class="toc-number">7.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-5"><span class="toc-number">7.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-5"><span class="toc-number">7.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-5"><span class="toc-number">7.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-5"><span class="toc-number">7.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-5"><span class="toc-number">7.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-5"><span class="toc-number">7.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-5"><span class="toc-number">7.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-5"><span class="toc-number">7.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-6"><span class="toc-number">7.10.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-6"><span class="toc-number">7.11.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-6"><span class="toc-number">7.11.1.</span> <span class="toc-text">7.1 默认方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-7"><span class="toc-number">8.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-7"><span class="toc-number">8.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-7"><span class="toc-number">8.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-7"><span class="toc-number">8.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-7"><span class="toc-number">8.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-7"><span class="toc-number">8.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-7"><span class="toc-number">8.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-7"><span class="toc-number">8.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-7"><span class="toc-number">8.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-7"><span class="toc-number">8.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-7"><span class="toc-number">8.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-7"><span class="toc-number">8.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-7"><span class="toc-number">8.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-7"><span class="toc-number">8.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-7"><span class="toc-number">8.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-7"><span class="toc-number">8.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-7"><span class="toc-number">8.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-7"><span class="toc-number">8.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-7"><span class="toc-number">8.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-7"><span class="toc-number">8.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-7"><span class="toc-number">8.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-7"><span class="toc-number">8.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-7"><span class="toc-number">8.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-7"><span class="toc-number">8.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-7"><span class="toc-number">8.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-7"><span class="toc-number">8.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-7"><span class="toc-number">8.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-7"><span class="toc-number">8.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-7"><span class="toc-number">8.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-7"><span class="toc-number">8.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-7"><span class="toc-number">8.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-7"><span class="toc-number">8.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-6"><span class="toc-number">8.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-6"><span class="toc-number">8.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-6"><span class="toc-number">8.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-6"><span class="toc-number">8.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-6"><span class="toc-number">8.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-6"><span class="toc-number">8.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-6"><span class="toc-number">8.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-6"><span class="toc-number">8.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-6"><span class="toc-number">8.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-6"><span class="toc-number">8.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-6"><span class="toc-number">8.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-6"><span class="toc-number">8.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-7"><span class="toc-number">8.9.3.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-7"><span class="toc-number">8.10.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-7"><span class="toc-number">8.10.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-7"><span class="toc-number">8.10.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-8"><span class="toc-number">9.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-8"><span class="toc-number">9.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-8"><span class="toc-number">9.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-8"><span class="toc-number">9.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-8"><span class="toc-number">9.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-8"><span class="toc-number">9.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-8"><span class="toc-number">9.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-8"><span class="toc-number">9.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-8"><span class="toc-number">9.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-8"><span class="toc-number">9.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-8"><span class="toc-number">9.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-8"><span class="toc-number">9.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-8"><span class="toc-number">9.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-8"><span class="toc-number">9.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-8"><span class="toc-number">9.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-8"><span class="toc-number">9.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-8"><span class="toc-number">9.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-8"><span class="toc-number">9.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-8"><span class="toc-number">9.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-8"><span class="toc-number">9.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-8"><span class="toc-number">9.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-8"><span class="toc-number">9.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-8"><span class="toc-number">9.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-8"><span class="toc-number">9.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-8"><span class="toc-number">9.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-8"><span class="toc-number">9.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-8"><span class="toc-number">9.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-8"><span class="toc-number">9.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-8"><span class="toc-number">9.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-8"><span class="toc-number">9.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-8"><span class="toc-number">9.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-8"><span class="toc-number">9.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-8"><span class="toc-number">9.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-8"><span class="toc-number">9.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-8"><span class="toc-number">9.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-8"><span class="toc-number">9.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-7"><span class="toc-number">9.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-7"><span class="toc-number">9.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-7"><span class="toc-number">9.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-7"><span class="toc-number">9.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-7"><span class="toc-number">9.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-7"><span class="toc-number">9.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-7"><span class="toc-number">9.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-7"><span class="toc-number">9.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-8"><span class="toc-number">9.9.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-8"><span class="toc-number">9.9.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-8"><span class="toc-number">9.9.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java8-9"><span class="toc-number">10.</span> <span class="toc-text">Java8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E7%89%B9%E6%80%A7-9"><span class="toc-number">10.1.</span> <span class="toc-text">一、新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%94%9F%E6%80%81-9"><span class="toc-number">10.1.1.</span> <span class="toc-text">1.1 生态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%96%B0%E7%89%B9%E6%80%A7-9"><span class="toc-number">10.1.2.</span> <span class="toc-text">1.2 新特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%B8%A9%E6%95%85%E8%80%8C%E7%9F%A5%E6%96%B0-9"><span class="toc-number">10.1.3.</span> <span class="toc-text">1.3 温故而知新</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Lamdba-9"><span class="toc-number">10.2.</span> <span class="toc-text">二、Lamdba</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0-9"><span class="toc-number">10.2.1.</span> <span class="toc-text">2.1 匿名函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-9"><span class="toc-number">10.2.2.</span> <span class="toc-text">2.2 匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Lambda-9"><span class="toc-number">10.2.3.</span> <span class="toc-text">2.3 Lambda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%BB%83%E4%B9%A0-9"><span class="toc-number">10.2.4.</span> <span class="toc-text">2.4  练习</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3-9"><span class="toc-number">10.3.</span> <span class="toc-text">三、函数式接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3-9"><span class="toc-number">10.3.1.</span> <span class="toc-text">3.1 消费型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%8F%90%E4%BE%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3-9"><span class="toc-number">10.3.2.</span> <span class="toc-text">3.2 提供型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3-9"><span class="toc-number">10.3.3.</span> <span class="toc-text">3.3 函数型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3-9"><span class="toc-number">10.3.4.</span> <span class="toc-text">3.4 断言型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%B6%E4%BB%96%E6%8E%A5%E5%8F%A3-9"><span class="toc-number">10.3.5.</span> <span class="toc-text">3,5 其他接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%95%E7%94%A8-9"><span class="toc-number">10.4.</span> <span class="toc-text">四、引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8-9"><span class="toc-number">10.4.1.</span> <span class="toc-text">4.1 方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8-9"><span class="toc-number">10.4.2.</span> <span class="toc-text">4.2 构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8-9"><span class="toc-number">10.4.3.</span> <span class="toc-text">4.3 数组引用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Stream-API-9"><span class="toc-number">10.5.</span> <span class="toc-text">五、Stream API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA-9"><span class="toc-number">10.5.1.</span> <span class="toc-text">5.1 创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%AD%9B%E9%80%89%E3%80%81%E5%88%87%E7%89%87-9"><span class="toc-number">10.5.2.</span> <span class="toc-text">5.2 筛选、切片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%98%A0%E5%B0%84-9"><span class="toc-number">10.5.3.</span> <span class="toc-text">5.3 映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E6%8E%92%E5%BA%8F-9"><span class="toc-number">10.5.4.</span> <span class="toc-text">5.4 排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%9F%A5%E6%89%BE%E3%80%81%E5%8C%B9%E9%85%8D-9"><span class="toc-number">10.5.5.</span> <span class="toc-text">5.5 查找、匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E5%BD%92%E7%BA%A6-%E3%80%81%E6%94%B6%E9%9B%86-9"><span class="toc-number">10.5.6.</span> <span class="toc-text">5.6 归约 、收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-%E7%BB%83%E4%B9%A0-9"><span class="toc-number">10.5.7.</span> <span class="toc-text">5.7 练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-%E5%B9%B6%E8%A1%8C%E6%B5%81-9"><span class="toc-number">10.5.8.</span> <span class="toc-text">5.8 并行流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Optional-9"><span class="toc-number">10.6.</span> <span class="toc-text">六、Optional</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%8E%A5%E5%8F%A3-9"><span class="toc-number">10.7.</span> <span class="toc-text">七、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95-9"><span class="toc-number">10.7.1.</span> <span class="toc-text">7.1 默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-9"><span class="toc-number">10.7.2.</span> <span class="toc-text">7.2 静态方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-DateTime-API-9"><span class="toc-number">10.8.</span> <span class="toc-text">八. DateTime API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E8%A7%A3%E5%86%B3%E4%BC%A0%E7%BB%9F%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98-9"><span class="toc-number">10.8.1.</span> <span class="toc-text">8.1 解决传统线程安全问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%9C%AC%E5%9C%B0%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F-9"><span class="toc-number">10.8.2.</span> <span class="toc-text">8.2 本地时间、日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E6%97%B6%E9%97%B4%E6%88%B3-9"><span class="toc-number">10.8.3.</span> <span class="toc-text">8.3 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%97%A5%E6%9C%9F%E3%80%81%E6%97%B6%E9%97%B4%E5%B7%AE-9"><span class="toc-number">10.8.4.</span> <span class="toc-text">8.4 日期、时间差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E7%9F%AB%E6%AD%A3%E5%99%A8-9"><span class="toc-number">10.8.5.</span> <span class="toc-text">8.5 时间矫正器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-8"><span class="toc-number">10.8.6.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-8"><span class="toc-number">10.8.7.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-8"><span class="toc-number">10.9.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-8"><span class="toc-number">10.9.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-8"><span class="toc-number">10.9.2.</span> <span class="toc-text">9.2 类型注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96-9"><span class="toc-number">10.9.3.</span> <span class="toc-text">8.5 时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-6-%E6%97%B6%E5%8C%BA%E5%A4%84%E7%90%86-9"><span class="toc-number">10.9.4.</span> <span class="toc-text">8.6 时区处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%B3%A8%E9%87%8A-9"><span class="toc-number">10.10.</span> <span class="toc-text">九、注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E9%87%8D%E5%A4%8D%E6%B3%A8%E9%87%8A-9"><span class="toc-number">10.10.1.</span> <span class="toc-text">9.1 重复注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3-9"><span class="toc-number">10.10.2.</span> <span class="toc-text">9.2 类型注解</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-MongoDB安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/">MongoDB安装</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/" class="archive-article-date">
-        <time datetime="2021-05-08T00:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-08</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><h2 id="一、windows安装"><a href="#一、windows安装" class="headerlink" title="一、windows安装"></a>一、windows安装</h2><h3 id="1-官网下载"><a href="#1-官网下载" class="headerlink" title="1.官网下载"></a>1.官网下载</h3><p><a href="https://www.mongodb.com/try/download/community">MongoDB </a>    默认是安装的最新的版本，我比较佛系，只是用来学习的，感觉没啥太大区别，就选择了默认的方式。</p>
-    
-    <a class="article-more-a" href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mongodb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/mongodb//" class="article-tag-list-link color3">mongodb</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/05/08/MongoDB%E5%AE%89%E8%A3%85/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mac设置redis开机启动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">Mac设置redis开机启动</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/" class="archive-article-date">
-        <time datetime="2021-04-15T13:06:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-15</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="1-创建-plist配置文件"><a href="#1-创建-plist配置文件" class="headerlink" title="1.创建.plist配置文件"></a>1.创建.plist配置文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /Library/LaunchDaemons/io.redis.redis-server.plist</span><br></pre></td></tr></table></figure>
-<p>按 <code>i </code>进入编辑模式</p>
-    
-    <a class="article-more-a" href="/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/redis//" class="article-tag-list-link color1">redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/04/15/Mac%E8%AE%BE%E7%BD%AEredis%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【Pytorch】六大学习率调整策略" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/17/%E3%80%90Pytorch%E3%80%91%E5%85%AD%E5%A4%A7%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5/">【Pytorch】六大学习率调整策略</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/17/%E3%80%90Pytorch%E3%80%91%E5%85%AD%E5%A4%A7%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5/" class="archive-article-date">
-        <time datetime="2021-03-17T14:06:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>PyTorch学习率调整策略通过torch.optim.lr_scheduler接口实现。PyTorch提供的学习率调整策略分为三大类，分别是</p>
-<blockquote>
-<p>a. 有序调整：等间隔调整(Step)，按需调整学习率(MultiStep)，指数衰减调整(Exponential)和 余弦退火              CosineAnnealing。<br>   b. 自适应调整：自适应调整学习率 ReduceLROnPlateau。<br>      c. 自定义调整：自定义调整学习率 LambdaLR。</p>
-</blockquote>
-    
-    <a class="article-more-a" href="/2021/03/17/%E3%80%90Pytorch%E3%80%91%E5%85%AD%E5%A4%A7%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pytorch</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/pytorch//" class="article-tag-list-link color3">pytorch</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/17/%E3%80%90Pytorch%E3%80%91%E5%85%AD%E5%A4%A7%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%B0%83%E6%95%B4%E7%AD%96%E7%95%A5/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【Python强化】-slots-限制类实例动态添加属性和方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/10/%E3%80%90Python%E5%BC%BA%E5%8C%96%E3%80%91-slots-%E9%99%90%E5%88%B6%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/">【Python强化】__slots__限制类实例动态添加属性和方法</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/10/%E3%80%90Python%E5%BC%BA%E5%8C%96%E3%80%91-slots-%E9%99%90%E5%88%B6%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/" class="archive-article-date">
-        <time datetime="2021-03-09T17:39:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Python中允许动态的对类或实例对象添加属性和方法，类方法大致分为 实例方法、静态方法和类方法，在Python中允许动态的添加，但是对于实例对象，我们只允许动态的添加实例方法，不能添加类方法和静态方法</p>
-<p><code>如果单纯的给实例对象添加方法，不会影响类的其他方法，如果给类添加方法的话，则会改变所有的实力对象</code></p>
-    
-    <a class="article-more-a" href="/2021/03/10/%E3%80%90Python%E5%BC%BA%E5%8C%96%E3%80%91-slots-%E9%99%90%E5%88%B6%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/10/%E3%80%90Python%E5%BC%BA%E5%8C%96%E3%80%91-slots-%E9%99%90%E5%88%B6%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/">展开全文 >></a>
-    </p>
-    
+<div id="SOHUCS" sid="“java8新特性解读”" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
 
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
+  <div id="giteement-ctn"></div>
   
-    <article id="post-【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
   
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/08/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">【Anaconda】conda创建虚拟环境不报错，但是虚拟环境无法生成的解决办法</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/08/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
-        <time datetime="2021-03-08T13:48:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-08</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>python新建虚拟环境，有两种方式</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n DeepLearning python=<span class="number">3.8</span></span><br></pre></td></tr></table></figure>
-<p>或者通过Anaconda的方式新建（可能打开Anaconda的过程很漫长。。。。）</p>
-    
-    <a class="article-more-a" href="/2021/03/08/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">anaconda</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/08/%E3%80%90Anaconda%E3%80%91conda%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8D%E6%8A%A5%E9%94%99%EF%BC%8C%E4%BD%86%E6%98%AF%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【hexo】hexo新增文章显示目录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95/">【Hexo】hexo新增文章显示目录</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95/" class="archive-article-date">
-        <time datetime="2021-03-06T15:52:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-【hexo】hexo-yilia添加百度统计和Google统计" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo-yilia%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8CGoogle%E7%BB%9F%E8%AE%A1/">【hexo】hexo+yilia添加百度统计和Google统计</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo-yilia%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8CGoogle%E7%BB%9F%E8%AE%A1/" class="archive-article-date">
-        <time datetime="2021-03-06T04:44:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-06</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>[TOC]</p>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h3><p>百度统计和Google统计主要用于分析网站数据：流量、访客量等。</p>
-    
-    <a class="article-more-a" href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo-yilia%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8CGoogle%E7%BB%9F%E8%AE%A1/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/06/%E3%80%90hexo%E3%80%91hexo-yilia%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%92%8CGoogle%E7%BB%9F%E8%AE%A1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  <script>
+  <!-- id: "“Java8新特性解读”" -->
+  var giteement = new Giteement({
+    id: '20210520193112',
+    owner: 'liuhuanhuan963019',
+    repo: 'gitmeet',
+    backcall_uri: 'http://www.novoice.top',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '11f0787f434c8c4e506b803f76dfac23d336fe232a17ab7297983a446273dc65',
+      client_secret: '0692683431e7c1bf14858900f6d5051db788ad1965f76ed2449518fd082de24d'
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
 
-  
-    <article id="post-【Python】zip函数的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2021/03/05/%E3%80%90Python%E3%80%91zip%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/">【Python】zip函数的使用</a>
-	
-    </h1>
-  
-
-
-  
-  
-<a href="/2021/03/05/%E3%80%90Python%E3%80%91zip%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-        <time datetime="2021-03-05T11:53:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-05</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="Python3-zip-函数"><a href="#Python3-zip-函数" class="headerlink" title="Python3 zip() 函数"></a>Python3 zip() 函数</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p><strong>zip()</strong> 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的对象，这样做的好处是节约了不少的内存。</p>
-<p>我们可以使用 list() 转换来输出列表。</p>
-<p>如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 ***** 号操作符，可以将元组解压为列表。</p>
-    
-    <a class="article-more-a" href="/2021/03/05/%E3%80%90Python%E3%80%91zip%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/#more">more >></a>
-    
-    
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">zip</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2021/03/05/%E3%80%90Python%E3%80%91zip%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-    </p>
-    
 
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next »</a>
-    </nav>
-  
 
 
 
@@ -4507,8 +3878,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
