@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-05-20T11:43:20.753Z</updated>
+  <updated>2021-05-22T15:25:16.081Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里云服务器安装Mysql全过程</title>
+    <link href="http://www.novoice.top/2021/05/22/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Mysql%E5%85%A8%E8%BF%87%E7%A8%8B/"/>
+    <id>http://www.novoice.top/2021/05/22/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Mysql%E5%85%A8%E8%BF%87%E7%A8%8B/</id>
+    <published>2021-05-22T15:25:16.000Z</published>
+    <updated>2021-05-22T15:25:16.081Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>“Java8新特性解读”</title>
@@ -439,23 +452,6 @@
     
     <summary type="html">&lt;p&gt;在Python中有两种函数，一种是def定义的函数，另一种是lambda函数，也就是大家常说的匿名函数。&lt;/p&gt;
 &lt;p&gt;与java中的lamdba类似，简化了代码，使代码看起来更加简洁流畅。 &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="python" scheme="http://www.novoice.top/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://www.novoice.top/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Python强化】 Griddata 二维插值</title>
-    <link href="http://www.novoice.top/2021/03/02/%E3%80%90python%E5%BC%BA%E5%8C%96%E3%80%91-griddata-%E4%BA%8C%E7%BB%B4%E6%8F%92%E5%80%BC/"/>
-    <id>http://www.novoice.top/2021/03/02/%E3%80%90python%E5%BC%BA%E5%8C%96%E3%80%91-griddata-%E4%BA%8C%E7%BB%B4%E6%8F%92%E5%80%BC/</id>
-    <published>2021-03-02T04:43:00.000Z</published>
-    <updated>2021-03-02T04:43:20.246Z</updated>
-    
     
     
     
