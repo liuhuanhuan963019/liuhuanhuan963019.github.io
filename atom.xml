@@ -6,7 +6,7 @@
   <link href="http://www.novoice.top/atom.xml" rel="self"/>
   
   <link href="http://www.novoice.top/"/>
-  <updated>2021-05-23T01:59:56.461Z</updated>
+  <updated>2021-05-23T02:17:57.307Z</updated>
   <id>http://www.novoice.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里云服务器安装Maven</title>
+    <link href="http://www.novoice.top/2021/05/23/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85maven/"/>
+    <id>http://www.novoice.top/2021/05/23/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85maven/</id>
+    <published>2021-05-23T02:16:44.000Z</published>
+    <updated>2021-05-23T02:17:57.307Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>一. 下载压缩包:</strong></p><p>官网地址: <a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a></p><a id="more"></a><p><strong>一. 下载压缩包:</strong></p><p>官网地址: <a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a></p><!--more--><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85maven1.png" alt="image-20210523101140539"></p><p><strong>二、上传文件</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rz</span><br></pre></td></tr></table></figure><p><strong>三. 解压文件</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-maven-3.8.1-bin.tar.gz</span><br></pre></td></tr></table></figure><p><strong>四. 配置环境变量</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line">export MAVEN_HOME=/usr/local/apache-maven-3.8.1</span><br><span class="line">export PATH=$MAVEN_HOME/bin:$PATH </span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Maven2.png" alt="image-20210523101325611"></p><p>出现如上提示，即可表示安装成功</p><p><strong>二、上传文件</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rz</span><br></pre></td></tr></table></figure><p><strong>三. 解压文件</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-maven-3.8.1-bin.tar.gz</span><br></pre></td></tr></table></figure><p><strong>四. 配置环境变量</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line">export MAVEN_HOME=/usr/local/apache-maven-3.8.1</span><br><span class="line">export PATH=$MAVEN_HOME/bin:$PATH </span><br></pre></td></tr></table></figure><p><strong>一. 下载压缩包:</strong></p><p>官网地址: <a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a></p><!--more--><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85maven1.png" alt="image-20210523101140539"></p><p><strong>二、上传文件</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rz</span><br></pre></td></tr></table></figure><p><strong>三. 解压文件</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-maven-3.8.1-bin.tar.gz</span><br></pre></td></tr></table></figure><p><strong>四. 配置环境变量</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line">export MAVEN_HOME=/usr/local/apache-maven-3.8.1</span><br><span class="line">export PATH=$MAVEN_HOME/bin:$PATH </span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/liuhuanhuan963019/blogPicture/md_photos/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Maven2.png" alt="image-20210523101325611"></p><p>出现如上提示，即可表示安装成功</p><p>出现如上提示，即可表示安装成功</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;一. 下载压缩包:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;官网地址: &lt;a href=&quot;http://maven.apache.org/download.cgi&quot;&gt;http://maven.apache.org/download.cgi&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="-maven" scheme="http://www.novoice.top/categories/maven/"/>
+    
+    
+    <category term="-maven" scheme="http://www.novoice.top/tags/maven/"/>
+    
+  </entry>
   
   <entry>
     <title>阿里云服务器安装Tomcat</title>
@@ -431,28 +453,6 @@
 &lt;li&gt;&lt;code&gt;cat()&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;实际使用中，这两个函数互相辅助：关于&lt;code&gt;cat()&lt;/code&gt;参考&lt;a href=&quot;https://blog.csdn.net/xinjieyuan/article/details/105208352&quot;&gt;torch.cat()&lt;/a&gt;，但是本文主要说&lt;code&gt;stack()&lt;/code&gt;。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="pytorch" scheme="http://www.novoice.top/categories/pytorch/"/>
-    
-    
-    <category term="pytorch" scheme="http://www.novoice.top/tags/pytorch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Pytorch】torch.normal()使用</title>
-    <link href="http://www.novoice.top/2021/03/02/%E3%80%90Pytorch%E3%80%91torch-normal-%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.novoice.top/2021/03/02/%E3%80%90Pytorch%E3%80%91torch-normal-%E4%BD%BF%E7%94%A8/</id>
-    <published>2021-03-02T04:48:41.000Z</published>
-    <updated>2021-03-02T04:49:30.090Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="torch-normal"><a href="#torch-normal" class="headerlink" title="torch.normal()"></a>torch.normal()</h1><h3 id="torch-normal-1"><a href="#torch-normal-1" class="headerlink" title="torch.normal()"></a>torch.normal()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.normal(means, std, out&#x3D;None)</span><br></pre></td></tr></table></figure><p>返回一个张量，包含从给定参数<code>means</code>,<code>std</code>的离散正态分布中抽取随机数。 均值<code>means</code>是一个张量，包含每个输出元素相关的正态分布的均值。 <code>std</code>是一个张量，包含每个输出元素相关的正态分布的标准差。 均值和标准差的形状不须匹配，但每个张量的元素个数须相同。</p><a id="more"></a><p>参数:</p><ul><li>means (Tensor) – 均值</li><li>std (Tensor) – 标准差</li><li>out (Tensor) – 可选的输出张量</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">torch.normal(means=torch.arange(<span class="number">1</span>, <span class="number">11</span>), std=torch.arange(<span class="number">1</span>, <span class="number">0</span>, -<span class="number">0.1</span>))</span><br><span class="line"> </span><br><span class="line"><span class="number">1.5104</span></span><br><span class="line"><span class="number">1.6955</span></span><br><span class="line"><span class="number">2.4895</span></span><br><span class="line"><span class="number">4.9185</span></span><br><span class="line"><span class="number">4.9895</span></span><br><span class="line"><span class="number">6.9155</span></span><br><span class="line"><span class="number">7.3683</span></span><br><span class="line"><span class="number">8.1836</span></span><br><span class="line"><span class="number">8.7164</span></span><br><span class="line"><span class="number">9.8916</span></span><br><span class="line">[torch.FloatTensor of size <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.normal(mean=<span class="number">0.0</span>, std, out=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><p>与上面函数类似，所有抽取的样本共享均值。</p><p>参数:</p><ul><li>means (Tensor,optional) – 所有分布均值</li><li>std (Tensor) – 每个元素的标准差</li><li>out (Tensor) – 可选的输出张量</li></ul><p>例子:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">torch.normal(mean=<span class="number">0.5</span>, std=torch.arange(<span class="number">1</span>, <span class="number">6</span>))</span><br><span class="line">  <span class="number">0.5723</span></span><br><span class="line">  <span class="number">0.0871</span></span><br><span class="line">-<span class="number">0.3783</span></span><br><span class="line">-<span class="number">2.5689</span></span><br><span class="line"><span class="number">10.7893</span></span><br><span class="line">[torch.FloatTensor of size <span class="number">5</span>]</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torch.normal(means, std=<span class="number">1.0</span>, out=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure><p>与上面函数类似，所有抽取的样本共享标准差。</p><p>参数:</p><ul><li>means (Tensor) – 每个元素的均值</li><li>std (float, optional) – 所有分布的标准差</li><li>out (Tensor) – 可选的输出张量</li></ul><p>例子:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>torch.normal(means=torch.arange(<span class="number">1</span>, <span class="number">6</span>))</span><br><span class="line"> </span><br><span class="line"> <span class="number">1.1681</span></span><br><span class="line"> <span class="number">2.8884</span></span><br><span class="line"> <span class="number">3.7718</span></span><br><span class="line"> <span class="number">2.5616</span></span><br><span class="line"> <span class="number">4.2500</span></span><br><span class="line">[torch.FloatTensor of size <span class="number">5</span>]</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;torch-normal&quot;&gt;&lt;a href=&quot;#torch-normal&quot; class=&quot;headerlink&quot; title=&quot;torch.normal()&quot;&gt;&lt;/a&gt;torch.normal()&lt;/h1&gt;&lt;h3 id=&quot;torch-normal-1&quot;&gt;&lt;a href=&quot;#torch-normal-1&quot; class=&quot;headerlink&quot; title=&quot;torch.normal()&quot;&gt;&lt;/a&gt;torch.normal()&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;torch.normal(means, std, out&amp;#x3D;None)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;返回一个张量，包含从给定参数&lt;code&gt;means&lt;/code&gt;,&lt;code&gt;std&lt;/code&gt;的离散正态分布中抽取随机数。 均值&lt;code&gt;means&lt;/code&gt;是一个张量，包含每个输出元素相关的正态分布的均值。 &lt;code&gt;std&lt;/code&gt;是一个张量，包含每个输出元素相关的正态分布的标准差。 均值和标准差的形状不须匹配，但每个张量的元素个数须相同。&lt;/p&gt;</summary>
     
     
     
