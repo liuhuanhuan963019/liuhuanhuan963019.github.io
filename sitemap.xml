@@ -613,14 +613,14 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/idea/</loc>
+    <loc>http://www.novoice.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2021-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>http://www.novoice.top/tags/idea/</loc>
     <lastmod>2021-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -634,14 +634,14 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/tomcat/</loc>
+    <loc>http://www.novoice.top/tags/maven/</loc>
     <lastmod>2021-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.novoice.top/tags/maven/</loc>
+    <loc>http://www.novoice.top/tags/tomcat/</loc>
     <lastmod>2021-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -748,13 +748,6 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/categories/hexo/yilia/</loc>
-    <lastmod>2021-05-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.novoice.top/categories/springBoot/</loc>
     <lastmod>2021-05-29</lastmod>
     <changefreq>daily</changefreq>
@@ -783,7 +776,7 @@
   </url>
   
   <url>
-    <loc>http://www.novoice.top/categories/tomcat/</loc>
+    <loc>http://www.novoice.top/categories/hexo/yilia/</loc>
     <lastmod>2021-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -791,6 +784,13 @@
   
   <url>
     <loc>http://www.novoice.top/categories/maven/</loc>
+    <lastmod>2021-05-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.novoice.top/categories/tomcat/</loc>
     <lastmod>2021-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
